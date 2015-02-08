@@ -2,6 +2,10 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 
 * Newest version of [Git slide](http://denny0223.github.io/HackGen-2014-workshop/)
 
+# 2015
+* Feb 8 / [SITCON](http://sitcon.org/) 冬季幹訓 : 信件寫作：統御方寸天地
+* Feb 9 / [SITCON](http://sitcon.org/) Workshop : Shell Script 資料分析工作坊
+
 # 2014
 * Mar 15 / [SITCON 2014](http://sitcon.org/2014) : [SITCON 2014 開幕](http://denny0223.github.io/sitcon2014-opening-and-closing/opening/)
 * Mar 15 / [SITCON 2014](http://sitcon.org/2014) : [SITCON 2014 閉幕](http://denny0223.github.io/sitcon2014-opening-and-closing/closing/)
