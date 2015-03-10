@@ -5,6 +5,9 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 # 2015
 * Feb 8 / [SITCON](http://sitcon.org/) 冬季幹訓 : 信件寫作：統御方寸天地
 * Feb 9 / [SITCON](http://sitcon.org/) Workshop : Shell Script 資料分析工作坊
+* Wed 7 / [SITCON 2015](http://sitcon.org/2015) : 「學生參與校務系統開發」、「校園 Open Data、Open API」座談會 與談人
+* Wed 7 / [SITCON 2015](http://sitcon.org/2015) : Google Code-In 開源，從小開始 with [海豹](https://github.com/seadog007)
+* Wed 8 / [SITCON](http://sitcon.org/) Workshop : Git 版本控制入門
 
 # 2014
 * Mar 15 / [SITCON 2014](http://sitcon.org/2014) : [SITCON 2014 開幕](http://denny0223.github.io/sitcon2014-opening-and-closing/opening/)
