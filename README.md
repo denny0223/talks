@@ -15,6 +15,8 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Apr 25 / SITCON Workshop @臺北市立大學 : Git 入門到進階與實務經驗談
 * Jun 10 / 大同大學資訊創意研究社 : Shell Script Intro
 * Jun 27 / [HKOSCon/SITOCN x HK](http://2015.opensource.hk/) : [Google Code-In — 開源，從小開始](https://speakerdeck.com/seadog007/google-code-in-2014) with [海豹](https://github.com/seadog007)
+* Jul 20 / [SITCON Camp 2015](http://sitcon.camp/2015/) 第一梯次 : 消失的歷史 - Git
+* Jul 25 / [矽塔學生社群聚會 #4](https://sintadesign.github.io/) : 廣州開源者行/香港開源年會/SITCON x HK 見聞分享
 
 # 2014
 * Mar 15 / [SITCON 2014](http://sitcon.org/2014) : [SITCON 2014 開幕](http://denny0223.github.io/sitcon2014-opening-and-closing/opening/)
