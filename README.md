@@ -19,6 +19,8 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Jul 25 / [矽塔學生社群聚會 #4](https://sintadesign.github.io/) : 廣州開源者行/香港開源年會/SITCON x HK 見聞分享
 * Aug 3 / [SITCON Camp 2015](http://sitcon.camp/2015/) 第二梯次 : 消失的歷史 - Git
 * Aug 22 / [HackNTU](https://www.hackntu.org/) : 被討厭的勇氣：校園開放資料的攻防戰
+* Sep 7 / 實踐大學資訊科技與管理學系 : Git 版本控制入門到進階與實務經驗談 (1)
+* Sep 10 / 實踐大學資訊科技與管理學系 : Git 版本控制入門到進階與實務經驗談 (2)
 
 # 2014
 * Mar 15 / [SITCON 2014](http://sitcon.org/2014) : [SITCON 2014 開幕](http://denny0223.github.io/sitcon2014-opening-and-closing/opening/)
