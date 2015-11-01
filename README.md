@@ -21,6 +21,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Aug 22 / [HackNTU](https://www.hackntu.org/) : 被討厭的勇氣：校園開放資料的攻防戰
 * Sep 7 / 實踐大學資訊科技與管理學系 : Git 版本控制入門到進階與實務經驗談 (1)
 * Sep 10 / 實踐大學資訊科技與管理學系 : Git 版本控制入門到進階與實務經驗談 (2)
+* Oct 31 / [MOPCON 2015](http://mopcon.org) : [從 0 到 1：打開 Android 開發的秘密，發現開源好棒棒](http://denny.one/MOPCON2015/)
 
 # 2014
 * Mar 15 / [SITCON 2014](http://sitcon.org/2014) : [SITCON 2014 開幕](http://denny0223.github.io/sitcon2014-opening-and-closing/opening/)
