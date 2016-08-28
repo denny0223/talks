@@ -4,13 +4,16 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 
 # 2016
 * Feb 27 / [SITCON 2016](http://sitcon.org/2016) : 論臺灣資訊普及教育：過去、現在與未來 論壇主持人
+* Aug 5 / [SITCON Camp 2016](http://sitcon.camp/2016/) : 視界咖啡館
+* Aug 20 / [COSCUP 2016](http://coscup.org/2016/) : Lightning Talk - How to strip "Denny Huang"
+* Aug 21 / [COSCUP 2016](http://coscup.org/2016/) : Lightning Talk - [COSCUP Pass App 開發秘辛](http://denny.one/COSCUP2016LT-COSCUP-Pass-Slide/)
 
 # 2015
 * Feb 8 / [SITCON](http://sitcon.org/) 冬季幹訓 : 信件寫作：統御方寸天地
 * Feb 9 / [SITCON](http://sitcon.org/) Workshop : Shell Script 資料分析工作坊
-* Wed 7 / [SITCON 2015](http://sitcon.org/2015) : 「學生參與校務系統開發」、「校園 Open Data、Open API」座談會 與談人
-* Wed 7 / [SITCON 2015](http://sitcon.org/2015) : Google Code-In 開源，從小開始 with [海豹](https://github.com/seadog007)
-* Wed 8 / [SITCON](http://sitcon.org/) Workshop : Git 版本控制入門
+* Mar 7 / [SITCON 2015](http://sitcon.org/2015) : 「學生參與校務系統開發」、「校園 Open Data、Open API」座談會 與談人
+* Mar 7 / [SITCON 2015](http://sitcon.org/2015) : Google Code-In 開源，從小開始 with [海豹](https://github.com/seadog007)
+* Mar 8 / [SITCON](http://sitcon.org/) Workshop : Git 版本控制入門
 * Apr 8 / 大同大學資訊創意研究社 : 從零開始慢慢爬 - 網頁爬蟲原理及技巧
 * Apr 11 / [SITCON 花蓮定期課程](http://sitcon-hualien.github.io/) : 深入淺出 Git 版本控制
 * Apr 11 / SITCON x WTTD : SITCON 一顆希望種子的成長茁壯 & 從零開始慢慢爬 - 網頁爬蟲原理及技巧
