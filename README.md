@@ -7,6 +7,18 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Aug 5 / [SITCON Camp 2016](http://sitcon.camp/2016/) : 視界咖啡館
 * Aug 20 / [COSCUP 2016](http://coscup.org/2016/) : Lightning Talk - How to strip "Denny Huang"
 * Aug 21 / [COSCUP 2016](http://coscup.org/2016/) : Lightning Talk - [COSCUP Pass App 開發秘辛](http://denny.one/COSCUP2016LT-COSCUP-Pass-Slide/)
+* Oct 3 / 輔仁大學 NISRA : 那條名為開源的道路：開源社群參與經歷分享
+* Oct 5 / 中央大學網路開源社 : Git 入門到進階與實務經驗談 (1)
+* Oct 12 / 大同大學網路攻防業師
+* Oct 19 / 大同大學網路攻防業師
+* Oct 22 / [SITCON x HK](http://hk.sitcon.org/2016/) : The Development Path of COSCUP Pass Check-in Application
+* Oct 26 / 大同大學網路攻防業師
+* Oct 29 / 嘉義高中 & 嘉義女中 : 開源之道 - 開源社群參與經歷分享 & App 開發經驗談
+* Nov 2 / 大同大學網路攻防業師
+* Nov 15 / 元智大學 ITAC 常態性社課 4 : Denny Huang - Shell Script 從入門到實務
+* Nov 16 / 中央大學網路開源社 : Git 入門到進階與實務經驗談 (2)
+* Nov 23 / 大同大學資訊創意研究社 : 大學時就該知道的 Git 版本控制 (1)
+* Nov 30 / 大同大學資訊創意研究社 : 大學時就該知道的 Git 版本控制 (2)
 
 # 2015
 * Feb 8 / [SITCON](http://sitcon.org/) 冬季幹訓 : 信件寫作：統御方寸天地
