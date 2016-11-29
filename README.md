@@ -1,6 +1,6 @@
 Presentations of Denny Huang. Welcome to send speech invitations via email: <denny0223@gmail.com>.
 
-* Newest version of [Git slide](http://denny0223.github.io/SITCON-Workshop-2015-Apr-git/)
+* Newest version of [Git slide](http://denny.one/git-slide/)
 
 # 2016
 * Feb 27 / [SITCON 2016](http://sitcon.org/2016) : 論臺灣資訊普及教育：過去、現在與未來 論壇主持人
