@@ -19,6 +19,9 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Nov 16 / 中央大學網路開源社 : Git 入門到進階與實務經驗談 (2)
 * Nov 23 / 大同大學資訊創意研究社 : 大學時就該知道的 Git 版本控制 (1)
 * Nov 30 / 大同大學資訊創意研究社 : 大學時就該知道的 Git 版本控制 (2)
+* Dec 7 / 慧燈中學資研社 : 社群講師分享活動
+* Dec 10 / SITCON Hour of Code 2016 花蓮 : 程式與生活 / 程式學習歷程分享
+* Dec 17 / [TDOH Conf 2016](http://tdoh.online/) : Lightning Talk - 一個路過人家專題展的故事
 
 # 2015
 * Feb 8 / [SITCON](http://sitcon.org/) 冬季幹訓 : 信件寫作：統御方寸天地
