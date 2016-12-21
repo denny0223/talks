@@ -1,0 +1,8 @@
+title: Talks
+description: Materials of Denny Huang's talks
+google_analytics: UA-65617168-1
+show_downloads: true
+theme: jekyll-theme-slate
+
+gems:
+  - jekyll-mentions
