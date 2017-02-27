@@ -2,6 +2,10 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 
 * Newest version of [Git slide](http://denny.one/git-slide/)
 
+# 2017
+* Feb 4 / 大安和平中崙政附四校電資社團寒訓 : Git 版本控制入門
+* Feb 4 / 德國第33屆混亂通訊大會 (33C3) 經驗分享 with [Pellaeon](https://github.com/pellaeon) & [Jeremy](https://github.com/jeremy5189)
+
 # 2016
 * Feb 27 / [SITCON 2016](http://sitcon.org/2016) : 論臺灣資訊普及教育：過去、現在與未來 論壇主持人
 * Aug 5 / [SITCON Camp 2016](http://sitcon.camp/2016/) : 視界咖啡館
