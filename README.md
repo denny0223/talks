@@ -5,6 +5,11 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 # 2017
 * Feb 4 / 大安和平中崙政附四校電資社團寒訓 : Git 版本控制入門
 * Feb 4 / 德國第33屆混亂通訊大會 (33C3) 經驗分享 with [Pellaeon](https://github.com/pellaeon) & [Jeremy](https://github.com/jeremy5189)
+* Mar 18 / [SITCON 2017](http://sitcon.org/2017/) : Lightning Talk - SITCON Pass
+* Mar 22 / 大同大學資訊創意研究社 : 大型專案開發經驗分享
+* Mar 27 / SITCON Workshop x 雲林科技大學開源社 : Git 版本控制入門 [直播錄影](https://www.youtube.com/watch?v=eznLhINAvQI)
+* Apr 26 / 交通大學資訊工程學系 導師時間 演講 : [大學時就該知道的 Git 版本控制](https://denny.one/git-speech/)
+* May 3 / 大同大學資訊創意研究社 : 大學時就該知道的 Git 版本控制 - 進階
 
 # 2016
 * Feb 27 / [SITCON 2016](http://sitcon.org/2016) : 論臺灣資訊普及教育：過去、現在與未來 論壇主持人
