@@ -10,6 +10,8 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Mar 27 / SITCON Workshop x 雲林科技大學開源社 : Git 版本控制入門 [直播錄影](https://www.youtube.com/watch?v=eznLhINAvQI)
 * Apr 26 / 交通大學資訊工程學系 導師時間 演講 : [大學時就該知道的 Git 版本控制](https://denny.one/git-speech/)
 * May 3 / 大同大學資訊創意研究社 : 大學時就該知道的 Git 版本控制 - 進階
+* May 31 / 高雄應用科技大學 資訊研習社 : 「什麼是開源？」講座
+* Jun 16 / SITCON x CCNS x C4Labs 台南聚 #29 : Bash Intro
 
 # 2016
 * Feb 27 / [SITCON 2016](http://sitcon.org/2016) : 論臺灣資訊普及教育：過去、現在與未來 論壇主持人
