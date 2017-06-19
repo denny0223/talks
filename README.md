@@ -1,6 +1,8 @@
 Presentations of Denny Huang. Welcome to send speech invitations via email: <denny0223@gmail.com>.
 
 * Newest version of [Git slide](http://denny.one/git-slide/)
+* Newest version of [Git Speech slide](http://denny.one/git-speech/)
+* Newest version of [Bash Intro slide](https://github.com/denny0223/Bash-Intro-Slide)
 
 # 2017
 * Feb 4 / 大安和平中崙政附四校電資社團寒訓 : Git 版本控制入門
