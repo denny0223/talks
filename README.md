@@ -58,6 +58,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Oct 31 / [MOPCON 2015](http://mopcon.org) : [從 0 到 1：打開 Android 開發的秘密，發現開源好棒棒](http://denny.one/MOPCON2015/)
 * Nov 5 / 大同大學網路攻防專題演講 : 資訊安全學習歷程經驗分享
 * Nov 29 / 交通大學/工業技術研究院 Open Source 人才培育工作坊 : [開源之路 - 從使用到參與貢獻開源專案](http://denny.one/20151129NCTU/)
+* Dec 2 / 亞東技術學院資訊管理系週會演講 : 相信我！扭轉你一生的社群參與術！ with [RSchiang](https://github.com/rschiang)
 * Dec 12 / SITCON Hour of Code 2015 - 「程式看世界」 桃園場 : 程式與生活
 * Dec 13 / SITCON Hour of Code 2015 - 「程式看世界」 台北場 : 程式與生活
 
