@@ -3,6 +3,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Newest version of [Git slide](http://denny.one/git-slide/)
 * Newest version of [Git Speech slide](http://denny.one/git-speech/)
 * Newest version of [Bash Intro slide](https://github.com/denny0223/Bash-Intro-Slide)
+* Newest version of [Introduction to Network and HTTP/RESTful slide](https://denny.one/the-net/)
 
 # 2017
 * Feb 4 / 大安和平中崙政附四校電資社團寒訓 : Git 版本控制入門
@@ -14,6 +15,8 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * May 3 / 大同大學資訊創意研究社 : 大學時就該知道的 Git 版本控制 - 進階
 * May 31 / 高雄應用科技大學 資訊研習社 : 「什麼是開源？」講座
 * Jun 16 / SITCON x CCNS x C4Labs 台南聚 #29 : Bash Intro
+* Aug 6 / [COSCUP 2017](http://coscup.org/2017/) : [社群經營論壇—社群是什麼？從校園到社會](http://coscup.org/2017/#/schedule/day2/2021410) with [HrJ](https://slides.com/hrjk) & [聽風](https://github.com/linroex)
+* Aug 15 / [SITCON Camp 2017](http://sitcon.camp) : HTTP、RESTful 觀念與實作
 
 # 2016
 * Feb 27 / [SITCON 2016](http://sitcon.org/2016) : 論臺灣資訊普及教育：過去、現在與未來 論壇主持人
