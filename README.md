@@ -17,6 +17,10 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Jun 16 / SITCON x CCNS x C4Labs 台南聚 #29 : Bash Intro
 * Aug 6 / [COSCUP 2017](http://coscup.org/2017/) : [社群經營論壇—社群是什麼？從校園到社會](http://coscup.org/2017/#/schedule/day2/2021410) with [HrJ](https://slides.com/hrjk) & [聽風](https://github.com/linroex)
 * Aug 15 / [SITCON Camp 2017](http://sitcon.camp) : HTTP、RESTful 觀念與實作
+* Sep 17 / SITCON 工作人員 Workshop : [為什麼聰明人都用電子郵件？](https://www.youtube.com/watch?v=5kXkcR6TKhc)
+* Sep 20 / 交通大學網路福利社 : 開源社群經驗分享
+* Oct 15 / 淡江大學資訊顧問室 : [GNU/Linux 系統介紹及安裝](https://denny.one/Linux-intro-slide/)
+* Oct 29 / MOPCON 2017 : [我們把他拆了](https://denny.one/MOPCON-2017-LT-Slide/) with [海豹](https://github.com/seadog007)
 
 # 2016
 * Feb 27 / [SITCON 2016](http://sitcon.org/2016) : 論臺灣資訊普及教育：過去、現在與未來 論壇主持人
