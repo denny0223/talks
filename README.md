@@ -21,6 +21,8 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Sep 20 / 交通大學網路福利社 : 開源社群經驗分享
 * Oct 15 / 淡江大學資訊顧問室 : [GNU/Linux 系統介紹及安裝](https://denny.one/Linux-intro-slide/)
 * Oct 29 / MOPCON 2017 : [我們把他拆了](https://denny.one/MOPCON-2017-LT-Slide/) with [海豹](https://github.com/seadog007)
+* Nov 18 / 彰化師範大學 : 【多元通識】印象彰化 - Andorid App 入門及實做
+* Nov 29 / 淡江大學資訊顧問室 : Bash Intro
 
 # 2016
 * Feb 27 / [SITCON 2016](http://sitcon.org/2016) : 論臺灣資訊普及教育：過去、現在與未來 論壇主持人
