@@ -23,6 +23,10 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Oct 29 / MOPCON 2017 : [我們把他拆了](https://denny.one/MOPCON-2017-LT-Slide/) with [海豹](https://github.com/seadog007)
 * Nov 18 / 彰化師範大學 : 【多元通識】印象彰化 - Andorid App 入門及實做
 * Nov 29 / 淡江大學資訊顧問室 : Bash Intro
+* Dec 6 - 11 / 106 台北資訊月 開源軟體館 小講堂 : 開放原始碼與社群經營之道
+* Dec 9 / SITCON x SOSCET Hour of Code @花蓮 : 活動主持
+* Dec 10 / SOSCET x SITCON 花蓮定期課程 #8 : Git 版本控制入門
+* Dec 20 / 雷亞遊戲 Rayark Inc. : 內訓 - Git for 遊戲企劃 & 美術
 
 # 2016
 * Feb 27 / [SITCON 2016](http://sitcon.org/2016) : 論臺灣資訊普及教育：過去、現在與未來 論壇主持人
