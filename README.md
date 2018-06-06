@@ -9,6 +9,8 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Jan 30 / [INFAS 全國中學生資訊年會](http://infas.club) 工作人員寒訓 : 公關組專業訓練
 * Jan 31 / [INFAS 全國中學生資訊年會](http://infas.club) 工作人員寒訓 : 社群經驗分享
 * Feb 12 / 11 校高中聯合寒訓 - 神選資人 百捌寒訓 : HTTP、RESTful 觀念與實作
+* Apr 1 / HackTKU 2017 淡江大學黑客松 評審
+* May 26 / 資策會開源貢獻者培育方案 : [從軟體工程角度看開源專案的協作方式](https://denny.one/TheOpenSourceWaySlide/)
 
 # 2017
 * Feb 4 / 大安和平中崙政附四校電資社團寒訓 : Git 版本控制入門
