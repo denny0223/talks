@@ -11,6 +11,10 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Feb 12 / 11 校高中聯合寒訓 - 神選資人 百捌寒訓 : HTTP、RESTful 觀念與實作
 * Apr 1 / HackTKU 2017 淡江大學黑客松 評審
 * May 26 / 資策會開源貢獻者培育方案 : [從軟體工程角度看開源專案的協作方式](https://denny.one/TheOpenSourceWaySlide/)
+* Jun 10 / [INFAS 全國中學生資訊年會](http://infas.club) Keynote : [Stay Hungry, Stay Foolish.](https://denny.one/INFAS2018/)
+* Jul 12 / 中央研究院 資訊服務處 : [當個懶惰的聰明人 - 實戰 CI/CD 與 container](https://denny.one/ci_cd_container/)
+* Jul 14 / 2018 TWIGF 台灣網路治理論壇: 網路治理在校園 主持人
+* Jul 18 / 教育部校園自由軟體數位資源推廣服務中心 OSSACC : [ezgo14 發表會 - Enlightenment 從啟蒙觸發](https://denny.one/ezgo14/)
 
 # 2017
 * Feb 4 / 大安和平中崙政附四校電資社團寒訓 : Git 版本控制入門
