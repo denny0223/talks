@@ -15,6 +15,10 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Jul 12 / 中央研究院 資訊服務處 : [當個懶惰的聰明人 - 實戰 CI/CD 與 container](https://denny.one/ci_cd_container/)
 * Jul 14 / 2018 TWIGF 台灣網路治理論壇: 網路治理在校園 主持人
 * Jul 18 / 教育部校園自由軟體數位資源推廣服務中心 OSSACC : [ezgo14 發表會 - Enlightenment 從啟蒙觸發](https://denny.one/ezgo14/)
+* Nov 4 / MOPCON 2018 ; [SITCON 2019](https://docs.google.com/presentation/d/1n2JdAbkMz-2pFtnzevih2tmLizYalM4JJWMAAc0nnS4/preview)
+* Nov 18 / SITCON 工作人員 Workshop : [為什麼聰明人都用電子郵件？](https://www.youtube.com/watch?v=5kXkcR6TKhc) / [投影片連結](https://denny.one/mail-slide/)
+* Dec 12 / 淡江大學 開源社 : [你的系統不是你的系統－藍色窗戶外的天空](https://www.youtube.com/watch?v=RRLviBLBiZs)
+* Dec 14 / 中正大學 資訊工程學系 : [開放源碼與他們的產地 - 社群經歷談](https://denny.one/20181214CCUCS/)
 
 # 2017
 * Feb 4 / 大安和平中崙政附四校電資社團寒訓 : Git 版本控制入門
