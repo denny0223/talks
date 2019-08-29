@@ -4,6 +4,14 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Newest version of [Git Speech slide](http://denny.one/git-speech/)
 * Newest version of [Bash Intro slide](https://github.com/denny0223/Bash-Intro-Slide)
 * Newest version of [Introduction to Network and HTTP/RESTful slide](https://denny.one/the-net/)
+* Newest version of [Intro SITCON](https://denny.one/Intro-SITCON/)
+
+# 2019
+* Jul 27 / 全台興趣實踐教育論壇 - 我的成就來自開源社群
+* Aug 6 / [SITCON Camp 2019](https://sitcon.camp/2019/) : [網路 / HTTP / RESTful 觀念及實做](https://denny.one/the-net/) [課程錄影](https://youtu.be/3r-Z2zcAhoI)
+* Aug 18 / [COSCUP 2019](https://coscup.org/2019/) : Lightning Talk - [OPass 專案回顧及展望](https://denny.one/OPass-COSCUP2019LT/)
+* Aug 24 / [HITCON 台灣駭客年會 CMT 2019](https://hitcon.org/2019/CMT/) : Lightning Talk - OPass 開發秘辛
+* Aug 26 / 教育部推動大學程式設計教學 - [全國大學程式設計教學交流會－< / 程式+跨域= ∞ >](http://plus.pro.edu.tw/news_detail04.jsp) : [從 SITCON 學生計算機年會 談社群經營](https://denny.one/Intro-SITCON/)
 
 # 2018
 * Jan 30 / [INFAS 全國中學生資訊年會](http://infas.club) 工作人員寒訓 : 公關組專業訓練
