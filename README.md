@@ -6,10 +6,15 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Newest version of [Introduction to Network and HTTP/RESTful slide](https://denny.one/the-net/)
 * Newest version of [Intro SITCON](https://denny.one/Intro-SITCON/)
 
+# 2021
+* Mar 3 / [SITCON](https://sitcon.org/) X [Dcard](https://www.dcard.tw/) : 線上直播 - [等等！還沒畢業怎麼成為工程師？](https://youtu.be/8pcbYqljBmw?t=870)
+* Apr 24 / 台北市駭客實驗教育機構 : Hacker School 說明及師資交流會 [活動錄影](https://youtu.be/EUYXTGgAqhg) [簡報連結](https://docs.google.com/presentation/d/1v7LjsB5rYvKJ2m0oTfbUyV58EBYNxH0r4hwp462pf4E/edit)
+
 # 2020
 * Oct 17 / [GDG DevFest 2020 Taiwan](https://devfest2020.web.app/) : [咻的～滑進 App - 透過 Firebase Dynamic Link 順暢導入使用者](https://denny.one/devfest2020/) [議程錄影](https://youtu.be/eseo0hcRaQI?t=18201)
 * Nov 5/ iThome : 大話資安 - 因應防疫，如何從後端和流程落實實聯制和隱私保護 [直播存檔](https://www.facebook.com/352329718226779/videos/360517928605937)
 * Nov 28 / [Developer Student Clubs National Dong Hwa University](https://dsc.community.dev/national-dong-hwa-university-hualien-university-of-education/) : [推展程式設計一日工作坊](https://dsc.community.dev/events/details/developer-student-clubs-national-dong-hwa-university-hualien-university-of-education-presents-tui-zhan-cheng-shi-she-ji-yi-ri-gong-zuo-fang/ ) - 出社會必備的 Git, CI/CD 版控技能
+* Dec 17 / [SITCON](https://sitcon.org/) : [從以色列資安教育思考台灣駭客養成](https://forms.gle/17ScdHjnU6pPMHC87)
 
 # 2019
 * Jul 27 / 全台興趣實踐教育論壇 - 我的成就來自開源社群
