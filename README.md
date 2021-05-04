@@ -9,6 +9,10 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 # 2021
 * Mar 3 / [SITCON](https://sitcon.org/) X [Dcard](https://www.dcard.tw/) : 線上直播 - [等等！還沒畢業怎麼成為工程師？](https://youtu.be/8pcbYqljBmw?t=870)
 * Apr 24 / 台北市駭客實驗教育機構 : Hacker School 說明及師資交流會 [活動錄影](https://youtu.be/EUYXTGgAqhg) [簡報連結](https://docs.google.com/presentation/d/1v7LjsB5rYvKJ2m0oTfbUyV58EBYNxH0r4hwp462pf4E/edit)
+* May 4 / [CYBERSEC 2021 臺灣資安大會](https://cyber.ithome.com.tw/2021/) : Cyber Talent - 講座 資安職場戰力與心志養成 [簡報連結](https://denny.one/CYBERSEC-2021/)
+* May 7 / TGONetworks x Fable :〈數位101 - 技術管理新思維〉影片 - [SITCON；如何經營數位時代的技術社群](https://www.youtube.com/watch?v=Tnjk8xEXTrQ)
+* May 24 / [Yourator](https://www.yourator.co/) - 職涯履行家 Podcast : EP19 以人脈替職涯加值，Denny 的技術社群人生 [專訪文章](https://www.yourator.co/articles/215) [完整 Podcast @YouTube](https://www.youtube.com/watch?v=FO4mcKn-ChY)
+* Jun 20 / [2021 均優學習論壇](http://www.quality-learning.net/2021/agenda/agendaCalendar.php) : 資訊專才在高中階段的養成 [直播存檔](https://youtu.be/r8BmJdqq_0Q?t=521)
 
 # 2020
 * Oct 17 / [GDG DevFest 2020 Taiwan](https://devfest2020.web.app/) : [咻的～滑進 App - 透過 Firebase Dynamic Link 順暢導入使用者](https://denny.one/devfest2020/) [議程錄影](https://youtu.be/eseo0hcRaQI?t=18201)
