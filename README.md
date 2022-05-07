@@ -13,8 +13,13 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * May 7 / TGONetworks x Fable :〈數位101 - 技術管理新思維〉影片 - [SITCON；如何經營數位時代的技術社群](https://www.youtube.com/watch?v=Tnjk8xEXTrQ)
 * May 24 / [Yourator](https://www.yourator.co/) - 職涯履行家 Podcast : EP19 以人脈替職涯加值，Denny 的技術社群人生 [專訪文章](https://www.yourator.co/articles/215) [完整 Podcast @YouTube](https://www.youtube.com/watch?v=FO4mcKn-ChY)
 * Jun 20 / [2021 均優學習論壇](http://www.quality-learning.net/2021/agenda/agendaCalendar.php) : 資訊專才在高中階段的養成 [直播存檔](https://youtu.be/r8BmJdqq_0Q?t=521)
+* Aug 1 / [COSCUP 2021](https://coscup.org/2021/) : COSCUP 2021 閉幕 [直播存檔](https://www.youtube.com/watch?v=h1kToE2FH2Y) / [投影片連結](https://docs.google.com/presentation/d/1nXXRTOZzW_3vv0waZ05WxpEdk4PyPvFIr8_TDcd45aQ/edit?usp=sharing)
+* Aug 12 / [SITCON 線上夏令營 2021](https://sitcon.camp/2021/) : HTTP / RESTful [投影片連結](https://denny.one/the-net)
+* Sep 18 / [築夢學院開放教育社群](https://www.facebook.com/doec.tw/) : [與 Denny 有約 -  以經驗訴說台灣教育，以未來訴說發展意義](https://www.facebook.com/doec.tw/posts/147113890912659)
+* Oct 24 / [MOPCON 2021](https://mopcon.org/2021/) : Panel - 面對學不完的軟體開發技術，工程師該如何自救？ with 葉丙成, 黃敬群, 潘奕濬, 陳思惟, 黃猷珵 [直播存檔](https://www.youtube.com/watch?v=igjqVbVvZqs)
 
 # 2020
+* Aug 2 / [COSCUP 2020](https://coscup.org/2021/) : COSCUP 2020 Day 2 閉幕 [活動錄影](https://www.youtube.com/watch?v=XBoRZcR1OHM) / [投影片連結](https://docs.google.com/presentation/d/1T4qqiihvjtV3FDpwgcqhvTzbjKRoLkd6gyZPbhZmAbM/edit?usp=sharing)
 * Oct 17 / [GDG DevFest 2020 Taiwan](https://devfest2020.web.app/) : [咻的～滑進 App - 透過 Firebase Dynamic Link 順暢導入使用者](https://denny.one/devfest2020/) [議程錄影](https://youtu.be/eseo0hcRaQI?t=18201)
 * Nov 5/ iThome : 大話資安 - 因應防疫，如何從後端和流程落實實聯制和隱私保護 [直播存檔](https://www.facebook.com/352329718226779/videos/360517928605937)
 * Nov 28 / [Developer Student Clubs National Dong Hwa University](https://dsc.community.dev/national-dong-hwa-university-hualien-university-of-education/) : [推展程式設計一日工作坊](https://dsc.community.dev/events/details/developer-student-clubs-national-dong-hwa-university-hualien-university-of-education-presents-tui-zhan-cheng-shi-she-ji-yi-ri-gong-zuo-fang/ ) - 出社會必備的 Git, CI/CD 版控技能
