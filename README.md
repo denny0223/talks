@@ -6,6 +6,9 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Newest version of [Introduction to Network and HTTP/RESTful slide](https://denny.one/the-net/)
 * Newest version of [Intro SITCON](https://denny.one/Intro-SITCON/)
 
+# 2022
+* May 18 / [Google Data Cloud Summit Recap：Taiwan](https://cloudonair.withgoogle.com/events/taiwan-data-cloud-summit-recap-2022) - Implement Atomic Habits with Data 利用數據打造企業原子習慣 [活動錄影](https://www.youtube.com/watch?v=Yylmj9I-KAc) [簡報連結](https://docs.google.com/presentation/d/e/2PACX-1vQZ5yP6F0HsuBUEeRq8FTY1sJJEsSaRB6jTRhYX_HhDFbgg-HXJ2M9INOomt9A3WZ2odu4UL-SRr8m_/pub?slide=id.g1226d6fc441_0_24)
+
 # 2021
 * Mar 3 / [SITCON](https://sitcon.org/) X [Dcard](https://www.dcard.tw/) : 線上直播 - [等等！還沒畢業怎麼成為工程師？](https://youtu.be/8pcbYqljBmw?t=870)
 * Apr 24 / 台北市駭客實驗教育機構 : Hacker School 說明及師資交流會 [活動錄影](https://youtu.be/EUYXTGgAqhg) [簡報連結](https://docs.google.com/presentation/d/1v7LjsB5rYvKJ2m0oTfbUyV58EBYNxH0r4hwp462pf4E/edit)
