@@ -8,6 +8,10 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 
 # 2022
 * May 18 / [Google Data Cloud Summit Recap：Taiwan](https://cloudonair.withgoogle.com/events/taiwan-data-cloud-summit-recap-2022) - Implement Atomic Habits with Data 利用數據打造企業原子習慣 [活動錄影](https://www.youtube.com/watch?v=Yylmj9I-KAc) [簡報連結](https://docs.google.com/presentation/d/e/2PACX-1vQZ5yP6F0HsuBUEeRq8FTY1sJJEsSaRB6jTRhYX_HhDFbgg-HXJ2M9INOomt9A3WZ2odu4UL-SRr8m_/pub?slide=id.g1226d6fc441_0_24)
+* Jul 24 - Aug 27 [g0v 零時小學校 2022 夏日源力增能營](https://g0v.hackmd.io/@jothon/Sch001SSR2022/) : 協作不想吵架？快用版本控制系統！ [課程錄影](https://www.youtube.com/watch?v=-mcjQxoyaEI) / [簡報連結](https://denny.one/git-g0v-sch001/)
+* Jul 30 / [COSCUP 2022](https://coscup.org/2022/) : COSCUP 2022 Day 1 閉幕 [投影片連結](https://docs.google.com/presentation/d/1gcyXi2XuSuhoCqNUrA4ijWkUKcqf_yhRD9Wr9-DhuAU/edit?usp=sharing)
+* Aug 19, 20 / [HITCON 台灣駭客年會](https://hitcon.org/2022/) : HITCON PEACE 2022 Day 1 & Day 2 開幕 [Day 1 錄影](https://www.youtube.com/watch?v=czE16CrFas8) / [Day 2 錄影](https://www.youtube.com/watch?v=fsg6YLMp0Vs)
+* Sep 17 / 2022 Google Developers Community Leads Summit : 社群心法： 如何經營與規劃社群活動 [簡報連結](https://denny.one/2022-GDSC-Leads-Summit/)
 
 # 2021
 * Mar 3 / [SITCON](https://sitcon.org/) X [Dcard](https://www.dcard.tw/) : 線上直播 - [等等！還沒畢業怎麼成為工程師？](https://youtu.be/8pcbYqljBmw?t=870)
