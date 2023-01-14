@@ -90,7 +90,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Oct 26 / 大同大學網路攻防業師
 * Oct 29 / 嘉義高中 & 嘉義女中 : 開源之道 - 開源社群參與經歷分享 & App 開發經驗談
 * Nov 2 / 大同大學網路攻防業師
-* Nov 15 / 元智大學 ITAC 常態性社課 4 : Denny Huang - Shell Script 從入門到實務
+* Nov 15 / 元智大學 ITAC 常態性社課 4 : Denny Huang - Shell Script 從入門到實務 [課程錄影](https://youtu.be/3ZEY0HnNcG8)
 * Nov 16 / 中央大學網路開源社 : Git 入門到進階與實務經驗談 (2)
 * Nov 23 / 大同大學資訊創意研究社 : 大學時就該知道的 Git 版本控制 (1)
 * Nov 30 / 大同大學資訊創意研究社 : 大學時就該知道的 Git 版本控制 (2)
