@@ -4,7 +4,18 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Newest version of [Git Speech slide](https://denny.one/git-speech/)
 * Newest version of [Bash Intro slide](https://github.com/denny0223/Bash-Intro-Slide)
 * Newest version of [Introduction to Network and HTTP/RESTful slide](https://denny.one/the-net/)
+* Newest version of [OSS Software Engineering](https://denny.one/OSS-Software-Engineering/)
 * Newest version of [Intro SITCON](https://denny.one/Intro-SITCON/)
+
+# 2023
+* Feb 11 / [g0v 零時小學校專案孵化競賽 2022-23](https://sch001.g0v.tw/dash/brd/sch001-2022/list) 評審
+* May 18 / [Google Cloud Taiwan Industry Exchange](https://cloudonair.withgoogle.com/events/taiwan-industry-summit-q2-2023/) : 遊戲媒體娛樂業專場分享：御風 AI 人工智慧，創造數據新價值 [活動錄影](https://youtu.be/xsbdIAQWgFk?t=930) [簡報連結](https://docs.google.com/presentation/d/e/2PACX-1vS6xuowBsRTo7u4aiSe76oq4WB3_TA3w57DafD3Ldf3dzgrmBFSx4OxdG7a7SPNA6HZEIP24yI2HgKL/pub)
+* Jul 21 / [SITCON Camp 2023](https://sitcon.camp/2023/) : HTTP / RESTful [投影片連結](https://denny.one/the-net/) [課程錄影](https://youtu.be/p1vybS--adA)
+* Jul 30 / [COSCUP 2023](https://hitcon.org/2023/) : COSCUP 2023 Day 2 開幕 & COSCUP Infrastructure Review [投影片連結](https://docs.google.com/presentation/d/1oU9zcdmqCZpLNgOgDPZ8bTwfl3Npmn7l4MwfMbjduUo/edit?usp) [開幕錄影](https://www.youtube.com/watch?v=H7L2jtr4qv4) [Infrastructure Review 錄影](https://www.youtube.com/watch?v=BV1PUNoGjB8)
+* Aug 18, 19 / [HITCON 台灣駭客年會](https://hitcon.org/2023/CMT/) : HITCON CMT 2023 Day 1 & Day 2 開幕 [活動錄影](https://www.facebook.com/HITCON/videos/hitcon-cmt-2023-%E9%96%8B%E5%B9%95/827109298763058)
+* Aug 26, 27 / [AIS3](https://ais3.org/) : [AIS3 CLUB 資安社團幹部研習營](https://www.facebook.com/AIS3tw/posts/pfbid0ES73dCjFiyZsdPsu8Z3ZDhmAWRxvfyWw1KhfdeXhy1PxTfLxyzTi5UJ7iFrvhXD9l) [https://denny.one/2023-AIS3-CLUB/](簡報連結) [Day 1 活動紀錄](https://www.facebook.com/AIS3tw/posts/pfbid02WkjmBW1XHB4QQHCG5fBPTgU53PxSeSswdkAWo2hRXFr1L24Ld9VbkzyvAguSYT18l) [Day 2 活動紀錄](https://www.facebook.com/AIS3tw/posts/pfbid0eQnbhDATRRJ6jKLsVSav7vLcEsFkZjYdu3xJe8RBfvruKhJBqURXco1eHSV1Jt3Bl)
+* Sep 6 / 資策會 [DevSecOps 開源漫談](https://www.facebook.com/groups/939632110636727/) : 技術分享會系列活動 - 解析開放原始碼專案的軟體工程實踐 [簡報連結](https://denny.one/OSS-Software-Engineering/) [演講錄影](https://www.youtube.com/watch?v=_iFvFufHhMs)
+* Dec 11 / [國立陽明交通大學資訊技術服務中心](https://it.nycu.edu.tw/) : 開放原始碼專案的軟體工程實踐 [簡報連結](https://denny.one/OSS-Software-Engineering/) [演講錄影](https://youtu.be/nMZ1ioLOOlI)
 
 # 2022
 * May 18 / [Google Data Cloud Summit Recap：Taiwan](https://cloudonair.withgoogle.com/events/taiwan-data-cloud-summit-recap-2022) - Implement Atomic Habits with Data 利用數據打造企業原子習慣 [活動錄影](https://www.youtube.com/watch?v=Yylmj9I-KAc) [簡報連結](https://docs.google.com/presentation/d/e/2PACX-1vQZ5yP6F0HsuBUEeRq8FTY1sJJEsSaRB6jTRhYX_HhDFbgg-HXJ2M9INOomt9A3WZ2odu4UL-SRr8m_/pub?slide=id.g1226d6fc441_0_24)
