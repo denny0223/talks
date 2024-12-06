@@ -7,6 +7,18 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Newest version of [OSS Software Engineering](https://denny.one/OSS-Software-Engineering/)
 * Newest version of [Intro SITCON](https://denny.one/Intro-SITCON/)
 
+# 2024
+* Apr 15 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（上） [簡報連結](https://denny.one/git-slide/)
+* Apr 22 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（下） [簡報連結](https://denny.one/git-slide/)
+* Jun 8 / [遊戲燈塔](https://game-beacon.com/) : 開源文化與專案管理 [簡報連結](https://denny.one/OSS-Software-Engineering/)
+* Jul 7 / [SITCON Hackathon 2024](https://hackathon.sitcon.org/2024/) 評審
+* Jul 18 / [SITCON Camp 2024](https://sitcon.camp/2024/) : 網路概論 [投影片連結](https://denny.one/the-net/) [課程錄影](https://youtu.be/mJvsg3uun8c)
+* Jul 28 / [Social Designer 2024 青年永續社會設計挑戰賽](https://mutahead.com/socialdesigner2024/) 評審 [總決賽評審團講評](https://youtu.be/M2ge5oPTCPc)
+* Oct 17 / [GDG Cloud Taipei](https://gdg.community.dev/gdg-cloud-taipei/) : [Google Cloud AI Study Jam 2024 - 生成式 AI 培訓計劃 #1](https://gdg.community.dev/events/details/google-gdg-cloud-taipei-presents-google-cloud-ai-study-jam-2024-sheng-cheng-shi-ai-pei-xun-ji-hua-1/)
+* Oct 22 / [GDG Cloud Taipei](https://gdg.community.dev/gdg-cloud-taipei/) : [Google Cloud AI Study Jam 2024 - 生成式 AI 培訓計劃 #2](https://gdg.community.dev/events/details/google-gdg-cloud-taipei-presents-google-cloud-ai-study-jam-2024-sheng-cheng-shi-ai-pei-xun-ji-hua-2/)
+* Nov 16 / 臺北市私立延平高級中學 : 科系探索實做課程 資訊學群體驗營 [投影片連結](https://denny.one/20241116-yphs/)
+* Nov 30 / [DevFest Taipei 2024](https://devfest-taipei.gdg.tw/2024/) : Panel Discussion - Responsible GenAI 驅動的挑戰與資安機會 with 趙式隆、邱銘彰、JerryWu、tjwei
+
 # 2023
 * Feb 11 / [g0v 零時小學校專案孵化競賽 2022-23](https://sch001.g0v.tw/dash/brd/sch001-2022/list) 評審
 * May 18 / [Google Cloud Taiwan Industry Exchange](https://cloudonair.withgoogle.com/events/taiwan-industry-summit-q2-2023/) : 遊戲媒體娛樂業專場分享：御風 AI 人工智慧，創造數據新價值 [活動錄影](https://youtu.be/xsbdIAQWgFk?t=930) [簡報連結](https://docs.google.com/presentation/d/e/2PACX-1vS6xuowBsRTo7u4aiSe76oq4WB3_TA3w57DafD3Ldf3dzgrmBFSx4OxdG7a7SPNA6HZEIP24yI2HgKL/pub)
