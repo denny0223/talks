@@ -7,6 +7,12 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Newest version of [OSS Software Engineering](https://denny.one/OSS-Software-Engineering/)
 * Newest version of [Intro SITCON](https://denny.one/Intro-SITCON/)
 
+# 2025
+* Apr 12 / [GDG Taichung - 四月 Build With AI Taichung](https://gdg.community.dev/events/details/google-gdg-taichung-presents-si-yue-build-with-ai-taichung/) : 資料驅動決策實踐 - 運用 BigQuery、Gemini 與 Looker Studio 進行資料分析 [簡報連結](https://denny.one/bwai-2025/)
+* Apr 24 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（上） [簡報連結](https://denny.one/git-slide/)
+* Apr 26 / [GDG Tainan - Build with AI Tainan 2025 #2 - BigQuery, Gemini & Looker Studio feat. 使用者研究工作坊](https://gdg.community.dev/events/details/google-gdg-taichung-presents-si-yue-build-with-ai-taichung/) : 資料驅動決策實踐 - 運用 BigQuery、Gemini 與 Looker Studio 進行資料分析 [簡報連結](https://denny.one/bwai-2025/)
+* May 1 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（下） [簡報連結](https://denny.one/git-slide/)
+
 # 2024
 * Apr 15 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（上） [簡報連結](https://denny.one/git-slide/)
 * Apr 22 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（下） [簡報連結](https://denny.one/git-slide/)
