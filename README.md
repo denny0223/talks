@@ -58,7 +58,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Oct 24 / [MOPCON 2021](https://mopcon.org/2021/) : Panel - 面對學不完的軟體開發技術，工程師該如何自救？ with 葉丙成, 黃敬群, 潘奕濬, 陳思惟, 黃猷珵 [直播存檔](https://www.youtube.com/watch?v=igjqVbVvZqs)
 
 # 2020
-* Aug 2 / [COSCUP 2020](https://coscup.org/2021/) : COSCUP 2020 Day 2 閉幕 [活動錄影](https://www.youtube.com/watch?v=XBoRZcR1OHM) / [投影片連結](https://docs.google.com/presentation/d/1T4qqiihvjtV3FDpwgcqhvTzbjKRoLkd6gyZPbhZmAbM/edit?usp=sharing)
+* Aug 2 / [COSCUP 2020](https://coscup.org/2020/) : COSCUP 2020 Day 2 閉幕 [活動錄影](https://www.youtube.com/watch?v=XBoRZcR1OHM) / [投影片連結](https://docs.google.com/presentation/d/1T4qqiihvjtV3FDpwgcqhvTzbjKRoLkd6gyZPbhZmAbM/edit?usp=sharing)
 * Oct 17 / [GDG DevFest 2020 Taiwan](https://devfest2020.web.app/) : [咻的～滑進 App - 透過 Firebase Dynamic Link 順暢導入使用者](https://denny.one/devfest2020/) [議程錄影](https://youtu.be/eseo0hcRaQI?t=18201)
 * Nov 5/ iThome : 大話資安 - 因應防疫，如何從後端和流程落實實聯制和隱私保護 [直播存檔](https://www.facebook.com/352329718226779/videos/360517928605937)
 * Nov 28 / [Developer Student Clubs National Dong Hwa University](https://dsc.community.dev/national-dong-hwa-university-hualien-university-of-education/) : [推展程式設計一日工作坊](https://dsc.community.dev/events/details/developer-student-clubs-national-dong-hwa-university-hualien-university-of-education-presents-tui-zhan-cheng-shi-she-ji-yi-ri-gong-zuo-fang/ ) - 出社會必備的 Git, CI/CD 版控技能
@@ -70,6 +70,8 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Aug 18 / [COSCUP 2019](https://coscup.org/2019/) : Lightning Talk - [OPass 專案回顧及展望](https://denny.one/OPass-COSCUP2019LT/)
 * Aug 24 / [HITCON 台灣駭客年會 CMT 2019](https://hitcon.org/2019/CMT/) : Lightning Talk - OPass 開發秘辛 [議程錄影](https://youtu.be/ugldBbCqUEg?t=315)
 * Aug 26 / 教育部推動大學程式設計教學 - [全國大學程式設計教學交流會－< / 程式+跨域= ∞ >](http://plus.pro.edu.tw/news_detail04.jsp) : [從 SITCON 學生計算機年會 談社群經營](https://denny.one/Intro-SITCON/)
+* Oct 20 / [MOPCON 2019](https://mopcon.org/2019/) : [SITCON 2020](https://docs.google.com/presentation/d/1n2JdAbkMz-2pFtnzevih2tmLizYalM4JJWMAAc0nnS4/preview) [議程錄影](https://youtu.be/WCBnql0JNP0?t=1382)
+* Nov 30 / [Open UP Summit 2019](https://www.accupass.com/event/1908160440581452622676) : Open Source Communities in Taiwan with 鄭鴻旗, 蘇恆誠, 馬志瑋 [議程錄影](https://www.youtube.com/watch?v=Ao2i76RbneI)
 
 # 2018
 * Jan 30 / [INFAS 全國中學生資訊年會](http://infas.club) 工作人員寒訓 : 公關組專業訓練
@@ -81,7 +83,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Jul 12 / 中央研究院 資訊服務處 : [當個懶惰的聰明人 - 實戰 CI/CD 與 container](https://denny.one/ci_cd_container/)
 * Jul 14 / 2018 TWIGF 台灣網路治理論壇: 網路治理在校園 主持人
 * Jul 18 / 教育部校園自由軟體數位資源推廣服務中心 OSSACC : [ezgo14 發表會 - Enlightenment 從啟蒙觸發](https://denny.one/ezgo14/)
-* Nov 4 / MOPCON 2018 : [SITCON 2019](https://docs.google.com/presentation/d/1n2JdAbkMz-2pFtnzevih2tmLizYalM4JJWMAAc0nnS4/preview)
+* Nov 4 / [MOPCON 2018](https://mopcon.org/2018/) : [SITCON 2019](https://docs.google.com/presentation/d/1n2JdAbkMz-2pFtnzevih2tmLizYalM4JJWMAAc0nnS4/preview)
 * Nov 18 / SITCON 工作人員 Workshop : [為什麼聰明人都用電子郵件？](https://www.youtube.com/watch?v=5kXkcR6TKhc) / [投影片連結](https://denny.one/mail-slide/)
 * Dec 12 / 淡江大學 開源社 : [你的系統不是你的系統－藍色窗戶外的天空](https://www.youtube.com/watch?v=RRLviBLBiZs)
 * Dec 14 / 中正大學 資訊工程學系 : [開放源碼與他們的產地 - 社群經歷談](https://denny.one/20181214CCUCS/)
@@ -101,7 +103,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Sep 17 / SITCON 工作人員 Workshop : [為什麼聰明人都用電子郵件？](https://www.youtube.com/watch?v=5kXkcR6TKhc)
 * Sep 20 / 交通大學網路福利社 : 開源社群經驗分享
 * Oct 15 / 淡江大學資訊顧問室 : [GNU/Linux 系統介紹及安裝](https://denny.one/Linux-intro-slide/)
-* Oct 29 / MOPCON 2017 : [我們把他拆了](https://denny.one/MOPCON-2017-LT-Slide/) with [海豹](https://github.com/seadog007)
+* Oct 29 / [MOPCON 2017](https://mopcon.org/2017/) : [我們把他拆了](https://denny.one/MOPCON-2017-LT-Slide/) with [海豹](https://github.com/seadog007)
 * Nov 18 / 彰化師範大學 : 【多元通識】印象彰化 - Andorid App 入門及實做
 * Nov 29 / 淡江大學資訊顧問室 : Bash Intro
 * Dec 6 - 11 / 106 台北資訊月 開源軟體館 小講堂 : 開放原始碼與社群經營之道
