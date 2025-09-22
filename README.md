@@ -88,7 +88,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * May 26 / 資策會開源貢獻者培育方案 : [從軟體工程角度看開源專案的協作方式](https://denny.one/TheOpenSourceWaySlide/)
 * Jun 10 / [INFAS 全國中學生資訊年會](http://infas.club) Keynote : [Stay Hungry, Stay Foolish.](https://denny.one/INFAS2018/)
 * Jul 12 / 中央研究院 資訊服務處 : [當個懶惰的聰明人 - 實戰 CI/CD 與 container](https://denny.one/ci_cd_container/)
-* Jul 14 / 2018 TWIGF 台灣網路治理論壇: 網路治理在校園 主持人
+* Jul 14 / [2018 TWIGF 台灣網路治理論壇](https://www.igf.org.tw/events/archives/2018-2/%E8%88%87%E8%AB%87%E4%BA%BA/) : 網路治理在校園 主持人 [活動錄影](https://www.youtube.com/watch?v=ODwzGOmwWF0)
 * Jul 18 / 教育部校園自由軟體數位資源推廣服務中心 OSSACC : [ezgo14 發表會 - Enlightenment 從啟蒙觸發](https://denny.one/ezgo14/)
 * Nov 4 / [MOPCON 2018](https://mopcon.org/2018/) : [SITCON 2019](https://docs.google.com/presentation/d/1n2JdAbkMz-2pFtnzevih2tmLizYalM4JJWMAAc0nnS4/preview)
 * Nov 18 / SITCON 工作人員 Workshop : [為什麼聰明人都用電子郵件？](https://www.youtube.com/watch?v=5kXkcR6TKhc) / [投影片連結](https://denny.one/mail-slide/)
