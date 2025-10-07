@@ -21,6 +21,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 
 * Sep 20 / 勞動部勞動力發展署雲嘉南分署 - YS青年職涯發展中心 : [2025 YS 青年論壇 《我們不只寫程式，也在寫未來》](https://www.facebook.com/ystainan/posts/pfbid0cVv1oJrriWC8XvQABiScsN37yAhdoUaQKkYF1whVC7couZdLaw1KPdbJUDCBJMJyl)專題演講 - 別等主線任務：用社群把你的支線升級成未來 [簡報連結](https://denny.one/20250919-ysyct/)
 * Sep 20 / 勞動部勞動力發展署雲嘉南分署 - YS青年職涯發展中心 : [2025 YS 青年論壇 《我們不只寫程式，也在寫未來》](https://www.facebook.com/ystainan/posts/pfbid0cVv1oJrriWC8XvQABiScsN37yAhdoUaQKkYF1whVC7couZdLaw1KPdbJUDCBJMJyl)議題分組討論 - 資訊人才就業組 Breaking the Code：在科技浪潮中編寫職涯
+* Oct 7 / [GDG Cloud Taipei](https://gdg.community.dev/gdg-cloud-taipei/) : [Cloud AI Study Jam 2025 GDG Cloud Taipei: 生成式 AI 培訓計畫](https://gdg.community.dev/events/details/google-gdg-cloud-taipei-presents-cloud-ai-study-jam-2025-gdg-cloud-taipei-sheng-cheng-shi-ai-pei-xun-ji-hua/) [簡報連結](https://denny.one/20251007-Google-Cloud-AI-Study-Jam-Taipei/)
 
 # 2024
 * Apr 15 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（上） [簡報連結](https://denny.one/git-slide/)
