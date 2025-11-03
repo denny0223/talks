@@ -6,6 +6,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Newest version of [Introduction to Network and HTTP/RESTful slide](https://denny.one/the-net/)
 * Newest version of [OSS Software Engineering](https://denny.one/OSS-Software-Engineering/)
 * Newest version of [Intro SITCON](https://denny.one/Intro-SITCON/)
+* Newest version of [可複製的好課：教學的系統思考](https://denny.one/good-class/)
 
 # 2025
 * Apr 12 / [GDG Taichung - 四月 Build With AI Taichung](https://gdg.community.dev/events/details/google-gdg-taichung-presents-si-yue-build-with-ai-taichung/) : 資料驅動決策實踐 - 運用 BigQuery、Gemini 與 Looker Studio 進行資料分析 [簡報連結](https://denny.one/bwai-2025/)
@@ -17,11 +18,13 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Aug 15 / [HITCON 台灣駭客年會](https://hitcon.org/2025/) : HITCON 2025 Day 1 開幕 [活動錄影](https://www.youtube.com/watch?v=6eHi9GlmVR4)
 * Sep 12 / GDG on Campus : Taiwan Google Developer Groups On Campus 2025 Workshop [簡報連結](https://denny.one/GDGoC-2025-Workshop/)
 * Sep 13 / [BenQ 【即code救援 重返自由】實體集結｜台北站](https://www.benq.com/zh-tw/campaign/rd-save-code-free-yourself.html) : 重返自由 - 硬體讓你自由了，軟體也要自由！[簡報連結](https://denny.one/20250913-BenQ-OSS/)
-* Sep 17 / 陽明交大軟體開發社（NYCU SDC）: 可複製的好課：教學的系統思考 [簡報連結](https://denny.one/20250917-NYCU-SDC/)
+* Sep 17 / 陽明交大軟體開發社（NYCU SDC）: 可複製的好課：教學的系統思考 [簡報連結](https://denny.one/good-class/)
 
 * Sep 20 / 勞動部勞動力發展署雲嘉南分署 - YS青年職涯發展中心 : [2025 YS 青年論壇 《我們不只寫程式，也在寫未來》](https://www.facebook.com/ystainan/posts/pfbid0cVv1oJrriWC8XvQABiScsN37yAhdoUaQKkYF1whVC7couZdLaw1KPdbJUDCBJMJyl)專題演講 - 別等主線任務：用社群把你的支線升級成未來 [簡報連結](https://denny.one/20250919-ysyct/)
 * Sep 20 / 勞動部勞動力發展署雲嘉南分署 - YS青年職涯發展中心 : [2025 YS 青年論壇 《我們不只寫程式，也在寫未來》](https://www.facebook.com/ystainan/posts/pfbid0cVv1oJrriWC8XvQABiScsN37yAhdoUaQKkYF1whVC7couZdLaw1KPdbJUDCBJMJyl)議題分組討論 - 資訊人才就業組 Breaking the Code：在科技浪潮中編寫職涯
 * Oct 7 / [GDG Cloud Taipei](https://gdg.community.dev/gdg-cloud-taipei/) : [Cloud AI Study Jam 2025 GDG Cloud Taipei: 生成式 AI 培訓計畫](https://gdg.community.dev/events/details/google-gdg-cloud-taipei-presents-cloud-ai-study-jam-2025-gdg-cloud-taipei-sheng-cheng-shi-ai-pei-xun-ji-hua/) [簡報連結](https://denny.one/20251007-Google-Cloud-AI-Study-Jam-Taipei/)
+* Oct 29 / [2024 年度 TWNIC 網路相關計畫](https://blog.twnic.tw/2025/02/07/30893/) : 「自律或他律？網路平臺內容審核機制之法制與技術革新」 諮詢會議 [簡報連結](https://denny.one/20251029-TWNIC-Grants-2024-platform-govern)
+* Nov 3 / [大同大學科學開源服務社](https://ttussc.com/) : 可複製的好課：教學的系統思考 [簡報連結](https://denny.one/good-class/)
 
 # 2024
 * Apr 15 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（上） [簡報連結](https://denny.one/git-slide/)
