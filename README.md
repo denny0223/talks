@@ -25,6 +25,9 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Oct 7 / [GDG Cloud Taipei](https://gdg.community.dev/gdg-cloud-taipei/) : [Cloud AI Study Jam 2025 GDG Cloud Taipei: 生成式 AI 培訓計畫](https://gdg.community.dev/events/details/google-gdg-cloud-taipei-presents-cloud-ai-study-jam-2025-gdg-cloud-taipei-sheng-cheng-shi-ai-pei-xun-ji-hua/) [簡報連結](https://denny.one/20251007-Google-Cloud-AI-Study-Jam-Taipei/)
 * Oct 29 / [2024 年度 TWNIC 網路相關計畫](https://blog.twnic.tw/2025/02/07/30893/) : 「自律或他律？網路平臺內容審核機制之法制與技術革新」 諮詢會議 [簡報連結](https://denny.one/20251029-TWNIC-Grants-2024-platform-govern)
 * Nov 3 / [大同大學科學開源服務社](https://ttussc.com/) : 可複製的好課：教學的系統思考 [簡報連結](https://denny.one/good-class/)
+* Nov 11 / [中國文化大學專案研發中心](https://incubator.sce.pccu.edu.tw/) : [2025 Vibe Coding青年放輕松](https://incubator.sce.pccu.edu.tw/p/406-1000-1283,r12.php?Lang=zh-tw) 賽前線上工作坊 [簡報連結](https://denny.one/20251111-Vibe-Coding-Workshop/)
+* Nov 13 / [數位發展部](https://moda.gov.tw/) : 單軌到共創：開源軟體策略與應用行動論壇 台北場 專家學者分享 - 開源 × 安全 [簡報連結](https://denny.one/202511-oss-strategy-co-creation-forum/)
+* Nov 19 / [數位發展部](https://moda.gov.tw/) : 單軌到共創：開源軟體策略與應用行動論壇 台南場 專家學者分享 - 開源 × 安全 [簡報連結](https://denny.one/202511-oss-strategy-co-creation-forum/)
 
 # 2024
 * Apr 15 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（上） [簡報連結](https://denny.one/git-slide/)
