@@ -19,7 +19,6 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Sep 12 / GDG on Campus : Taiwan Google Developer Groups On Campus 2025 Workshop [簡報連結](https://denny.one/GDGoC-2025-Workshop/)
 * Sep 13 / [BenQ 【即code救援 重返自由】實體集結｜台北站](https://www.benq.com/zh-tw/campaign/rd-save-code-free-yourself.html) : 重返自由 - 硬體讓你自由了，軟體也要自由！[簡報連結](https://denny.one/20250913-BenQ-OSS/)
 * Sep 17 / 陽明交大軟體開發社（NYCU SDC）: 可複製的好課：教學的系統思考 [簡報連結](https://denny.one/good-class/)
-
 * Sep 20 / 勞動部勞動力發展署雲嘉南分署 - YS青年職涯發展中心 : [2025 YS 青年論壇 《我們不只寫程式，也在寫未來》](https://www.facebook.com/ystainan/posts/pfbid0cVv1oJrriWC8XvQABiScsN37yAhdoUaQKkYF1whVC7couZdLaw1KPdbJUDCBJMJyl)專題演講 - 別等主線任務：用社群把你的支線升級成未來 [簡報連結](https://denny.one/20250919-ysyct/)
 * Sep 20 / 勞動部勞動力發展署雲嘉南分署 - YS青年職涯發展中心 : [2025 YS 青年論壇 《我們不只寫程式，也在寫未來》](https://www.facebook.com/ystainan/posts/pfbid0cVv1oJrriWC8XvQABiScsN37yAhdoUaQKkYF1whVC7couZdLaw1KPdbJUDCBJMJyl)議題分組討論 - 資訊人才就業組 Breaking the Code：在科技浪潮中編寫職涯
 * Oct 7 / [GDG Cloud Taipei](https://gdg.community.dev/gdg-cloud-taipei/) : [Cloud AI Study Jam 2025 GDG Cloud Taipei: 生成式 AI 培訓計畫](https://gdg.community.dev/events/details/google-gdg-cloud-taipei-presents-cloud-ai-study-jam-2025-gdg-cloud-taipei-sheng-cheng-shi-ai-pei-xun-ji-hua/) [簡報連結](https://denny.one/20251007-Google-Cloud-AI-Study-Jam-Taipei/)
@@ -28,6 +27,8 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Nov 11 / [中國文化大學專案研發中心](https://incubator.sce.pccu.edu.tw/) : [2025 Vibe Coding青年放輕松](https://incubator.sce.pccu.edu.tw/p/406-1000-1283,r12.php?Lang=zh-tw) 賽前線上工作坊 [簡報連結](https://denny.one/20251111-Vibe-Coding-Workshop/)
 * Nov 13 / [數位發展部](https://moda.gov.tw/) : 單軌到共創：開源軟體策略與應用行動論壇 台北場 專家學者分享 - 開源 × 安全 [簡報連結](https://denny.one/202511-oss-strategy-co-creation-forum/)
 * Nov 19 / [數位發展部](https://moda.gov.tw/) : 單軌到共創：開源軟體策略與應用行動論壇 台南場 專家學者分享 - 開源 × 安全 [簡報連結](https://denny.one/202511-oss-strategy-co-creation-forum/)
+* Nov 26 / [GDG on Campus NCCU](https://www.instagram.com/gdg.nccu/) : From Code to Community: 經營規劃社群的心法大揭秘
+* Dec 3 / 國立新竹科學園區實驗高級中等學校 多元講座 : 被演算法推薦的人生？資訊科技世代的生涯選擇與逃避自由 [簡報連結](https://denny.one/algolife/)
 
 # 2024
 * Apr 15 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（上） [簡報連結](https://denny.one/git-slide/)
