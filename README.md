@@ -84,7 +84,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Aug 6 / [SITCON Camp 2019](https://sitcon.camp/2019/) : [網路 / HTTP / RESTful 觀念及實做](https://denny.one/the-net/) [課程錄影](https://youtu.be/3r-Z2zcAhoI)
 * Aug 18 / [COSCUP 2019](https://coscup.org/2019/) : Lightning Talk - [OPass 專案回顧及展望](https://denny.one/OPass-COSCUP2019LT/)
 * Aug 24 / [HITCON 台灣駭客年會 CMT 2019](https://hitcon.org/2019/CMT/) : Lightning Talk - OPass 開發秘辛 [議程錄影](https://youtu.be/ugldBbCqUEg?t=315)
-* Aug 26 / 教育部推動大學程式設計教學 - [全國大學程式設計教學交流會－< / 程式+跨域= ∞ >](http://plus.pro.edu.tw/news_detail04.jsp) : [從 SITCON 學生計算機年會 談社群經營](https://denny.one/Intro-SITCON/)
+* Aug 26 / 教育部推動大學程式設計教學 - [全國大學程式設計教學交流會－< / 程式+跨域= ∞ >](http://plus.pro.edu.tw/news_detail04.jsp) : [從 SITCON 學生計算機年會 談社群經營](https://denny.one/Intro-SITCON/) [議程錄影](https://www.youtube.com/watch?v=ljfJXMkAGpQ)
 * Oct 20 / [MOPCON 2019](https://mopcon.org/2019/) : [SITCON 2020](https://docs.google.com/presentation/d/1n2JdAbkMz-2pFtnzevih2tmLizYalM4JJWMAAc0nnS4/preview) [議程錄影](https://youtu.be/WCBnql0JNP0?t=1382)
 * Nov 30 / [Open UP Summit 2019](https://www.accupass.com/event/1908160440581452622676) : Open Source Communities in Taiwan with 鄭鴻旗, 蘇恆誠, 馬志瑋 [議程錄影](https://www.youtube.com/watch?v=Ao2i76RbneI)
 
