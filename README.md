@@ -21,7 +21,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Apr 26 / [GDG Tainan - Build with AI Tainan 2025 #2 - BigQuery, Gemini & Looker Studio feat. 使用者研究工作坊](https://gdg.community.dev/events/details/google-gdg-taichung-presents-si-yue-build-with-ai-taichung/) : 資料驅動決策實踐 - 運用 BigQuery、Gemini 與 Looker Studio 進行資料分析 [簡報連結](https://denny.one/bwai-2025/)
 * May 1 / [大同大學科學創意暨開源服務社](https://ttussc.github.io/) - Git 版本控制（下） [簡報連結](https://denny.one/git-slide/)
 * May 24 / [GDG on Campus DevJam TW 2025](https://devjam.tw/) 前置工作坊 : 嘴砲寫程式，Gemini 快炒 Todo，Cloud Run 端上雲 [簡報連結](https://denny.one/DevJam-TW-2025/)
-* Jul 10 / [SITCON Camp 2025](https://sitcon.camp/2025/) : 網路概論 [投影片連結](https://denny.one/the-net/)
+* Jul 10 / [SITCON Camp 2025](https://sitcon.camp/2025/) : 網路概論 [投影片連結](https://denny.one/the-net/) [課程錄影](https://youtu.be/y240RVF6laE)
 * Aug 15 / [HITCON 台灣駭客年會](https://hitcon.org/2025/) : HITCON 2025 Day 1 開幕 [活動錄影](https://www.youtube.com/watch?v=6eHi9GlmVR4)
 * Sep 12 / GDG on Campus : Taiwan Google Developer Groups On Campus 2025 Workshop [簡報連結](https://denny.one/GDGoC-2025-Workshop/)
 * Sep 13 / [BenQ 【即code救援 重返自由】實體集結｜台北站](https://www.benq.com/zh-tw/campaign/rd-save-code-free-yourself.html) : 重返自由 - 硬體讓你自由了，軟體也要自由！[簡報連結](https://denny.one/20250913-BenQ-OSS/)
