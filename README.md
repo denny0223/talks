@@ -13,6 +13,7 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * Mar 19 / [大同大學科學開源服務社](https://ttussc.org/) - Git 版本控制（下） [簡報連結](https://denny.one/git-slide/)
 * Mar 28 / [SITCON 2026](https://sitcon.org/2026/) : [開幕](https://sitcon.org/2026/agenda/be3c85/) with 副召 Windless, 總召 柴柴, 副總統 蕭美琴 [總統府新聞](https://www.president.gov.tw/News/39930) [議程錄影](https://www.youtube.com/watch?v=0ZTTQj6GYNU) [總統府 Flickr](https://www.flickr.com/photos/presidentialoffice/albums/72177720332679694/page3)
 * Apr 13 / 總統接見「第三屆 IT Matters Awards 獲獎者及評審團」[總統府新聞](https://www.president.gov.tw/NEWS/39967) [總統府 Flickr](https://www.flickr.com/photos/presidentialoffice/albums/72177720333045341/page2)
+* Apr 17 / 成淵高中班級 & 資訊研究社 - 創社團、玩社群，這其中或許做對了什麼？ [簡報連結](https://denny.one/20260417-cyhs/)
 
 # 2025
 * Apr 12 / [GDG Taichung - 四月 Build With AI Taichung](https://gdg.community.dev/events/details/google-gdg-taichung-presents-si-yue-build-with-ai-taichung/) : 資料驅動決策實踐 - 運用 BigQuery、Gemini 與 Looker Studio 進行資料分析 [簡報連結](https://denny.one/bwai-2025/)
