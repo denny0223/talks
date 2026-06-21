@@ -17,6 +17,9 @@ Presentations of Denny Huang. Welcome to send speech invitations via email: <den
 * May 3 / 新北市政府資訊中心 臺北市政府資訊局 : [2026 雙北程式設計節 城市儀表板大黑客松](https://codefest.taipei/2026-spring/) 評審
 * May 18 / [Google Cloud Gen AI Academy APAC Edition](https://hack2skill.com/event/apac-genaiacademy?tab=cohort2) : Introduction to the Conversational Analytics in BigQuery [課程錄影](https://www.youtube.com/live/VJo_K0aVe4o)
 * May 27 / [Google Cloud Gen AI Academy APAC Edition](https://hack2skill.com/event/apac-genaiacademy?tab=cohort2) : AI-Assisted Data Science with BigQuery [課程錄影](https://www.youtube.com/live/P7XAMLITeEk)
+* Jun 17 / [HappyDesigner Meetup](https://luma.com/4ixqx6sa) : AI Native 時代我居然還想教學生軟體開發生命週期，到底是哪裡出了問題？ [簡報連結](https://denny.one/Harness-Engineering/)
+* Jun 18 / [GDG Taiepi 月會](https://gdg.community.dev/e/mnfqcj/) : AI 世代，有了 Harness，還需要軟體工程嗎？ [簡報連結](https://denny.one/Harness-Engineering/)
+* Jun 25 / [Google 數位人才探索計畫](https://growonairtw.withgoogle.com/events/digitaleducation) : Google Cloud 學程總整課程 [簡報連結](https://denny.one/20260625-digital-education-google-cloud/)
 
 # 2025
 * Apr 12 / [GDG Taichung - 四月 Build With AI Taichung](https://gdg.community.dev/events/details/google-gdg-taichung-presents-si-yue-build-with-ai-taichung/) : 資料驅動決策實踐 - 運用 BigQuery、Gemini 與 Looker Studio 進行資料分析 [簡報連結](https://denny.one/bwai-2025/)
