@@ -1,0 +1,61 @@
+{% assign absolute_url = page.url | absolute_url %}
+{% if page.collection == "events" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": {{ page.title | jsonify }},
+    "startDate": {{ page.date | date: "%Y-%m-%d" | jsonify }},
+    "description": {{ page.summary | default: page.title | jsonify }},
+    "url": {{ absolute_url | jsonify }},
+    "inLanguage": {{ page.language | default: site.lang | jsonify }},
+    "performer": {
+      "@type": "Person",
+      "name": {{ site.author.name | jsonify }},
+      "url": {{ site.author.url | jsonify }}
+    }{% if page.event_url %},
+    "location": {
+      "@type": "Place",
+      "name": {{ page.event | jsonify }},
+      "url": {{ page.event_url | jsonify }}
+    }{% elsif page.event %},
+    "location": {
+      "@type": "Place",
+      "name": {{ page.event | jsonify }}
+    }{% endif %}
+  }
+  </script>
+{% elsif page.collection == "slides" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PresentationDigitalDocument",
+    "name": {{ page.title | jsonify }},
+    "description": {{ page.summary | default: page.title | jsonify }},
+    "url": {{ absolute_url | jsonify }},
+    "inLanguage": {{ page.language | default: site.lang | jsonify }},
+    "author": {
+      "@type": "Person",
+      "name": {{ site.author.name | jsonify }},
+      "url": {{ site.author.url | jsonify }}
+    }{% if page.external_url %},
+    "sameAs": {{ page.external_url | jsonify }}{% endif %}
+  }
+  </script>
+{% else %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "description": {{ site.description | jsonify }},
+    "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+    "inLanguage": {{ site.lang | jsonify }},
+    "author": {
+      "@type": "Person",
+      "name": {{ site.author.name | jsonify }},
+      "url": {{ site.author.url | jsonify }}
+    }
+  }
+  </script>
+{% endif %}

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  {% if page.summary %}
+    <p class="summary">{{ page.summary }}</p>
+  {% endif %}
+
+  {% assign topic_slug = page.slug %}
+  {% assign topic_events = site.events | where_exp: "event", "event.topics contains topic_slug" | sort: "date" | reverse %}
+  {% assign topic_slides = site.slides | where_exp: "slide", "slide.topics contains topic_slug" | sort: "title" %}
+
+  {% if topic_events.size > 0 %}
+    <h2>Records</h2>
+    <ul class="record-list">
+      {% for event in topic_events %}
+        <li>{{ event.display_date | default: event.date | date: "%Y-%m-%d" }} / <a href="{{ event.url | relative_url }}">{{ event.title }}</a>{% if event.event %} - {{ event.event }}{% endif %}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if topic_slides.size > 0 %}
+    <h2>Slides</h2>
+    <ul class="record-list">
+      {% for slide in topic_slides %}
+        <li><a href="{{ slide.url | relative_url }}">{{ slide.title }}</a>{% if slide.external_url %} / <a href="{{ slide.external_url }}">Original slide</a>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {{ content }}
+</article>

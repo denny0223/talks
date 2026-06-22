@@ -1,1 +1,55 @@
+title: Denny Huang Talks
+description: Denny Huang 的演講、課程、活動紀錄與投影片索引。
+url: https://denny.one
+baseurl: /talks
+lang: zh-TW
+timezone: Asia/Taipei
+
+author:
+  name: Denny Huang
+  email: denny0223@gmail.com
+  url: https://denny.one/
+
 theme: jekyll-theme-slate
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  events:
+    output: true
+    permalink: /events/:name/
+  slides:
+    output: true
+    permalink: /slides/:name/
+  topics:
+    output: true
+    permalink: /topics/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /talks/assets/og-default.png
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+  - scope:
+      path: ""
+      type: slides
+    values:
+      layout: slide
+  - scope:
+      path: ""
+      type: topics
+    values:
+      layout: topic
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - scripts/

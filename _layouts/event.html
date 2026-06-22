@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  <p class="meta">{{ page.display_date | default: page.date | date: "%Y-%m-%d" }}{% if page.event %} / {{ page.event }}{% endif %}</p>
+  {% if page.summary %}
+    <p class="summary">{{ page.summary }}</p>
+  {% endif %}
+
+  <dl class="details">
+    <dt>Role</dt>
+    <dd>{{ page.role | default: "speaker" }}</dd>
+    {% if page.event_url %}
+      <dt>Event</dt>
+      <dd><a href="{{ page.event_url }}">{{ page.event }}</a></dd>
+    {% elsif page.event %}
+      <dt>Event</dt>
+      <dd>{{ page.event }}</dd>
+    {% endif %}
+    {% if page.slides and page.slides.size > 0 %}
+      <dt>Slides</dt>
+      <dd>
+        <ul>
+          {% for slide_id in page.slides %}
+            {% assign slide = site.slides | where: "slug", slide_id | first %}
+            {% if slide %}
+              <li><a href="{{ slide.url | relative_url }}">{{ slide.title }}</a>{% if slide.external_url %} / <a href="{{ slide.external_url }}">Original slide</a>{% endif %}</li>
+            {% else %}
+              <li>{{ slide_id }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </dd>
+    {% endif %}
+    {% if page.videos and page.videos.size > 0 %}
+      <dt>Videos</dt>
+      <dd>
+        <ul>
+          {% for video in page.videos %}
+            <li><a href="{{ video.url }}">{{ video.label | default: video.url }}</a></li>
+          {% endfor %}
+        </ul>
+      </dd>
+    {% endif %}
+    {% if page.links and page.links.size > 0 %}
+      <dt>Related links</dt>
+      <dd>
+        <ul>
+          {% for link in page.links %}
+            <li><a href="{{ link.url }}">{{ link.label | default: link.url }}</a></li>
+          {% endfor %}
+        </ul>
+      </dd>
+    {% endif %}
+  </dl>
+
+  {% if page.topics and page.topics.size > 0 %}
+    <h2>Topics</h2>
+    <ul class="tag-list">
+      {% for topic_id in page.topics %}
+        {% assign topic = site.topics | where: "slug", topic_id | first %}
+        <li>{% if topic %}<a href="{{ topic.url | relative_url }}">{{ topic.title }}</a>{% else %}<span>{{ topic_id }}</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {{ content }}
+</article>

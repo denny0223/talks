@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  {% if page.summary %}
+    <p class="summary">{{ page.summary }}</p>
+  {% endif %}
+
+  <dl class="details">
+    {% if page.external_url %}
+      <dt>Original slide</dt>
+      <dd><a href="{{ page.external_url }}">{{ page.external_url }}</a></dd>
+    {% endif %}
+    {% if page.first_presented %}
+      <dt>First presented</dt>
+      <dd>{{ page.first_presented }}</dd>
+    {% endif %}
+    {% if page.language %}
+      <dt>Language</dt>
+      <dd>{{ page.language }}</dd>
+    {% endif %}
+  </dl>
+
+  {% assign related_events = site.events | where_exp: "event", "event.slides contains page.slug" | sort: "date" | reverse %}
+  {% if related_events.size > 0 %}
+    <h2>Related records</h2>
+    <ul class="record-list">
+      {% for event in related_events %}
+        <li>{{ event.display_date | default: event.date | date: "%Y-%m-%d" }} / <a href="{{ event.url | relative_url }}">{{ event.title }}</a>{% if event.event %} - {{ event.event }}{% endif %}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if page.topics and page.topics.size > 0 %}
+    <h2>Topics</h2>
+    <ul class="tag-list">
+      {% for topic_id in page.topics %}
+        {% assign topic = site.topics | where: "slug", topic_id | first %}
+        <li>{% if topic %}<a href="{{ topic.url | relative_url }}">{{ topic.title }}</a>{% else %}<span>{{ topic_id }}</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {{ content }}
+</article>
