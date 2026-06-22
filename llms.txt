@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# Denny Huang Talks
+
+This site records Denny Huang's public talks, courses, panels, hosting, judging, and slide links.
+
+Canonical human entrypoint:
+- {{ "/" | absolute_url }}
+
+Machine-readable data:
+- {{ "/talks.json" | absolute_url }}: structured event records
+- {{ "/slides.json" | absolute_url }}: structured slide records
+- {{ "/llms-full.txt" | absolute_url }}: full Markdown export for agents
+- {{ "/sitemap.xml" | absolute_url }}: search sitemap
+
+Important indexes:
+- {{ "/events/" | absolute_url }}
+- {{ "/slides/" | absolute_url }}
+- {{ "/topics/" | absolute_url }}
+
+Notes:
+- Original slide URLs are preserved for sharing.
+- `/slides/*` pages provide searchable context and link back to original slides.
+- Most content is Traditional Chinese with English product and event names kept as written.

@@ -1,0 +1,23 @@
+---
+layout: null
+permalink: /slides.json
+sitemap: false
+---
+[
+{% assign slides = site.slides | sort: "title" %}
+{% for slide in slides %}
+  {% assign related_events = site.events | where_exp: "event", "event.slides contains slide.slug" %}
+  {
+    "id": {{ slide.slug | jsonify }},
+    "title": {{ slide.title | jsonify }},
+    "external_url": {{ slide.external_url | jsonify }},
+    "summary": {{ slide.summary | jsonify }},
+    "topics": {{ slide.topics | jsonify }},
+    "language": {{ slide.language | jsonify }},
+    "first_presented": {{ slide.first_presented | jsonify }},
+    "aliases": {{ slide.aliases | jsonify }},
+    "related_events": [{% for event in related_events %}{{ event.slug | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+    "url": {{ slide.url | absolute_url | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

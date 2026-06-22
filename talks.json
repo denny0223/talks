@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /talks.json
+sitemap: false
+---
+[
+{% assign events = site.events | sort: "date" | reverse %}
+{% for event in events %}
+  {
+    "id": {{ event.slug | jsonify }},
+    "title": {{ event.title | jsonify }},
+    "date": {{ event.date | date: "%Y-%m-%d" | jsonify }},
+    "display_date": {{ event.display_date | jsonify }},
+    "event": {{ event.event | jsonify }},
+    "event_url": {{ event.event_url | jsonify }},
+    "role": {{ event.role | jsonify }},
+    "language": {{ event.language | jsonify }},
+    "summary": {{ event.summary | jsonify }},
+    "topics": {{ event.topics | jsonify }},
+    "slides": {{ event.slides | jsonify }},
+    "videos": {{ event.videos | jsonify }},
+    "links": {{ event.links | jsonify }},
+    "url": {{ event.url | absolute_url | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

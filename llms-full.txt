@@ -1,0 +1,48 @@
+---
+layout: null
+permalink: /llms-full.txt
+sitemap: false
+---
+# Denny Huang Talks Full Data
+
+## Topics
+
+{% assign topics = site.topics | sort: "title" %}
+{% for topic in topics %}
+### {{ topic.title }}
+
+- URL: {{ topic.url | absolute_url }}
+- Summary: {{ topic.summary }}
+
+{% endfor %}
+## Slides
+
+{% assign slides = site.slides | sort: "title" %}
+{% for slide in slides %}
+### {{ slide.title }}
+
+- ID: {{ slide.slug }}
+- URL: {{ slide.url | absolute_url }}
+- Original: {{ slide.external_url }}
+- First presented: {{ slide.first_presented }}
+- Topics: {{ slide.topics | join: ", " }}
+- Summary: {{ slide.summary }}
+
+{% endfor %}
+## Event Records
+
+{% assign events = site.events | sort: "date" | reverse %}
+{% for event in events %}
+### {{ event.title }}
+
+- Date: {{ event.date | date: "%Y-%m-%d" }}
+- Display date: {{ event.display_date }}
+- Event: {{ event.event }}
+- URL: {{ event.url | absolute_url }}
+- Event URL: {{ event.event_url }}
+- Role: {{ event.role }}
+- Topics: {{ event.topics | join: ", " }}
+- Slides: {{ event.slides | join: ", " }}
+- Summary: {{ event.summary }}
+
+{% endfor %}
