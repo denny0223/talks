@@ -1,0 +1,89 @@
+#!/usr/bin/env node
+
+const fs = require("node:fs");
+const path = require("node:path");
+
+const root = path.resolve(__dirname, "..");
+const args = new Map();
+for (let i = 2; i < process.argv.length; i += 2) {
+  const key = process.argv[i];
+  const value = process.argv[i + 1];
+  if (!key || !key.startsWith("--") || value === undefined) {
+    usage();
+  }
+  args.set(key.slice(2), value);
+}
+
+for (const required of ["date", "title", "event"]) {
+  if (!args.has(required)) usage(`Missing --${required}`);
+}
+
+const date = args.get("date");
+if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) usage("--date must use YYYY-MM-DD");
+
+function usage(message) {
+  if (message) console.error(message);
+  console.error(`Usage:
+  scripts/new-event --date YYYY-MM-DD --title "Talk title" --event "Event name" [--event-url URL] [--slide slide-id] [--topics topic-a,topic-b]`);
+  process.exit(1);
+}
+
+function slugify(input) {
+  return input
+    .normalize("NFKD")
+    .replace(/[^\w\s-]/g, " ")
+    .toLowerCase()
+    .replace(/_/g, "-")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 70)
+    .replace(/-$/g, "") || "event";
+}
+
+function yamlString(value) {
+  return JSON.stringify(value || "");
+}
+
+function yamlArray(values) {
+  if (!values || values.length === 0) return "[]";
+  return `\n${values.map((value) => `  - ${yamlString(value)}`).join("\n")}`;
+}
+
+const slug = `${date}-${slugify(args.get("title"))}`;
+const filePath = path.join(root, "_events", `${slug}.md`);
+if (fs.existsSync(filePath)) {
+  console.error(`${filePath} already exists`);
+  process.exit(1);
+}
+
+const topics = args.get("topics") ? args.get("topics").split(",").map((item) => item.trim()).filter(Boolean) : [];
+const slides = args.get("slide") ? args.get("slide").split(",").map((item) => item.trim()).filter(Boolean) : [];
+const slideDir = path.join(root, "_slides");
+for (const slide of slides) {
+  if (!fs.existsSync(path.join(slideDir, `${slide}.md`))) {
+    console.error(`Unknown slide '${slide}'. Create _slides/${slide}.md first or use an existing slide id.`);
+    process.exit(1);
+  }
+}
+
+const body = `---
+title: ${yamlString(args.get("title"))}
+date: ${date}
+display_date: ${yamlString(date)}
+event: ${yamlString(args.get("event"))}
+event_url: ${yamlString(args.get("event-url") || "")}
+role: "speaker"
+language: "zh-TW"
+summary: ""
+topics: ${yamlArray(topics)}
+slides: ${yamlArray(slides)}
+videos: []
+links: []
+---
+
+${args.get("event")} : ${args.get("title")}
+`;
+
+fs.writeFileSync(filePath, body);
+console.log(`Created ${path.relative(root, filePath)}`);

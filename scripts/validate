@@ -1,0 +1,136 @@
+#!/usr/bin/env node
+
+const fs = require("node:fs");
+const path = require("node:path");
+
+const root = path.resolve(__dirname, "..");
+const collections = {
+  events: path.join(root, "_events"),
+  slides: path.join(root, "_slides"),
+  topics: path.join(root, "_topics"),
+};
+
+function fail(message) {
+  console.error(message);
+  process.exitCode = 1;
+}
+
+function readCollection(dir) {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
+    .filter((file) => file.endsWith(".md"))
+    .sort()
+    .map((file) => {
+      const fullPath = path.join(dir, file);
+      const text = fs.readFileSync(fullPath, "utf8");
+      const match = text.match(/^---\n([\s\S]*?)\n---\n?/);
+      if (!match) {
+        fail(`${file}: missing front matter`);
+        return { file, data: {}, body: text };
+      }
+      return { file, slug: file.replace(/\.md$/, ""), data: parseFrontMatter(match[1]), body: text.slice(match[0].length) };
+    });
+}
+
+function parseFrontMatter(source) {
+  const data = {};
+  const lines = source.split(/\n/);
+  let key = null;
+  for (const line of lines) {
+    const top = line.match(/^([A-Za-z0-9_-]+):(?:\s*(.*))?$/);
+    if (top) {
+      key = top[1];
+      const raw = top[2] || "";
+      if (raw === "[]") data[key] = [];
+      else if (raw.startsWith('"')) data[key] = JSON.parse(raw);
+      else data[key] = raw;
+      continue;
+    }
+    const list = line.match(/^\s+-\s+(.*)$/);
+    if (list && key) {
+      if (!Array.isArray(data[key])) data[key] = [];
+      const raw = list[1];
+      if (raw.includes(": ")) {
+        const [firstKey, ...rest] = raw.split(": ");
+        const item = { [firstKey]: JSON.parse(rest.join(": ")) };
+        data[key].push(item);
+      } else {
+        data[key].push(raw.startsWith('"') ? JSON.parse(raw) : raw);
+      }
+      continue;
+    }
+    const nested = line.match(/^\s+([A-Za-z0-9_-]+):\s+(.*)$/);
+    if (nested && key && Array.isArray(data[key]) && data[key].length > 0) {
+      data[key][data[key].length - 1][nested[1]] = JSON.parse(nested[2]);
+    }
+  }
+  return data;
+}
+
+function validUrl(url) {
+  if (!url) return true;
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "https:" || parsed.protocol === "http:" || parsed.protocol === "mailto:";
+  } catch {
+    return false;
+  }
+}
+
+const events = readCollection(collections.events);
+const slides = readCollection(collections.slides);
+const topics = readCollection(collections.topics);
+const slideIds = new Set(slides.map((slide) => slide.slug));
+const topicIds = new Set(topics.map((topic) => topic.slug));
+
+for (const [name, records] of Object.entries({ events, slides, topics })) {
+  const seen = new Set();
+  for (const record of records) {
+    if (seen.has(record.slug)) fail(`${name}/${record.file}: duplicate slug`);
+    seen.add(record.slug);
+  }
+}
+
+for (const event of events) {
+  for (const field of ["title", "date", "summary", "topics"]) {
+    if (!event.data[field] || (Array.isArray(event.data[field]) && event.data[field].length === 0)) {
+      fail(`_events/${event.file}: missing ${field}`);
+    }
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(event.data.date)) fail(`_events/${event.file}: invalid date`);
+  if (!validUrl(event.data.event_url)) fail(`_events/${event.file}: invalid event_url`);
+  for (const topic of event.data.topics || []) {
+    if (!topicIds.has(topic)) fail(`_events/${event.file}: unknown topic ${topic}`);
+  }
+  for (const slide of event.data.slides || []) {
+    if (!slideIds.has(slide)) fail(`_events/${event.file}: unknown slide ${slide}`);
+  }
+  for (const group of ["videos", "links"]) {
+    for (const link of event.data[group] || []) {
+      if (!validUrl(link.url)) fail(`_events/${event.file}: invalid ${group} URL ${link.url}`);
+    }
+  }
+}
+
+for (const slide of slides) {
+  for (const field of ["title", "external_url", "summary", "topics", "first_presented"]) {
+    if (!slide.data[field] || (Array.isArray(slide.data[field]) && slide.data[field].length === 0)) {
+      fail(`_slides/${slide.file}: missing ${field}`);
+    }
+  }
+  if (!validUrl(slide.data.external_url)) fail(`_slides/${slide.file}: invalid external_url`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(slide.data.first_presented)) fail(`_slides/${slide.file}: invalid first_presented`);
+  for (const topic of slide.data.topics || []) {
+    if (!topicIds.has(topic)) fail(`_slides/${slide.file}: unknown topic ${topic}`);
+  }
+}
+
+for (const topic of topics) {
+  for (const field of ["title", "summary"]) {
+    if (!topic.data[field]) fail(`_topics/${topic.file}: missing ${field}`);
+  }
+}
+
+if (!process.exitCode) {
+  console.log(`Validated ${events.length} events, ${slides.length} slides, ${topics.length} topics.`);
+}
