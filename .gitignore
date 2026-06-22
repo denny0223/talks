@@ -1,0 +1,15 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Bundler local state
+.bundle/
+vendor/bundle/
+Gemfile.lock
+
+# Editor and OS temporary files
+*.swp
+*.swo
+*~
+.DS_Store
