@@ -4,6 +4,7 @@ url: https://denny.one
 baseurl: /talks
 lang: zh-TW
 timezone: Asia/Taipei
+future: true
 
 author:
   name: Denny Huang
