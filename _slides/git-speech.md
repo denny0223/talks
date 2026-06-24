@@ -8,6 +8,9 @@ topics:
 language: "zh-TW"
 first_presented: 2017-04-26
 aliases: []
+featured: true
+featured_order: 20
+featured_label: "Git Speech slide"
 ---
 
 大學時就該知道的 Git 版本控制 相關投影片。

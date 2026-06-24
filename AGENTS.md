@@ -46,6 +46,20 @@ If the event uses an existing slide, do not create a new `_slides/` file. Only c
 
 Topics should stay broad and stable. Only add `_topics/topic-id.md` when a new long-term category is clearly needed.
 
+## Featured Slide Versions
+
+The homepage featured slide list is intentionally curated. It represents frequently used latest slide URLs that visitors should be able to access quickly, not the newest slides by date.
+
+Use these fields on `_slides/*.md`:
+
+```yaml
+featured: true
+featured_order: 10
+featured_label: "Git slide"
+```
+
+Only mark a slide as featured when the user explicitly wants it in that priority list. Sort order is controlled by `featured_order`; use gaps of 10. `featured_label` controls homepage link text and should match the existing visitor-facing wording.
+
 ## Migration Script Boundary
 
 `scripts/migrate-readme.js` exists to reproduce the initial migration from the old README list. Do not run it for routine updates: it deletes and regenerates `_events/`, `_slides/`, and `_topics/`.
@@ -76,6 +90,7 @@ This local environment may not have Ruby or Bundler installed. If the build cann
 - Use Traditional Chinese for Taiwanese learner/public-facing summaries unless the original talk title or event name is English.
 - Preserve literal product, event, and UI names as written.
 - Keep original slide URLs as the official sharing targets; `/slides/{slug}/` pages provide searchable context and links back to the original slides.
+- Keep homepage featured slides manually curated via `featured`, `featured_order`, and `featured_label`; do not replace this with date-based automation.
 - Prefer meaningful `summary` text over generic labels such as "簡報連結" or "投影片連結".
 - When correcting obvious typos or URL normalization in data, keep the change small and mention it in the commit or final summary.
 

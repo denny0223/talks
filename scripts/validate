@@ -42,8 +42,7 @@ function parseFrontMatter(source) {
       key = top[1];
       const raw = top[2] || "";
       if (raw === "[]") data[key] = [];
-      else if (raw.startsWith('"')) data[key] = JSON.parse(raw);
-      else data[key] = raw;
+      else data[key] = parseScalar(raw);
       continue;
     }
     const list = line.match(/^\s+-\s+(.*)$/);
@@ -55,16 +54,25 @@ function parseFrontMatter(source) {
         const item = { [firstKey]: JSON.parse(rest.join(": ")) };
         data[key].push(item);
       } else {
-        data[key].push(raw.startsWith('"') ? JSON.parse(raw) : raw);
+        data[key].push(parseScalar(raw));
       }
       continue;
     }
     const nested = line.match(/^\s+([A-Za-z0-9_-]+):\s+(.*)$/);
     if (nested && key && Array.isArray(data[key]) && data[key].length > 0) {
-      data[key][data[key].length - 1][nested[1]] = JSON.parse(nested[2]);
+      data[key][data[key].length - 1][nested[1]] = parseScalar(nested[2]);
     }
   }
   return data;
+}
+
+function parseScalar(raw) {
+  if (raw === "") return "";
+  if (raw === "true") return true;
+  if (raw === "false") return false;
+  if (/^-?\d+$/.test(raw)) return Number(raw);
+  if (raw.startsWith('"')) return JSON.parse(raw);
+  return raw;
 }
 
 function validUrl(url) {
@@ -112,6 +120,7 @@ for (const event of events) {
   }
 }
 
+const featuredOrders = new Map();
 for (const slide of slides) {
   for (const field of ["title", "external_url", "summary", "topics", "first_presented"]) {
     if (!slide.data[field] || (Array.isArray(slide.data[field]) && slide.data[field].length === 0)) {
@@ -122,6 +131,15 @@ for (const slide of slides) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(slide.data.first_presented)) fail(`_slides/${slide.file}: invalid first_presented`);
   for (const topic of slide.data.topics || []) {
     if (!topicIds.has(topic)) fail(`_slides/${slide.file}: unknown topic ${topic}`);
+  }
+  if (slide.data.featured === true) {
+    if (!Number.isInteger(slide.data.featured_order)) {
+      fail(`_slides/${slide.file}: featured slide must set numeric featured_order`);
+    } else if (featuredOrders.has(slide.data.featured_order)) {
+      fail(`_slides/${slide.file}: duplicate featured_order ${slide.data.featured_order} also used by ${featuredOrders.get(slide.data.featured_order)}`);
+    } else {
+      featuredOrders.set(slide.data.featured_order, slide.file);
+    }
   }
 }
 

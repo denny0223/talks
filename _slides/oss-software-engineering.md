@@ -9,6 +9,9 @@ topics:
 language: "zh-TW"
 first_presented: 2023-09-06
 aliases: []
+featured: true
+featured_order: 50
+featured_label: "OSS Software Engineering"
 ---
 
 開源文化與專案管理 相關投影片。

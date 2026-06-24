@@ -36,12 +36,29 @@ topics:
 language: "zh-TW"
 first_presented: 2026-06-25
 aliases: []
+featured: false
+featured_order:
+featured_label:
 ---
 
 A short human-readable note for the slide page.
 ```
 
 The original slide URL remains the official sharing URL. The generated `/slides/slide-id/` page is only a searchable context page that links back to the original slide.
+
+## Feature a Common Slide
+
+The homepage `Featured Slide Versions` list is curated manually for frequently used slides that visitors should access quickly. It is not based on recency.
+
+Set these fields in `_slides/slide-id.md`:
+
+```yaml
+featured: true
+featured_order: 10
+featured_label: "Git slide"
+```
+
+Use gaps of 10 for `featured_order` so future slides can be inserted without renumbering the whole list. `featured_label` controls the homepage link text and should match the visitor-facing label. Do not set `featured: true` just because a slide is new.
 
 ## Add a New Topic
 

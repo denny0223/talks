@@ -7,11 +7,11 @@ description: Denny Huang 的演講、課程、活動紀錄與投影片索引。
 
 Presentations, courses, panels, hosting, judging, and public activity records of Denny Huang. Speech invitations: [denny0223@gmail.com](mailto:denny0223@gmail.com).
 
-## Newest Slide Versions
+## Featured Slide Versions
 
-{% assign latest_slides = site.slides | sort: "first_presented" | reverse %}
-{% for slide in latest_slides limit: 10 %}
-- [{{ slide.title }}]({{ slide.url | relative_url }}) / [Original slide]({{ slide.external_url }})
+{% assign featured_slides = site.slides | where_exp: "slide", "slide.featured == true" | sort: "featured_order" %}
+{% for slide in featured_slides %}
+- Newest version of [{{ slide.featured_label | default: slide.title }}]({{ slide.external_url }})
 {% endfor %}
 
 {% assign events_by_year = site.events | sort: "date" | reverse | group_by_exp: "event", "event.date | date: '%Y'" %}

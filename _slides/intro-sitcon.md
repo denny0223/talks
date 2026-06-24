@@ -8,6 +8,9 @@ topics:
 language: "zh-TW"
 first_presented: 2019-08-26
 aliases: []
+featured: true
+featured_order: 60
+featured_label: "Intro SITCON"
 ---
 
 從 SITCON 學生計算機年會 談社群經營 相關投影片。

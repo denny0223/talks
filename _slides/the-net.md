@@ -9,6 +9,9 @@ topics:
 language: "zh-TW"
 first_presented: 2017-08-15
 aliases: []
+featured: true
+featured_order: 40
+featured_label: "Introduction to Network and HTTP/RESTful slide"
 ---
 
 網路概論 相關投影片。
