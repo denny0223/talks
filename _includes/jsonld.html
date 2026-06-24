@@ -13,7 +13,7 @@
       "@type": "Person",
       "name": {{ site.author.name | jsonify }},
       "url": {{ site.author.url | jsonify }}
-    }{% if page.event_url %},
+    }{% if page.event_url and page.event_url != "" %},
     "location": {
       "@type": "Place",
       "name": {{ page.event | jsonify }},

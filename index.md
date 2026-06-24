@@ -22,19 +22,7 @@ Presentations, courses, panels, hosting, judging, and public activity records of
 {% for event in year.items %}
   <li>
     {{ event.display_date | remove_first: year.name | strip }} /
-    <a href="{{ event.url | relative_url }}">{{ event.title }}</a>
-    {% if event.event %} - {{ event.event }}{% endif %}
-    {% if event.slides and event.slides.size > 0 %}
-      {% for slide_id in event.slides %}
-        {% assign slide = site.slides | where: "slug", slide_id | first %}
-        {% if slide %} [<a href="{{ slide.url | relative_url }}">投影片</a>]{% endif %}
-      {% endfor %}
-    {% endif %}
-    {% if event.videos and event.videos.size > 0 %}
-      {% for video in event.videos %}
-        [<a href="{{ video.url }}">錄影</a>]
-      {% endfor %}
-    {% endif %}
+    {{ event.content | markdownify | remove: "<p>" | remove: "</p>" | strip }}
   </li>
 {% endfor %}
 </ul>

@@ -13,9 +13,8 @@ permalink: /events/
 <ul class="record-list">
 {% for event in year.items %}
   <li>
-    {{ event.display_date | default: event.date | date: "%Y-%m-%d" }} /
-    <a href="{{ event.url | relative_url }}">{{ event.title }}</a>
-    {% if event.event %} - {{ event.event }}{% endif %}
+    {{ event.display_date | remove_first: year.name | strip }} /
+    {{ event.content | markdownify | remove: "<p>" | remove: "</p>" | strip }}
   </li>
 {% endfor %}
 </ul>
