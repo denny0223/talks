@@ -3,7 +3,7 @@ title: "Bash Intro"
 date: 2014-05-23
 display_date: "2014 May 23"
 event: "東華大學資工週"
-event_url: "https://gist.github.com/denny0223/f12a8042ff6349ae247c"
+event_url: ""
 role: "speaker"
 language: "en"
 summary: "東華大學資工週 : Bash Intro"

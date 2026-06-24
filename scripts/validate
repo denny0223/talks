@@ -90,6 +90,7 @@ const slides = readCollection(collections.slides);
 const topics = readCollection(collections.topics);
 const slideIds = new Set(slides.map((slide) => slide.slug));
 const topicIds = new Set(topics.map((topic) => topic.slug));
+const slideUrls = new Map(slides.map((slide) => [slide.slug, slide.data.external_url]));
 
 for (const [name, records] of Object.entries({ events, slides, topics })) {
   const seen = new Set();
@@ -112,6 +113,14 @@ for (const event of events) {
   }
   for (const slide of event.data.slides || []) {
     if (!slideIds.has(slide)) fail(`_events/${event.file}: unknown slide ${slide}`);
+  }
+  const referencedSlideUrls = (event.data.slides || []).map((slide) => slideUrls.get(slide)).filter(Boolean);
+  const referencedVideoUrls = (event.data.videos || []).map((video) => video.url).filter(Boolean);
+  if (event.data.event_url && referencedSlideUrls.includes(event.data.event_url)) {
+    fail(`_events/${event.file}: event_url points to a referenced slide URL`);
+  }
+  if (event.data.event_url && referencedVideoUrls.includes(event.data.event_url)) {
+    fail(`_events/${event.file}: event_url points to a referenced video URL`);
   }
   for (const group of ["videos", "links"]) {
     for (const link of event.data[group] || []) {

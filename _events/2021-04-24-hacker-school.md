@@ -3,7 +3,7 @@ title: "Hacker School 說明及師資交流會"
 date: 2021-04-24
 display_date: "2021 Apr 24"
 event: "台北市駭客實驗教育機構"
-event_url: "https://youtu.be/EUYXTGgAqhg"
+event_url: ""
 role: "speaker"
 language: "zh-TW"
 summary: "台北市駭客實驗教育機構 : Hacker School 說明及師資交流會"

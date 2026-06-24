@@ -3,7 +3,7 @@ title: "Taiwan Google Developer Groups On Campus 2025 Workshop"
 date: 2025-09-12
 display_date: "2025 Sep 12"
 event: "GDG on Campus"
-event_url: "https://denny.one/GDGoC-2025-Workshop/"
+event_url: ""
 role: "speaker"
 language: "en"
 summary: "GDG on Campus : Taiwan Google Developer Groups On Campus 2025 Workshop"
