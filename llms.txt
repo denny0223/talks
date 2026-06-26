@@ -16,6 +16,12 @@ Machine-readable data:
 - {{ "/llms-full.txt" | absolute_url }}: full Markdown export for agents
 - {{ "/sitemap.xml" | absolute_url }}: search sitemap
 
+Event export notes:
+- `date` and `end_date` are canonical date fields.
+- `date_text` is generated display text.
+- `display_date` is a backward-compatible alias for `date_text`.
+- `sequence` preserves same-day ordering and is null for single-record dates.
+
 Important indexes:
 - {{ "/events/" | absolute_url }}
 - {{ "/slides/" | absolute_url }}

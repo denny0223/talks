@@ -46,7 +46,9 @@ Event dates are normalized:
 
 - Single-day events use only `date`.
 - Continuous multi-day events use `date` and `end_date`.
+- Generated date ranges always use `-` in public text.
 - When multiple events share the same `date`, every event on that date must set `sequence: 1`, `sequence: 2`, etc. to preserve the public list order.
+- `scripts/new-event` appends the next `sequence` automatically. When it creates the second event on a date, it also updates the existing event to `sequence: 1` and reports the updated file.
 - Do not add `display_date`; templates and exports generate display text from normalized date fields.
 
 If the event uses an existing slide, do not create a new `_slides/` file. Only create `_slides/slide-id.md` when a slide URL appears for the first time.
@@ -82,6 +84,12 @@ Run this after changing collection data or templates:
 ```
 
 The validator checks required fields, normalized date fields, same-day ordering, duplicate slugs, slide references, topic references, and URL shape.
+
+Machine-readable exports use generated date fields:
+
+- `date_text` is the generated display date.
+- `display_date` is kept only as a backward-compatible alias for `date_text`.
+- Source records must not define `display_date` or `date_label`.
 
 If Ruby/Bundler is available, also run:
 

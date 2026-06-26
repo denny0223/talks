@@ -22,6 +22,24 @@ Then edit the generated `_events/YYYY-MM-DD-title.md` file and fill in `summary`
 
 If the record uses an existing slide, only the event file is needed.
 
+Event dates use normalized source fields:
+
+- Use `date` for every record.
+- Add `--end-date YYYY-MM-DD` for a continuous multi-day event. Generated pages display date ranges with `-`.
+- Do not add `display_date` or `date_label` to `_events`; display text is generated from `date` and `end_date`.
+- When multiple records share the same date, `scripts/new-event` appends the next `sequence` value. If it creates the second record for a date, it also updates the existing record to `sequence: 1`.
+
+Example multi-day record:
+
+```bash
+scripts/new-event \
+  --date 2026-08-01 \
+  --end-date 2026-08-02 \
+  --title "Two-day workshop" \
+  --event "Example Event" \
+  --topics education
+```
+
 ## Add a New Slide
 
 Create `_slides/slide-id.md` before referencing it from an event.
@@ -82,7 +100,7 @@ Run validation after changing collection data:
 scripts/validate
 ```
 
-The validator checks required fields, date format, unique slugs, slide references, topic references, and URL shape.
+The validator checks required fields, normalized date fields, same-day ordering, unique slugs, slide references, topic references, and URL shape.
 
 If Ruby and Bundler are available, also run:
 
@@ -106,3 +124,15 @@ These pages and endpoints are generated from collections:
 - `/llms.txt`
 - `/llms-full.txt`
 - `/sitemap.xml`
+
+## Data Exports
+
+`/talks.json` is the structured event export. Date fields are generated from normalized `_events` source records:
+
+- `date`: canonical start date.
+- `end_date`: canonical end date for continuous multi-day events, otherwise `null`.
+- `date_text`: generated visitor-facing date text.
+- `display_date`: backward-compatible alias for `date_text`; do not add it to source records.
+- `sequence`: same-day display order, otherwise `null`.
+
+`/slides.json` lists slide records and their related event IDs. `llms.txt` points crawlers and AI tools to the JSON exports, full Markdown export, and sitemap.
