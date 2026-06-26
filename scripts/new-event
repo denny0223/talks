@@ -33,7 +33,10 @@ if (args.get("sequence") && (!Number.isInteger(explicitSequence) || explicitSequ
 function usage(message) {
   if (message) console.error(message);
   console.error(`Usage:
-  scripts/new-event --date YYYY-MM-DD --title "Talk title" --event "Event name" [--event-url URL] [--slide slide-id] [--topics topic-a,topic-b] [--end-date YYYY-MM-DD] [--sequence N]`);
+  scripts/new-event --date YYYY-MM-DD --title "Talk title" --event "Event name" [--event-url URL] [--slide slide-id] [--topics topic-a,topic-b] [--end-date YYYY-MM-DD]
+
+Advanced:
+  --sequence N   Only for appending the next record to a date that already has events. Omit it for normal use.`);
   process.exit(1);
 }
 

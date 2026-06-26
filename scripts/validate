@@ -120,9 +120,9 @@ for (const event of events) {
   }
   if ("display_date" in event.data) fail(`_events/${event.file}: display_date is generated from date and end_date`);
   if ("date_label" in event.data) fail(`_events/${event.file}: date_label is not supported; encode the date range with date and end_date`);
-  if (!validDate(event.data.date)) fail(`_events/${event.file}: invalid date`);
+  if (!validDate(event.data.date)) fail(`_events/${event.file}: invalid date; must use YYYY-MM-DD`);
   if (event.data.end_date) {
-    if (!validDate(event.data.end_date)) fail(`_events/${event.file}: invalid end_date`);
+    if (!validDate(event.data.end_date)) fail(`_events/${event.file}: invalid end_date; must use YYYY-MM-DD`);
     else if (event.data.end_date < event.data.date) fail(`_events/${event.file}: end_date must not be earlier than date`);
   }
   if (event.data.sequence !== undefined && (!Number.isInteger(event.data.sequence) || event.data.sequence < 1)) {
@@ -184,7 +184,7 @@ for (const slide of slides) {
     }
   }
   if (!validUrl(slide.data.external_url)) fail(`_slides/${slide.file}: invalid external_url`);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(slide.data.first_presented)) fail(`_slides/${slide.file}: invalid first_presented`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(slide.data.first_presented)) fail(`_slides/${slide.file}: invalid first_presented; must use YYYY-MM-DD`);
   for (const topic of slide.data.topics || []) {
     if (!topicIds.has(topic)) fail(`_slides/${slide.file}: unknown topic ${topic}`);
   }
