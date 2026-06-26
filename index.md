@@ -10,9 +10,11 @@ Presentations, courses, panels, hosting, judging, and public activity records of
 ## Featured Slide Versions
 
 {% assign featured_slides = site.slides | where_exp: "slide", "slide.featured == true" | sort: "featured_order" %}
+<ul class="record-list">
 {% for slide in featured_slides %}
-- Newest version of [{{ slide.featured_label | default: slide.title }}]({{ slide.external_url }})
+  <li>Newest version of <a href="{{ slide.external_url }}">{{ slide.featured_label | default: slide.title }}</a></li>
 {% endfor %}
+</ul>
 
 {% assign events_by_year = site.events | sort: "date" | reverse | group_by_exp: "event", "event.date | date: '%Y'" %}
 {% for year in events_by_year %}
