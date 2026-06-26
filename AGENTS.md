@@ -46,7 +46,6 @@ Event dates are normalized:
 
 - Single-day events use only `date`.
 - Continuous multi-day events use `date` and `end_date`.
-- Only use `date_label` for unusual non-continuous date text that cannot be derived from `date` and `end_date`.
 - When multiple events share the same `date`, every event on that date must set `sequence: 1`, `sequence: 2`, etc. to preserve the public list order.
 - Do not add `display_date`; templates and exports generate display text from normalized date fields.
 

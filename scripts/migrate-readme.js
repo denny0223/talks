@@ -290,7 +290,6 @@ for (const line of lines) {
   const links = extractLinks(rest);
   const title = titleFromRest(rest);
   const endDate = parseEndDate(year, displayDate);
-  const dateLabel = endDate && /[A-Z][a-z]{2}\s+\d{1,2}\s+-\s+\d{1,2}/.test(displayDate) ? `${year} ${displayDate}` : "";
   const event = eventNameFromRest(rest);
   const textForTopics = `${title} ${event} ${stripMarkdown(rest)}`;
   const topics = topicsFor(textForTopics);
@@ -328,7 +327,6 @@ for (const line of lines) {
     title,
     date,
     end_date: endDate,
-    date_label: dateLabel,
     event,
     event_url: links[0]?.url || "",
     role: roleFromText(rest),
@@ -360,7 +358,7 @@ for (const event of events) {
   const count = usedSlugs.get(event.slug) || 0;
   usedSlugs.set(event.slug, count + 1);
   const finalSlug = count === 0 ? event.slug : `${event.slug}-${count + 1}`;
-  const body = `---\ntitle: ${yamlString(event.title)}\ndate: ${event.date}\n${event.end_date ? `end_date: ${event.end_date}\n` : ""}${event.date_label ? `date_label: ${yamlString(event.date_label)}\n` : ""}${event.sequence ? `sequence: ${event.sequence}\n` : ""}event: ${yamlString(event.event)}\nevent_url: ${yamlString(event.event_url)}\nrole: ${yamlString(event.role)}\nlanguage: ${yamlString(event.language)}\nsummary: ${yamlString(event.summary)}\ntopics: ${yamlArray(event.topics, "  ")}\nslides: ${yamlArray(event.slides, "  ")}\nvideos: ${yamlLinkArray(event.videos, "  ")}\nlinks: ${yamlLinkArray(event.links, "  ")}\n---\n\n${event.original_markdown}\n`;
+  const body = `---\ntitle: ${yamlString(event.title)}\ndate: ${event.date}\n${event.end_date ? `end_date: ${event.end_date}\n` : ""}${event.sequence ? `sequence: ${event.sequence}\n` : ""}event: ${yamlString(event.event)}\nevent_url: ${yamlString(event.event_url)}\nrole: ${yamlString(event.role)}\nlanguage: ${yamlString(event.language)}\nsummary: ${yamlString(event.summary)}\ntopics: ${yamlArray(event.topics, "  ")}\nslides: ${yamlArray(event.slides, "  ")}\nvideos: ${yamlLinkArray(event.videos, "  ")}\nlinks: ${yamlLinkArray(event.links, "  ")}\n---\n\n${event.original_markdown}\n`;
   fs.writeFileSync(path.join(eventDir, `${finalSlug}.md`), body);
 }
 

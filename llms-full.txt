@@ -41,7 +41,6 @@ sitemap: false
 
 - Date: {{ event.date | date: "%Y-%m-%d" }}
 {% if event.end_date %}- End date: {{ event.end_date | date: "%Y-%m-%d" }}
-{% endif %}{% if event.date_label %}- Date label: {{ event.date_label }}
 {% endif %}- Date text: {{ event_date_text | strip }}
 - Event: {{ event.event }}
 - URL: {{ event.url | absolute_url }}

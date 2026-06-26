@@ -17,7 +17,6 @@ sitemap: false
     "title": {{ event.title | jsonify }},
     "date": {{ event.date | date: "%Y-%m-%d" | jsonify }},
     "end_date": {{ event.end_date | date: "%Y-%m-%d" | jsonify }},
-    "date_label": {{ event.date_label | jsonify }},
     "date_text": {{ event_date_text | strip | jsonify }},
     "display_date": {{ event_date_text | strip | jsonify }},
     "sequence": {{ event.sequence | default: nil | jsonify }},

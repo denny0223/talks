@@ -112,13 +112,13 @@ for (const event of events) {
       fail(`_events/${event.file}: missing ${field}`);
     }
   }
-  if ("display_date" in event.data) fail(`_events/${event.file}: use date, end_date, or date_label instead of display_date`);
+  if ("display_date" in event.data) fail(`_events/${event.file}: display_date is generated from date and end_date`);
+  if ("date_label" in event.data) fail(`_events/${event.file}: date_label is not supported; encode the date range with date and end_date`);
   if (!validDate(event.data.date)) fail(`_events/${event.file}: invalid date`);
   if (event.data.end_date) {
     if (!validDate(event.data.end_date)) fail(`_events/${event.file}: invalid end_date`);
     else if (event.data.end_date < event.data.date) fail(`_events/${event.file}: end_date must not be earlier than date`);
   }
-  if (event.data.date_label && typeof event.data.date_label !== "string") fail(`_events/${event.file}: date_label must be a string`);
   if (event.data.sequence !== undefined && (!Number.isInteger(event.data.sequence) || event.data.sequence < 1)) {
     fail(`_events/${event.file}: sequence must be a positive integer`);
   }

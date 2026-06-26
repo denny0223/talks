@@ -29,7 +29,7 @@ if (args.get("sequence") && (!Number.isInteger(explicitSequence) || explicitSequ
 function usage(message) {
   if (message) console.error(message);
   console.error(`Usage:
-  scripts/new-event --date YYYY-MM-DD --title "Talk title" --event "Event name" [--event-url URL] [--slide slide-id] [--topics topic-a,topic-b] [--end-date YYYY-MM-DD] [--date-label "Date label"] [--sequence N]`);
+  scripts/new-event --date YYYY-MM-DD --title "Talk title" --event "Event name" [--event-url URL] [--slide slide-id] [--topics topic-a,topic-b] [--end-date YYYY-MM-DD] [--sequence N]`);
   process.exit(1);
 }
 
@@ -101,7 +101,7 @@ for (const slide of slides) {
 const body = `---
 title: ${yamlString(args.get("title"))}
 date: ${date}
-${endDate ? `end_date: ${endDate}\n` : ""}${args.get("date-label") ? `date_label: ${yamlString(args.get("date-label"))}\n` : ""}${sequence ? `sequence: ${sequence}\n` : ""}event: ${yamlString(args.get("event"))}
+${endDate ? `end_date: ${endDate}\n` : ""}${sequence ? `sequence: ${sequence}\n` : ""}event: ${yamlString(args.get("event"))}
 event_url: ${yamlString(args.get("event-url") || "")}
 role: "speaker"
 language: "zh-TW"
