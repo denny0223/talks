@@ -15,15 +15,7 @@
       "name": {{ site.author.name | jsonify }},
       "url": {{ site.author.url | jsonify }}
     }{% if page.event_url and page.event_url != "" %},
-    "location": {
-      "@type": "Place",
-      "name": {{ page.event | jsonify }},
-      "url": {{ page.event_url | jsonify }}
-    }{% elsif page.event %},
-    "location": {
-      "@type": "Place",
-      "name": {{ page.event | jsonify }}
-    }{% endif %}
+    "sameAs": {{ page.event_url | jsonify }}{% endif %}
   }
   </script>
 {% elsif page.collection == "slides" %}
@@ -43,7 +35,7 @@
     "sameAs": {{ page.external_url | jsonify }}{% endif %}
   }
   </script>
-{% else %}
+{% elsif page.url == "/" %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

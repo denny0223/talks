@@ -1,0 +1,22 @@
+{% assign seo_title = page.title | default: site.title %}
+{% unless seo_title == site.title %}
+  {% assign seo_title = seo_title | append: " | " | append: site.title %}
+{% endunless %}
+{% assign seo_description = page.description | default: page.summary | default: site.description %}
+{% assign seo_url = page.url | absolute_url %}
+{% assign og_type = "website" %}
+{% if page.collection == "events" or page.collection == "slides" or page.collection == "topics" %}
+  {% assign og_type = "article" %}
+{% endif %}
+<title>{{ seo_title }}</title>
+<meta name="generator" content="Jekyll v{{ jekyll.version }}">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta name="author" content="{{ site.author.name }}">
+<meta name="description" content="{{ seo_description | strip }}">
+<meta property="og:description" content="{{ seo_description | strip }}">
+<link rel="canonical" href="{{ seo_url }}">
+<meta property="og:url" content="{{ seo_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="{{ page.lang | default: site.lang | replace: "-", "_" }}">
+<meta property="og:type" content="{{ og_type }}">
+<meta name="twitter:card" content="summary">

@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% seo %}
+    {% include head-seo.html %}
     <link rel="alternate" type="application/json" title="Talk records as JSON" href="{{ '/talks.json' | relative_url }}">
     <link rel="alternate" type="application/json" title="Slide records as JSON" href="{{ '/slides.json' | relative_url }}">
+    <link rel="alternate" type="application/json" title="Topic records as JSON" href="{{ '/topics.json' | relative_url }}">
     <link rel="alternate" type="text/plain" title="LLMs guide" href="{{ '/llms.txt' | relative_url }}">
     <style>
       :root {
