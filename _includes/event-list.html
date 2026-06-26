@@ -9,12 +9,13 @@
 {% for date_group in date_groups %}
   {% assign date_events = date_group.items | sort: "sequence" %}
   {% for event in date_events %}
+    {% capture event_date_text %}{% include event-date.html event=event format=include.date_format %}{% endcapture %}
     <li>
       {% if include.body == "content" %}
-        <a href="{{ event.url | relative_url }}">{% include event-date.html event=event format=include.date_format %}</a> /
+        <a href="{{ event.url | relative_url }}">{{ event_date_text | strip }}</a> /
         {{ event.content | markdownify | remove: "<p>" | remove: "</p>" | strip }}
       {% else %}
-        {% include event-date.html event=event format=include.date_format %} / <a href="{{ event.url | relative_url }}">{{ event.title }}</a>{% if event.event %} - {{ event.event }}{% endif %}
+        {{ event_date_text | strip }} / <a href="{{ event.url | relative_url }}">{{ event.title }}</a>{% if event.event %} - {{ event.event }}{% endif %}
       {% endif %}
     </li>
   {% endfor %}
