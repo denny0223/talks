@@ -19,7 +19,8 @@ Presentations, courses, panels, hosting, judging, and public activity records of
 ## {{ year.name }}
 
 <ul class="record-list">
-{% for event in year.items %}
+{% assign year_items = year.items | reverse %}
+{% for event in year_items %}
   <li>
     <a href="{{ event.url | relative_url }}">{{ event.display_date | remove_first: year.name | strip }}</a> /
     {{ event.content | markdownify | remove: "<p>" | remove: "</p>" | strip }}
