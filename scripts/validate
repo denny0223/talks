@@ -106,6 +106,12 @@ for (const [name, records] of Object.entries({ events, slides, topics })) {
 
 const eventsByDate = new Map();
 
+function sameDateSummary(events) {
+  return events
+    .map((event) => `${event.file}${Number.isInteger(event.data.sequence) ? ` sequence=${event.data.sequence}` : " sequence=<missing>"}`)
+    .join(", ");
+}
+
 for (const event of events) {
   for (const field of ["title", "date", "summary", "topics"]) {
     if (!event.data[field] || (Array.isArray(event.data[field]) && event.data[field].length === 0)) {
@@ -155,17 +161,18 @@ for (const [date, dateEvents] of eventsByDate) {
   }
 
   const seenSequences = new Set();
+  const summary = sameDateSummary(dateEvents);
   for (const event of dateEvents) {
     const sequence = event.data.sequence;
     if (!Number.isInteger(sequence)) {
-      fail(`_events/${event.file}: missing sequence for same-day events on ${date}`);
+      fail(`_events/${event.file}: missing sequence for same-day events on ${date}; same-day files: ${summary}`);
       continue;
     }
-    if (seenSequences.has(sequence)) fail(`_events/${event.file}: duplicate sequence ${sequence} on ${date}`);
+    if (seenSequences.has(sequence)) fail(`_events/${event.file}: duplicate sequence ${sequence} on ${date}; same-day files: ${summary}`);
     seenSequences.add(sequence);
   }
   for (let sequence = 1; sequence <= dateEvents.length; sequence += 1) {
-    if (!seenSequences.has(sequence)) fail(`${date}: same-day sequences must be continuous from 1 to ${dateEvents.length}`);
+    if (!seenSequences.has(sequence)) fail(`${date}: same-day sequences must be continuous from 1 to ${dateEvents.length}; same-day files: ${summary}`);
   }
 }
 
