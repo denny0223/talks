@@ -42,6 +42,14 @@ For a normal new talk or activity, use the maintenance script:
 
 Then edit the generated `_events/YYYY-MM-DD-title.md` file and fill in a useful `summary`, plus `videos` and `links` when available.
 
+Event dates are normalized:
+
+- Single-day events use only `date`.
+- Continuous multi-day events use `date` and `end_date`.
+- Only use `date_label` for unusual non-continuous date text that cannot be derived from `date` and `end_date`.
+- When multiple events share the same `date`, every event on that date must set `sequence: 1`, `sequence: 2`, etc. to preserve the public list order.
+- Do not add `display_date`; templates and exports generate display text from normalized date fields.
+
 If the event uses an existing slide, do not create a new `_slides/` file. Only create `_slides/slide-id.md` when a slide URL appears for the first time.
 
 Topics should stay broad and stable. Only add `_topics/topic-id.md` when a new long-term category is clearly needed.
@@ -74,7 +82,7 @@ Run this after changing collection data or templates:
 ./scripts/validate
 ```
 
-The validator checks required fields, date format, duplicate slugs, slide references, topic references, and URL shape.
+The validator checks required fields, normalized date fields, same-day ordering, duplicate slugs, slide references, topic references, and URL shape.
 
 If Ruby/Bundler is available, also run:
 
