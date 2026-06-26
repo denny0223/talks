@@ -1,0 +1,40 @@
+{% assign event = include.event %}
+{% assign format = include.format | default: "full" %}
+{% if event.date_label %}
+  {% assign label = event.date_label %}
+  {% if format == "short" %}
+    {{ label | remove_first: event.date | date: "%Y" | strip }}
+  {% else %}
+    {{ label }}
+  {% endif %}
+{% else %}
+  {% assign start_year = event.date | date: "%Y" %}
+  {% assign start_month = event.date | date: "%b" %}
+  {% assign start_day = event.date | date: "%-d" %}
+  {% if event.end_date %}
+    {% assign end_year = event.end_date | date: "%Y" %}
+    {% assign end_month = event.end_date | date: "%b" %}
+    {% assign end_day = event.end_date | date: "%-d" %}
+    {% if format == "short" %}
+      {% if start_year == end_year and start_month == end_month %}
+        {{ start_month }} {{ start_day }}, {{ end_day }}
+      {% elsif start_year == end_year %}
+        {{ start_month }} {{ start_day }} - {{ end_month }} {{ end_day }}
+      {% else %}
+        {{ start_year }} {{ start_month }} {{ start_day }} - {{ end_year }} {{ end_month }} {{ end_day }}
+      {% endif %}
+    {% else %}
+      {% if start_year == end_year and start_month == end_month %}
+        {{ start_year }} {{ start_month }} {{ start_day }}, {{ end_day }}
+      {% elsif start_year == end_year %}
+        {{ start_year }} {{ start_month }} {{ start_day }} - {{ end_month }} {{ end_day }}
+      {% else %}
+        {{ start_year }} {{ start_month }} {{ start_day }} - {{ end_year }} {{ end_month }} {{ end_day }}
+      {% endif %}
+    {% endif %}
+  {% elsif format == "short" %}
+    {{ start_month }} {{ start_day }}
+  {% else %}
+    {{ start_year }} {{ start_month }} {{ start_day }}
+  {% endif %}
+{% endif %}

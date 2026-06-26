@@ -6,6 +6,7 @@
     "@type": "Event",
     "name": {{ page.title | jsonify }},
     "startDate": {{ page.date | date: "%Y-%m-%d" | jsonify }},
+    {% if page.end_date %}"endDate": {{ page.end_date | date: "%Y-%m-%d" | jsonify }},{% endif %}
     "description": {{ page.summary | default: page.title | jsonify }},
     "url": {{ absolute_url | jsonify }},
     "inLanguage": {{ page.language | default: site.lang | jsonify }},

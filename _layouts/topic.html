@@ -13,11 +13,7 @@ layout: default
 
   {% if topic_events.size > 0 %}
     <h2>Records</h2>
-    <ul class="record-list">
-      {% for event in topic_events %}
-        <li>{{ event.display_date | default: event.date | date: "%Y-%m-%d" }} / <a href="{{ event.url | relative_url }}">{{ event.title }}</a>{% if event.event %} - {{ event.event }}{% endif %}</li>
-      {% endfor %}
-    </ul>
+    {% include event-list.html events=topic_events order="desc" date_format="full" body="title" %}
   {% endif %}
 
   {% if topic_slides.size > 0 %}

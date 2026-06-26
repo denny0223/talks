@@ -25,11 +25,7 @@ layout: default
   {% assign related_events = site.events | where_exp: "event", "event.slides contains page.slug" | sort: "date" | reverse %}
   {% if related_events.size > 0 %}
     <h2>Related records</h2>
-    <ul class="record-list">
-      {% for event in related_events %}
-        <li>{{ event.display_date | default: event.date | date: "%Y-%m-%d" }} / <a href="{{ event.url | relative_url }}">{{ event.title }}</a>{% if event.event %} - {{ event.event }}{% endif %}</li>
-      {% endfor %}
-    </ul>
+    {% include event-list.html events=related_events order="desc" date_format="full" body="title" %}
   {% endif %}
 
   {% if page.topics and page.topics.size > 0 %}

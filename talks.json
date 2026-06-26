@@ -5,12 +5,22 @@ sitemap: false
 ---
 [
 {% assign events = site.events | sort: "date" | reverse %}
-{% for event in events %}
+{% assign date_groups = events | group_by_exp: "event", "event.date | date: '%Y-%m-%d'" %}
+{% assign emitted = 0 %}
+{% for date_group in date_groups %}
+{% assign date_events = date_group.items | sort: "sequence" %}
+{% for event in date_events %}
+  {% capture event_date_text %}{% include event-date.html event=event format="full" %}{% endcapture %}
+  {% unless emitted == 0 %},{% endunless %}
   {
     "id": {{ event.slug | jsonify }},
     "title": {{ event.title | jsonify }},
     "date": {{ event.date | date: "%Y-%m-%d" | jsonify }},
-    "display_date": {{ event.display_date | jsonify }},
+    "end_date": {{ event.end_date | date: "%Y-%m-%d" | jsonify }},
+    "date_label": {{ event.date_label | jsonify }},
+    "date_text": {{ event_date_text | strip | jsonify }},
+    "display_date": {{ event_date_text | strip | jsonify }},
+    "sequence": {{ event.sequence | default: nil | jsonify }},
     "event": {{ event.event | jsonify }},
     "event_url": {{ event.event_url | jsonify }},
     "role": {{ event.role | jsonify }},
@@ -21,6 +31,8 @@ sitemap: false
     "videos": {{ event.videos | jsonify }},
     "links": {{ event.links | jsonify }},
     "url": {{ event.url | absolute_url | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
+  }
+  {% assign emitted = emitted | plus: 1 %}
+{% endfor %}
 {% endfor %}
 ]

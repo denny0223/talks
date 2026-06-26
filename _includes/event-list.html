@@ -1,0 +1,22 @@
+{% assign sorted_events = include.events | sort: "date" %}
+{% if include.order == "desc" %}
+  {% assign ordered_events = sorted_events | reverse %}
+{% else %}
+  {% assign ordered_events = sorted_events %}
+{% endif %}
+{% assign date_groups = ordered_events | group_by_exp: "event", "event.date | date: '%Y-%m-%d'" %}
+<ul class="record-list">
+{% for date_group in date_groups %}
+  {% assign date_events = date_group.items | sort: "sequence" %}
+  {% for event in date_events %}
+    <li>
+      {% if include.body == "content" %}
+        <a href="{{ event.url | relative_url }}">{% include event-date.html event=event format=include.date_format %}</a> /
+        {{ event.content | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+      {% else %}
+        {% include event-date.html event=event format=include.date_format %} / <a href="{{ event.url | relative_url }}">{{ event.title }}</a>{% if event.event %} - {{ event.event }}{% endif %}
+      {% endif %}
+    </li>
+  {% endfor %}
+{% endfor %}
+</ul>

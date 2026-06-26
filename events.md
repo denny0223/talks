@@ -10,13 +10,5 @@ permalink: /events/
 {% for year in events_by_year %}
 ## {{ year.name }}
 
-<ul class="record-list">
-{% assign year_items = year.items | reverse %}
-{% for event in year_items %}
-  <li>
-    <a href="{{ event.url | relative_url }}">{{ event.display_date | remove_first: year.name | strip }}</a> /
-    {{ event.content | markdownify | remove: "<p>" | remove: "</p>" | strip }}
-  </li>
-{% endfor %}
-</ul>
+{% include event-list.html events=year.items order="asc" date_format="short" body="content" %}
 {% endfor %}

@@ -32,11 +32,17 @@ sitemap: false
 ## Event Records
 
 {% assign events = site.events | sort: "date" | reverse %}
-{% for event in events %}
+{% assign date_groups = events | group_by_exp: "event", "event.date | date: '%Y-%m-%d'" %}
+{% for date_group in date_groups %}
+{% assign date_events = date_group.items | sort: "sequence" %}
+{% for event in date_events %}
+{% capture event_date_text %}{% include event-date.html event=event format="full" %}{% endcapture %}
 ### {{ event.title }}
 
 - Date: {{ event.date | date: "%Y-%m-%d" }}
-- Display date: {{ event.display_date }}
+{% if event.end_date %}- End date: {{ event.end_date | date: "%Y-%m-%d" }}
+{% endif %}{% if event.date_label %}- Date label: {{ event.date_label }}
+{% endif %}- Date text: {{ event_date_text | strip }}
 - Event: {{ event.event }}
 - URL: {{ event.url | absolute_url }}
 - Event URL: {{ event.event_url }}
@@ -45,4 +51,5 @@ sitemap: false
 - Slides: {{ event.slides | join: ", " }}
 - Summary: {{ event.summary }}
 
+{% endfor %}
 {% endfor %}
