@@ -22,6 +22,7 @@ Do not hand-maintain public indexes or machine-readable exports as content sourc
 - `topics.md`
 - `talks.json`
 - `slides.json`
+- `topics.json`
 - `llms.txt`
 - `llms-full.txt`
 - `robots.txt`
@@ -87,6 +88,9 @@ The validator checks required fields, normalized date fields, same-day ordering,
 
 Machine-readable exports use generated date fields:
 
+- `talks.json` `id` is the stable unique event record key and must be derived from the `_events` filename.
+- `slides.json` `related_events` values must join to `talks.json` `id`.
+- `topics.json` `id` values must join from event and slide `topics`.
 - `date_text` is the generated display date.
 - `display_date` is kept only as a backward-compatible alias for `date_text`.
 - Source records must not define `display_date` or `date_label`.
