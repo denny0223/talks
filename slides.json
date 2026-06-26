@@ -17,7 +17,7 @@ sitemap: false
     "language": {{ slide.language | jsonify }},
     "first_presented": {{ slide.first_presented | jsonify }},
     "aliases": {{ slide.aliases | jsonify }},
-    "related_events": [{% assign related_emitted = 0 %}{% for date_group in related_date_groups %}{% assign date_events = date_group.items | sort: "sequence" %}{% for event in date_events %}{% unless related_emitted == 0 %}, {% endunless %}{{ event.slug | jsonify }}{% assign related_emitted = related_emitted | plus: 1 %}{% endfor %}{% endfor %}],
+    "related_events": [{% assign related_emitted = 0 %}{% for date_group in related_date_groups %}{% assign date_events = date_group.items | sort: "sequence" %}{% for event in date_events %}{% assign event_id = event.path | split: "/" | last | remove: ".md" %}{% unless related_emitted == 0 %}, {% endunless %}{{ event_id | jsonify }}{% assign related_emitted = related_emitted | plus: 1 %}{% endfor %}{% endfor %}],
     "url": {{ slide.url | absolute_url | jsonify }}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}

@@ -9,23 +9,30 @@ sitemap: false
 
 {% assign topics = site.topics | sort: "title" %}
 {% for topic in topics %}
-### {{ topic.title }}
+### {{ topic.slug }} / {{ topic.title }}
 
+- ID: {{ topic.slug }}
 - URL: {{ topic.url | absolute_url }}
 - Summary: {{ topic.summary }}
+- Aliases: {{ topic.aliases | join: ", " }}
 
 {% endfor %}
 ## Slides
 
 {% assign slides = site.slides | sort: "title" %}
 {% for slide in slides %}
-### {{ slide.title }}
+{% assign related_events = site.events | where_exp: "event", "event.slides contains slide.slug" | sort: "date" | reverse %}
+{% assign related_date_groups = related_events | group_by_exp: "event", "event.date | date: '%Y-%m-%d'" %}
+### {{ slide.slug }} / {{ slide.title }}
 
 - ID: {{ slide.slug }}
 - URL: {{ slide.url | absolute_url }}
 - Original: {{ slide.external_url }}
 - First presented: {{ slide.first_presented }}
+- Language: {{ slide.language }}
 - Topics: {{ slide.topics | join: ", " }}
+- Aliases: {{ slide.aliases | join: ", " }}
+- Related events: {% assign related_emitted = 0 %}{% for date_group in related_date_groups %}{% assign date_events = date_group.items | sort: "sequence" %}{% for event in date_events %}{% assign event_id = event.path | split: "/" | last | remove: ".md" %}{% unless related_emitted == 0 %}, {% endunless %}{{ event_id }}{% assign related_emitted = related_emitted | plus: 1 %}{% endfor %}{% endfor %}
 - Summary: {{ slide.summary }}
 
 {% endfor %}
@@ -37,17 +44,23 @@ sitemap: false
 {% assign date_events = date_group.items | sort: "sequence" %}
 {% for event in date_events %}
 {% capture event_date_text %}{% include event-date.html event=event format="full" %}{% endcapture %}
-### {{ event.title }}
+{% assign event_id = event.path | split: "/" | last | remove: ".md" %}
+### {{ event.date | date: "%Y-%m-%d" }} / {{ event_id }} / {{ event.title }}
 
+- ID: {{ event_id }}
 - Date: {{ event.date | date: "%Y-%m-%d" }}
 {% if event.end_date %}- End date: {{ event.end_date | date: "%Y-%m-%d" }}
 {% endif %}- Date text: {{ event_date_text | strip }}
+- Sequence: {{ event.sequence | default: "" }}
 - Event: {{ event.event }}
 - URL: {{ event.url | absolute_url }}
 - Event URL: {{ event.event_url }}
 - Role: {{ event.role }}
+- Language: {{ event.language }}
 - Topics: {{ event.topics | join: ", " }}
 - Slides: {{ event.slides | join: ", " }}
+- Videos: {% for video in event.videos %}{% unless forloop.first %}, {% endunless %}{{ video.label | default: video.url }} <{{ video.url }}>{% endfor %}
+- Links: {% for link in event.links %}{% unless forloop.first %}, {% endunless %}{{ link.label | default: link.url }} <{{ link.url }}>{% endfor %}
 - Summary: {{ event.summary }}
 
 {% endfor %}

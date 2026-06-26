@@ -10,10 +10,11 @@ sitemap: false
 {% for date_group in date_groups %}
 {% assign date_events = date_group.items | sort: "sequence" %}
 {% for event in date_events %}
+  {% assign event_id = event.path | split: "/" | last | remove: ".md" %}
   {% capture event_date_text %}{% include event-date.html event=event format="full" %}{% endcapture %}
   {% unless emitted == 0 %},{% endunless %}
   {
-    "id": {{ event.slug | jsonify }},
+    "id": {{ event_id | jsonify }},
     "title": {{ event.title | jsonify }},
     "date": {{ event.date | date: "%Y-%m-%d" | jsonify }},
     "end_date": {{ event.end_date | date: "%Y-%m-%d" | jsonify }},

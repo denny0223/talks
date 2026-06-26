@@ -13,14 +13,22 @@ Canonical human entrypoint:
 Machine-readable data:
 - {{ "/talks.json" | absolute_url }}: structured event records
 - {{ "/slides.json" | absolute_url }}: structured slide records
+- {{ "/topics.json" | absolute_url }}: structured topic records
 - {{ "/llms-full.txt" | absolute_url }}: full Markdown export for agents
 - {{ "/sitemap.xml" | absolute_url }}: search sitemap
 
 Event export notes:
+- `id` is the stable unique event record key.
+- `slides` values join to `slides.json` `id`.
+- `topics` values join to `topics.json` `id`.
 - `date` and `end_date` are canonical date fields.
 - `date_text` is generated display text.
 - `display_date` is a backward-compatible alias for `date_text`.
 - `sequence` preserves same-day ordering and is null for single-record dates.
+
+Slide export notes:
+- `id` is the stable unique slide key.
+- `related_events` values join to `talks.json` `id`.
 
 Important indexes:
 - {{ "/events/" | absolute_url }}

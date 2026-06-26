@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /topics.json
+sitemap: false
+---
+[
+{% assign topics = site.topics | sort: "title" %}
+{% for topic in topics %}
+  {
+    "id": {{ topic.slug | jsonify }},
+    "title": {{ topic.title | jsonify }},
+    "summary": {{ topic.summary | jsonify }},
+    "aliases": {{ topic.aliases | jsonify }},
+    "url": {{ topic.url | absolute_url | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
