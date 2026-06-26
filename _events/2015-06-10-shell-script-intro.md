@@ -1,7 +1,6 @@
 ---
 title: "Shell Script Intro"
 date: 2015-06-10
-display_date: "2015 Jun 10"
 event: "大同大學資訊創意研究社"
 event_url: ""
 role: "speaker"
@@ -13,5 +12,6 @@ slides: []
 videos: []
 links: []
 ---
+
 
 大同大學資訊創意研究社 : Shell Script Intro

@@ -1,7 +1,7 @@
 ---
 title: "Bash Intro"
 date: 2014-06-23
-display_date: "2014 Jun 23"
+sequence: 2
 event: "輔仁大學 NISRA"
 event_url: ""
 role: "speaker"
@@ -14,5 +14,6 @@ slides:
 videos: []
 links: []
 ---
+
 
 輔仁大學 NISRA : [Bash Intro](https://gist.github.com/denny0223/246929a04a6c2fa38f31)

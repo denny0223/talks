@@ -1,7 +1,6 @@
 ---
 title: "The Development Path of COSCUP Pass Check-in Application"
 date: 2016-10-22
-display_date: "2016 Oct 22"
 event: "SITCON x HK"
 event_url: "https://hk.sitcon.org/2016/"
 role: "speaker"
@@ -15,5 +14,6 @@ links:
   - label: "SITCON x HK"
     url: "https://hk.sitcon.org/2016/"
 ---
+
 
 [SITCON x HK](https://hk.sitcon.org/2016/) : The Development Path of COSCUP Pass Check-in Application

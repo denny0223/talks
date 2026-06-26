@@ -1,7 +1,6 @@
 ---
 title: "ezgo14 發表會 - Enlightenment 從啟蒙觸發"
 date: 2018-07-18
-display_date: "2018 Jul 18"
 event: "教育部校園自由軟體數位資源推廣服務中心 OSSACC"
 event_url: ""
 role: "speaker"
@@ -15,5 +14,6 @@ slides:
 videos: []
 links: []
 ---
+
 
 教育部校園自由軟體數位資源推廣服務中心 OSSACC : [ezgo14 發表會 - Enlightenment 從啟蒙觸發](https://denny.one/ezgo14/)

@@ -1,7 +1,6 @@
 ---
 title: "實戰！中大型軟體專案開發課程 - Version Control System"
 date: 2014-04-27
-display_date: "2014 Apr 27"
 event: "OSSF"
 event_url: ""
 role: "speaker"
@@ -16,5 +15,6 @@ slides: []
 videos: []
 links: []
 ---
+
 
 OSSF : 實戰！中大型軟體專案開發課程 - Version Control System
