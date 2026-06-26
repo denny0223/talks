@@ -6,7 +6,7 @@ event: "HITCON 台灣駭客年會"
 event_url: "https://hitcon.org/2022/"
 role: "speaker"
 language: "zh-TW"
-summary: "HITCON 台灣駭客年會 : HITCON PEACE 2022 Day 1 & Day 2 開幕 /"
+summary: "HITCON 台灣駭客年會 : HITCON PEACE 2022 Day 1 & Day 2 開幕"
 topics: 
   - "community"
   - "security"
