@@ -32,7 +32,6 @@ defaults:
       path: ""
     values:
       layout: default
-      image: /talks/assets/og-default.png
   - scope:
       path: ""
       type: events
@@ -52,5 +51,6 @@ defaults:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - AGENTS.md
   - README.md
   - scripts/
