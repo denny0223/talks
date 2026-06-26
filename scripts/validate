@@ -85,6 +85,10 @@ function validUrl(url) {
   }
 }
 
+function validDate(value) {
+  return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value);
+}
+
 const events = readCollection(collections.events);
 const slides = readCollection(collections.slides);
 const topics = readCollection(collections.topics);
@@ -100,13 +104,26 @@ for (const [name, records] of Object.entries({ events, slides, topics })) {
   }
 }
 
+const eventsByDate = new Map();
+
 for (const event of events) {
   for (const field of ["title", "date", "summary", "topics"]) {
     if (!event.data[field] || (Array.isArray(event.data[field]) && event.data[field].length === 0)) {
       fail(`_events/${event.file}: missing ${field}`);
     }
   }
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(event.data.date)) fail(`_events/${event.file}: invalid date`);
+  if ("display_date" in event.data) fail(`_events/${event.file}: use date, end_date, or date_label instead of display_date`);
+  if (!validDate(event.data.date)) fail(`_events/${event.file}: invalid date`);
+  if (event.data.end_date) {
+    if (!validDate(event.data.end_date)) fail(`_events/${event.file}: invalid end_date`);
+    else if (event.data.end_date < event.data.date) fail(`_events/${event.file}: end_date must not be earlier than date`);
+  }
+  if (event.data.date_label && typeof event.data.date_label !== "string") fail(`_events/${event.file}: date_label must be a string`);
+  if (event.data.sequence !== undefined && (!Number.isInteger(event.data.sequence) || event.data.sequence < 1)) {
+    fail(`_events/${event.file}: sequence must be a positive integer`);
+  }
+  if (!eventsByDate.has(event.data.date)) eventsByDate.set(event.data.date, []);
+  eventsByDate.get(event.data.date).push(event);
   if (!validUrl(event.data.event_url)) fail(`_events/${event.file}: invalid event_url`);
   for (const topic of event.data.topics || []) {
     if (!topicIds.has(topic)) fail(`_events/${event.file}: unknown topic ${topic}`);
@@ -126,6 +143,29 @@ for (const event of events) {
     for (const link of event.data[group] || []) {
       if (!validUrl(link.url)) fail(`_events/${event.file}: invalid ${group} URL ${link.url}`);
     }
+  }
+}
+
+for (const [date, dateEvents] of eventsByDate) {
+  if (dateEvents.length === 1) {
+    if (dateEvents[0].data.sequence !== undefined) {
+      fail(`_events/${dateEvents[0].file}: sequence is only allowed when multiple events share ${date}`);
+    }
+    continue;
+  }
+
+  const seenSequences = new Set();
+  for (const event of dateEvents) {
+    const sequence = event.data.sequence;
+    if (!Number.isInteger(sequence)) {
+      fail(`_events/${event.file}: missing sequence for same-day events on ${date}`);
+      continue;
+    }
+    if (seenSequences.has(sequence)) fail(`_events/${event.file}: duplicate sequence ${sequence} on ${date}`);
+    seenSequences.add(sequence);
+  }
+  for (let sequence = 1; sequence <= dateEvents.length; sequence += 1) {
+    if (!seenSequences.has(sequence)) fail(`${date}: same-day sequences must be continuous from 1 to ${dateEvents.length}`);
   }
 }
 

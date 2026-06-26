@@ -20,11 +20,16 @@ for (const required of ["date", "title", "event"]) {
 
 const date = args.get("date");
 if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) usage("--date must use YYYY-MM-DD");
+const endDate = args.get("end-date") || "";
+if (endDate && !/^\d{4}-\d{2}-\d{2}$/.test(endDate)) usage("--end-date must use YYYY-MM-DD");
+if (endDate && endDate < date) usage("--end-date must not be earlier than --date");
+const explicitSequence = args.get("sequence") ? Number(args.get("sequence")) : null;
+if (args.get("sequence") && (!Number.isInteger(explicitSequence) || explicitSequence < 1)) usage("--sequence must be a positive integer");
 
 function usage(message) {
   if (message) console.error(message);
   console.error(`Usage:
-  scripts/new-event --date YYYY-MM-DD --title "Talk title" --event "Event name" [--event-url URL] [--slide slide-id] [--topics topic-a,topic-b]`);
+  scripts/new-event --date YYYY-MM-DD --title "Talk title" --event "Event name" [--event-url URL] [--slide slide-id] [--topics topic-a,topic-b] [--end-date YYYY-MM-DD] [--date-label "Date label"] [--sequence N]`);
   process.exit(1);
 }
 
@@ -50,6 +55,21 @@ function yamlArray(values) {
   return `\n${values.map((value) => `  - ${yamlString(value)}`).join("\n")}`;
 }
 
+function parseFrontMatter(source) {
+  const data = {};
+  const match = source.match(/^---\n([\s\S]*?)\n---\n?/);
+  if (!match) return data;
+  for (const line of match[1].split(/\n/)) {
+    const top = line.match(/^([A-Za-z0-9_-]+):(?:\s*(.*))?$/);
+    if (!top) continue;
+    const raw = top[2] || "";
+    if (raw.startsWith('"')) data[top[1]] = JSON.parse(raw);
+    else if (/^-?\d+$/.test(raw)) data[top[1]] = Number(raw);
+    else data[top[1]] = raw;
+  }
+  return data;
+}
+
 const slug = `${date}-${slugify(args.get("title"))}`;
 const filePath = path.join(root, "_events", `${slug}.md`);
 if (fs.existsSync(filePath)) {
@@ -59,6 +79,17 @@ if (fs.existsSync(filePath)) {
 
 const topics = args.get("topics") ? args.get("topics").split(",").map((item) => item.trim()).filter(Boolean) : [];
 const slides = args.get("slide") ? args.get("slide").split(",").map((item) => item.trim()).filter(Boolean) : [];
+const sameDateEvents = fs.readdirSync(path.join(root, "_events"))
+  .filter((file) => file.endsWith(".md"))
+  .map((file) => parseFrontMatter(fs.readFileSync(path.join(root, "_events", file), "utf8")))
+  .filter((event) => event.date === date);
+const sequence = explicitSequence || (sameDateEvents.length > 0
+  ? Math.max(0, ...sameDateEvents.map((event) => Number.isInteger(event.sequence) ? event.sequence : 0)) + 1
+  : null);
+if (sequence && sameDateEvents.some((event) => event.sequence === sequence)) {
+  console.error(`Another event on ${date} already uses sequence ${sequence}`);
+  process.exit(1);
+}
 const slideDir = path.join(root, "_slides");
 for (const slide of slides) {
   if (!fs.existsSync(path.join(slideDir, `${slide}.md`))) {
@@ -70,8 +101,7 @@ for (const slide of slides) {
 const body = `---
 title: ${yamlString(args.get("title"))}
 date: ${date}
-display_date: ${yamlString(date)}
-event: ${yamlString(args.get("event"))}
+${endDate ? `end_date: ${endDate}\n` : ""}${args.get("date-label") ? `date_label: ${yamlString(args.get("date-label"))}\n` : ""}${sequence ? `sequence: ${sequence}\n` : ""}event: ${yamlString(args.get("event"))}
 event_url: ${yamlString(args.get("event-url") || "")}
 role: "speaker"
 language: "zh-TW"

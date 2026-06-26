@@ -238,6 +238,28 @@ function parseDate(year, dateText) {
   return `${year}-${month}-${day}`;
 }
 
+function parseEndDate(year, dateText) {
+  const range = dateText.match(/([A-Z][a-z]{2})\s+\d{1,2}\s+-\s+([A-Z][a-z]{2})\s+(\d{1,2})/);
+  if (range) {
+    const month = monthMap[range[2]] || "01";
+    const day = String(range[3]).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  }
+  const sameMonthRange = dateText.match(/([A-Z][a-z]{2})\s+\d{1,2}\s+-\s+(\d{1,2})/);
+  if (sameMonthRange) {
+    const month = monthMap[sameMonthRange[1]] || "01";
+    const day = String(sameMonthRange[2]).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  }
+  const comma = dateText.match(/([A-Z][a-z]{2})\s+\d{1,2},\s*(\d{1,2})/);
+  if (comma) {
+    const month = monthMap[comma[1]] || "01";
+    const day = String(comma[2]).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  }
+  return "";
+}
+
 const eventDir = path.join(root, "_events");
 const slideDir = path.join(root, "_slides");
 const topicDir = path.join(root, "_topics");
@@ -267,6 +289,8 @@ for (const line of lines) {
   const date = parseDate(year, displayDate);
   const links = extractLinks(rest);
   const title = titleFromRest(rest);
+  const endDate = parseEndDate(year, displayDate);
+  const dateLabel = endDate && /[A-Z][a-z]{2}\s+\d{1,2}\s+-\s+\d{1,2}/.test(displayDate) ? `${year} ${displayDate}` : "";
   const event = eventNameFromRest(rest);
   const textForTopics = `${title} ${event} ${stripMarkdown(rest)}`;
   const topics = topicsFor(textForTopics);
@@ -303,7 +327,8 @@ for (const line of lines) {
     slug,
     title,
     date,
-    display_date: `${year} ${displayDate}`,
+    end_date: endDate,
+    date_label: dateLabel,
     event,
     event_url: links[0]?.url || "",
     role: roleFromText(rest),
@@ -317,12 +342,25 @@ for (const line of lines) {
   });
 }
 
+const eventsByDate = new Map();
+for (const event of events) {
+  if (!eventsByDate.has(event.date)) eventsByDate.set(event.date, []);
+  eventsByDate.get(event.date).push(event);
+}
+for (const dateEvents of eventsByDate.values()) {
+  if (dateEvents.length > 1) {
+    dateEvents.forEach((event, index) => {
+      event.sequence = index + 1;
+    });
+  }
+}
+
 const usedSlugs = new Map();
 for (const event of events) {
   const count = usedSlugs.get(event.slug) || 0;
   usedSlugs.set(event.slug, count + 1);
   const finalSlug = count === 0 ? event.slug : `${event.slug}-${count + 1}`;
-  const body = `---\ntitle: ${yamlString(event.title)}\ndate: ${event.date}\ndisplay_date: ${yamlString(event.display_date)}\nevent: ${yamlString(event.event)}\nevent_url: ${yamlString(event.event_url)}\nrole: ${yamlString(event.role)}\nlanguage: ${yamlString(event.language)}\nsummary: ${yamlString(event.summary)}\ntopics: ${yamlArray(event.topics, "  ")}\nslides: ${yamlArray(event.slides, "  ")}\nvideos: ${yamlLinkArray(event.videos, "  ")}\nlinks: ${yamlLinkArray(event.links, "  ")}\n---\n\n${event.original_markdown}\n`;
+  const body = `---\ntitle: ${yamlString(event.title)}\ndate: ${event.date}\n${event.end_date ? `end_date: ${event.end_date}\n` : ""}${event.date_label ? `date_label: ${yamlString(event.date_label)}\n` : ""}${event.sequence ? `sequence: ${event.sequence}\n` : ""}event: ${yamlString(event.event)}\nevent_url: ${yamlString(event.event_url)}\nrole: ${yamlString(event.role)}\nlanguage: ${yamlString(event.language)}\nsummary: ${yamlString(event.summary)}\ntopics: ${yamlArray(event.topics, "  ")}\nslides: ${yamlArray(event.slides, "  ")}\nvideos: ${yamlLinkArray(event.videos, "  ")}\nlinks: ${yamlLinkArray(event.links, "  ")}\n---\n\n${event.original_markdown}\n`;
   fs.writeFileSync(path.join(eventDir, `${finalSlug}.md`), body);
 }
 
