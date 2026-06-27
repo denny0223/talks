@@ -24,10 +24,12 @@ sitemap: false
     "event": {{ event.event | jsonify }},
     "event_url": {{ event.event_url | jsonify }},
     "role": {{ event.role | jsonify }},
+    "role_label": {% capture role_label %}{% include role-label.html role=event.role %}{% endcapture %}{{ role_label | strip | jsonify }},
     "language": {{ event.language | jsonify }},
     "summary": {{ event.summary | jsonify }},
     "topics": {{ event.topics | jsonify }},
     "slides": {{ event.slides | jsonify }},
+    "has_videos": {% if event.videos and event.videos.size > 0 %}true{% else %}false{% endif %},
     "videos": {{ event.videos | jsonify }},
     "links": {{ event.links | jsonify }},
     "url": {{ event.url | absolute_url | jsonify }}

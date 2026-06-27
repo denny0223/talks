@@ -16,6 +16,13 @@
         {{ event.content | markdownify | remove: "<p>" | remove: "</p>" | strip }}
       {% else %}
         {{ event_date_text | strip }} / <a href="{{ event.url | relative_url }}">{{ event.title }}</a>{% if event.event %} - {{ event.event }}{% endif %}
+        {% if include.badges %}
+          <span class="badge-list" aria-label="Record metadata">
+            <span class="badge">{% include role-label.html role=event.role %}</span>
+            {% if event.videos and event.videos.size > 0 %}<span class="badge">Video</span>{% endif %}
+            {% if event.slides and event.slides.size > 0 %}<span class="badge">Slides</span>{% endif %}
+          </span>
+        {% endif %}
       {% endif %}
     </li>
   {% endfor %}

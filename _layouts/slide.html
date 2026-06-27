@@ -3,6 +3,8 @@ layout: default
 ---
 <article>
   <h1>{{ page.title }}</h1>
+  {% assign related_events = site.events | where_exp: "event", "event.slides contains page.slug" | sort: "date" | reverse %}
+  {% assign latest_event = related_events | first %}
   {% if page.summary %}
     <p class="summary">{{ page.summary }}</p>
   {% endif %}
@@ -16,16 +18,19 @@ layout: default
       <dt>First presented</dt>
       <dd>{{ page.first_presented }}</dd>
     {% endif %}
+    {% if latest_event %}
+      <dt>Latest used</dt>
+      <dd><a href="{{ latest_event.url | relative_url }}">{% include event-date.html event=latest_event format="full" %} / {{ latest_event.title }}</a></dd>
+    {% endif %}
     {% if page.language %}
       <dt>Language</dt>
       <dd>{{ page.language }}</dd>
     {% endif %}
   </dl>
 
-  {% assign related_events = site.events | where_exp: "event", "event.slides contains page.slug" | sort: "date" | reverse %}
   {% if related_events.size > 0 %}
     <h2>Related records</h2>
-    {% include event-list.html events=related_events order="desc" date_format="full" body="title" %}
+    {% include event-list.html events=related_events order="desc" date_format="full" body="title" badges=true %}
   {% endif %}
 
   {% if page.topics and page.topics.size > 0 %}

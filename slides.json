@@ -7,6 +7,13 @@ sitemap: false
 {% assign slides = site.slides | sort: "title" %}
 {% for slide in slides %}
   {% assign related_events = site.events | where_exp: "event", "event.slides contains slide.slug" | sort: "date" | reverse %}
+  {% assign latest_event = related_events | first %}
+  {% assign video_event_count = 0 %}
+  {% for related_event in related_events %}
+    {% if related_event.videos and related_event.videos.size > 0 %}
+      {% assign video_event_count = video_event_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
   {% assign related_date_groups = related_events | group_by_exp: "event", "event.date | date: '%Y-%m-%d'" %}
   {
     "id": {{ slide.slug | jsonify }},
@@ -16,6 +23,9 @@ sitemap: false
     "topics": {{ slide.topics | jsonify }},
     "language": {{ slide.language | jsonify }},
     "first_presented": {{ slide.first_presented | jsonify }},
+    "latest_presented": {% if latest_event %}{{ latest_event.date | date: "%Y-%m-%d" | jsonify }}{% else %}null{% endif %},
+    "latest_event": {% if latest_event %}{% assign latest_event_id = latest_event.path | split: "/" | last | remove: ".md" %}{{ latest_event_id | jsonify }}{% else %}null{% endif %},
+    "video_event_count": {{ video_event_count | jsonify }},
     "aliases": {{ slide.aliases | jsonify }},
     "related_events": [{% assign related_emitted = 0 %}{% for date_group in related_date_groups %}{% assign date_events = date_group.items | sort: "sequence" %}{% for event in date_events %}{% assign event_id = event.path | split: "/" | last | remove: ".md" %}{% unless related_emitted == 0 %}, {% endunless %}{{ event_id | jsonify }}{% assign related_emitted = related_emitted | plus: 1 %}{% endfor %}{% endfor %}],
     "url": {{ slide.url | absolute_url | jsonify }}
