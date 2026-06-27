@@ -20,7 +20,7 @@ layout: default
     <h2>Slides</h2>
     <ul class="record-list">
       {% for slide in topic_slides %}
-        <li><a href="{{ slide.url | relative_url }}">{{ slide.title }}</a>{% if slide.external_url %} / <a href="{{ slide.external_url }}">Original slide</a>{% endif %}</li>
+        <li><a href="{{ slide.url | relative_url }}">{{ slide.title }}</a>{% if slide.external_url %} / <a href="{{ slide.external_url }}">Open slide deck</a>{% endif %}</li>
       {% endfor %}
     </ul>
   {% endif %}

@@ -14,7 +14,7 @@ permalink: /slides/
     <h2><a href="{{ slide.url | relative_url }}">{{ slide.title }}</a></h2>
     {% if slide.summary %}<p>{{ slide.summary }}</p>{% endif %}
     <p class="meta">{{ related_events.size }} related record{% if related_events.size != 1 %}s{% endif %}{% if slide.first_presented %} / first presented {{ slide.first_presented }}{% endif %}</p>
-    {% if slide.external_url %}<p><a href="{{ slide.external_url }}">Original slide</a></p>{% endif %}
+    {% if slide.external_url %}<p><a href="{{ slide.external_url }}">Open slide deck</a></p>{% endif %}
   </li>
 {% endfor %}
 </ul>

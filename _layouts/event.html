@@ -25,7 +25,7 @@ layout: default
           {% for slide_id in page.slides %}
             {% assign slide = site.slides | where: "slug", slide_id | first %}
             {% if slide %}
-              <li><a href="{{ slide.url | relative_url }}">{{ slide.title }}</a>{% if slide.external_url %} / <a href="{{ slide.external_url }}">Original slide</a>{% endif %}</li>
+              <li><a href="{{ slide.url | relative_url }}">{{ slide.title }}</a>{% if slide.external_url %} / <a href="{{ slide.external_url }}">Open slide deck</a>{% endif %}</li>
             {% else %}
               <li>{{ slide_id }}</li>
             {% endif %}
