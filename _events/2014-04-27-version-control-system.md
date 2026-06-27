@@ -11,7 +11,8 @@ topics:
   - "open-source"
   - "software-engineering"
   - "education"
-slides: []
+slides: 
+  - "git-slide"
 videos: []
 links: []
 ---
