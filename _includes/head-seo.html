@@ -4,6 +4,12 @@
 {% endunless %}
 {% assign seo_description = page.description | default: page.summary | default: site.description %}
 {% assign seo_url = page.url | absolute_url %}
+{% assign seo_language = page.language | default: page.lang | default: site.lang | default: "zh-TW" %}
+{% if seo_language == "en" %}
+  {% assign seo_locale = "en_US" %}
+{% else %}
+  {% assign seo_locale = seo_language | replace: "-", "_" %}
+{% endif %}
 {% assign og_type = "website" %}
 {% if page.collection == "events" or page.collection == "slides" or page.collection == "topics" %}
   {% assign og_type = "article" %}
@@ -17,6 +23,6 @@
 <link rel="canonical" href="{{ seo_url }}">
 <meta property="og:url" content="{{ seo_url }}">
 <meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:locale" content="{{ page.lang | default: site.lang | replace: "-", "_" }}">
+<meta property="og:locale" content="{{ seo_locale }}">
 <meta property="og:type" content="{{ og_type }}">
 <meta name="twitter:card" content="summary">

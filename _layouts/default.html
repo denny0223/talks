@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'zh-TW' }}">
+<html lang="{{ page.language | default: page.lang | default: site.lang | default: 'zh-TW' }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -132,7 +132,6 @@
         <a href="{{ '/events/' | relative_url }}">Events</a>
         <a href="{{ '/slides/' | relative_url }}">Slides</a>
         <a href="{{ '/topics/' | relative_url }}">Topics</a>
-        <a href="{{ '/llms.txt' | relative_url }}">llms.txt</a>
       </nav>
     </header>
     <main>
@@ -140,6 +139,7 @@
     </main>
     <footer>
       <p>Presentations and public activity records of Denny Huang. Speech invitations: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.</p>
+      <p>Machine-readable indexes: <a href="{{ '/llms.txt' | relative_url }}">llms.txt</a>, <a href="{{ '/talks.json' | relative_url }}">talks.json</a>, <a href="{{ '/slides.json' | relative_url }}">slides.json</a>, <a href="{{ '/topics.json' | relative_url }}">topics.json</a>.</p>
     </footer>
   </body>
 </html>

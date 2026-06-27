@@ -1,0 +1,9 @@
+{% assign role = include.role | default: "speaker" %}
+{% case role %}
+  {% when "speaker" %}演講
+  {% when "panelist" %}與談
+  {% when "judge" %}評審
+  {% when "host" %}主持
+  {% when "interviewee" %}受訪
+  {% else %}{{ role }}
+{% endcase %}

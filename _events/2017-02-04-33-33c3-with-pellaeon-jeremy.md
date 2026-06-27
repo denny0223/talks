@@ -3,7 +3,7 @@ title: "德國第33屆混亂通訊大會 (33C3) 經驗分享 with Pellaeon & Jer
 date: 2017-02-04
 sequence: 2
 event: ""
-event_url: "https://github.com/pellaeon"
+event_url: ""
 role: "speaker"
 language: "zh-TW"
 summary: "德國第33屆混亂通訊大會 (33C3) 經驗分享 with Pellaeon & Jeremy"

@@ -1,7 +1,7 @@
 ---
 title: "總統接見「第三屆 IT Matters Awards 獲獎者及評審團」"
 date: 2026-04-13
-event: ""
+event: "第三屆 IT Matters Awards"
 event_url: "https://www.president.gov.tw/NEWS/39967"
 role: "judge"
 language: "zh-TW"

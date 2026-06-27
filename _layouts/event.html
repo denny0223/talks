@@ -3,18 +3,18 @@ layout: default
 ---
 <article>
   <h1>{{ page.title }}</h1>
-  <p class="meta">{% include event-date.html event=page format="full" %}{% if page.event %} / {{ page.event }}{% endif %}</p>
+  <p class="meta">{% include event-date.html event=page format="full" %}{% if page.event and page.event != "" %} / {{ page.event }}{% endif %}</p>
   {% if page.summary %}
     <p class="summary">{{ page.summary }}</p>
   {% endif %}
 
   <dl class="details">
     <dt>Role</dt>
-    <dd>{{ page.role | default: "speaker" }}</dd>
-    {% if page.event_url and page.event_url != "" %}
+    <dd>{% include role-label.html role=page.role %}</dd>
+    {% if page.event and page.event != "" and page.event_url and page.event_url != "" %}
       <dt>Event</dt>
       <dd><a href="{{ page.event_url }}">{{ page.event }}</a></dd>
-    {% elsif page.event %}
+    {% elsif page.event and page.event != "" %}
       <dt>Event</dt>
       <dd>{{ page.event }}</dd>
     {% endif %}

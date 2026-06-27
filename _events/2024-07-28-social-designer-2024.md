@@ -1,7 +1,7 @@
 ---
 title: "Social Designer 2024 青年永續社會設計挑戰賽 評審"
 date: 2024-07-28
-event: ""
+event: "Social Designer 2024 青年永續社會設計挑戰賽"
 event_url: "https://mutahead.com/socialdesigner2024/"
 role: "judge"
 language: "zh-TW"
