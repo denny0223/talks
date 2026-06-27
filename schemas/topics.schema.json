@@ -1,0 +1,22 @@
+---
+layout: null
+permalink: /schemas/topics.schema.json
+---
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "{{ '/schemas/topics.schema.json' | absolute_url }}",
+  "title": "Denny Huang Topic Records",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "title", "summary", "aliases", "url"],
+    "properties": {
+      "id": { "type": "string" },
+      "title": { "type": "string" },
+      "summary": { "type": "string" },
+      "aliases": { "type": "array", "items": { "type": "string" } },
+      "url": { "type": "string", "format": "uri" }
+    },
+    "additionalProperties": false
+  }
+}

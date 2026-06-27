@@ -1,7 +1,6 @@
 ---
 layout: null
 permalink: /llms-full.txt
-sitemap: false
 ---
 # Denny Huang Talks Full Data
 
@@ -22,6 +21,13 @@ sitemap: false
 {% assign slides = site.slides | sort: "title" %}
 {% for slide in slides %}
 {% assign related_events = site.events | where_exp: "event", "event.slides contains slide.slug" | sort: "date" | reverse %}
+{% assign latest_event = related_events | first %}
+{% assign video_event_count = 0 %}
+{% for related_event in related_events %}
+{% if related_event.videos and related_event.videos.size > 0 %}
+{% assign video_event_count = video_event_count | plus: 1 %}
+{% endif %}
+{% endfor %}
 {% assign related_date_groups = related_events | group_by_exp: "event", "event.date | date: '%Y-%m-%d'" %}
 ### {{ slide.slug }} / {{ slide.title }}
 
@@ -29,6 +35,9 @@ sitemap: false
 - URL: {{ slide.url | absolute_url }}
 - Original: {{ slide.external_url }}
 - First presented: {{ slide.first_presented }}
+- Latest presented: {% if latest_event %}{{ latest_event.date | date: "%Y-%m-%d" }}{% else %}N/A{% endif %}
+- Latest event: {% if latest_event %}{{ latest_event.path | split: "/" | last | remove: ".md" }}{% else %}N/A{% endif %}
+- Video event count: {{ video_event_count }}
 - Language: {{ slide.language }}
 - Topics: {{ slide.topics | join: ", " }}
 - Aliases: {{ slide.aliases | join: ", " }}
@@ -56,9 +65,12 @@ sitemap: false
 - URL: {{ event.url | absolute_url }}
 - Event URL: {{ event.event_url }}
 - Role: {{ event.role }}
+{% capture role_label %}{% include role-label.html role=event.role %}{% endcapture %}
+- Role label: {{ role_label | strip }}
 - Language: {{ event.language }}
 - Topics: {{ event.topics | join: ", " }}
 - Slides: {{ event.slides | join: ", " }}
+- Has videos: {% if event.videos and event.videos.size > 0 %}true{% else %}false{% endif %}
 - Videos: {% for video in event.videos %}{% unless forloop.first %}, {% endunless %}{{ video.label | default: video.url }} <{{ video.url }}>{% endfor %}
 - Links: {% for link in event.links %}{% unless forloop.first %}, {% endunless %}{{ link.label | default: link.url }} <{{ link.url }}>{% endfor %}
 - Summary: {{ event.summary }}

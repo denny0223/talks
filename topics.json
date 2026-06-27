@@ -1,7 +1,6 @@
 ---
 layout: null
 permalink: /topics.json
-sitemap: false
 ---
 [
 {% assign topics = site.topics | sort: "title" %}

@@ -1,20 +1,56 @@
 {% assign absolute_url = page.url | absolute_url %}
 {% if page.collection == "events" %}
+  {% assign event_id = page.path | split: "/" | last | remove: ".md" %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Event",
+    "@id": {{ absolute_url | append: "#event" | jsonify }},
+    "identifier": {{ event_id | jsonify }},
     "name": {{ page.title | jsonify }},
     "startDate": {{ page.date | date: "%Y-%m-%d" | jsonify }},
     {% if page.end_date %}"endDate": {{ page.end_date | date: "%Y-%m-%d" | jsonify }},{% endif %}
     "description": {{ page.summary | default: page.title | jsonify }},
     "url": {{ absolute_url | jsonify }},
     "inLanguage": {{ page.language | default: site.lang | jsonify }},
+    {% if page.topics and page.topics.size > 0 %}"keywords": {{ page.topics | join: ", " | jsonify }},{% endif %}
     "performer": {
       "@type": "Person",
       "name": {{ site.author.name | jsonify }},
       "url": {{ site.author.url | jsonify }}
-    }{% if page.event_url and page.event_url != "" %},
+    }{% if page.slides and page.slides.size > 0 %},
+    "workFeatured": [
+      {% for slide_id in page.slides %}
+        {% assign slide = site.slides | where: "slug", slide_id | first %}
+        {% if slide %}
+          {
+            "@type": "PresentationDigitalDocument",
+            "@id": {{ slide.url | absolute_url | append: "#slide" | jsonify }},
+            "name": {{ slide.title | jsonify }},
+            "url": {{ slide.url | absolute_url | jsonify }}{% if slide.external_url %},
+            "sameAs": {{ slide.external_url | jsonify }}{% endif %}
+          }{% unless forloop.last %},{% endunless %}
+        {% endif %}
+      {% endfor %}
+    ]{% endif %}{% if page.videos and page.videos.size > 0 %},
+    "recordedIn": [
+      {% for video in page.videos %}
+        {
+          "@type": "VideoObject",
+          "name": {{ video.label | default: page.title | jsonify }},
+          "url": {{ video.url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]{% endif %}{% if page.links and page.links.size > 0 %},
+    "subjectOf": [
+      {% for link in page.links %}
+        {
+          "@type": "CreativeWork",
+          "name": {{ link.label | default: link.url | jsonify }},
+          "url": {{ link.url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]{% endif %}{% if page.event_url and page.event_url != "" %},
     "sameAs": {{ page.event_url | jsonify }}{% endif %}
   }
   </script>
@@ -23,10 +59,14 @@
   {
     "@context": "https://schema.org",
     "@type": "PresentationDigitalDocument",
+    "@id": {{ absolute_url | append: "#slide" | jsonify }},
+    "identifier": {{ page.slug | jsonify }},
     "name": {{ page.title | jsonify }},
     "description": {{ page.summary | default: page.title | jsonify }},
     "url": {{ absolute_url | jsonify }},
     "inLanguage": {{ page.language | default: site.lang | jsonify }},
+    {% if page.first_presented %}"datePublished": {{ page.first_presented | jsonify }},{% endif %}
+    {% if page.topics and page.topics.size > 0 %}"keywords": {{ page.topics | join: ", " | jsonify }},{% endif %}
     "author": {
       "@type": "Person",
       "name": {{ site.author.name | jsonify }},

@@ -1,7 +1,6 @@
 ---
 layout: null
 permalink: /llms.txt
-sitemap: false
 ---
 # Denny Huang Talks
 
@@ -17,6 +16,11 @@ Machine-readable data:
 - {{ "/llms-full.txt" | absolute_url }}: full Markdown export for agents
 - {{ "/sitemap.xml" | absolute_url }}: search sitemap
 
+Schemas:
+- {{ "/schemas/talks.schema.json" | absolute_url }}: JSON Schema for event records
+- {{ "/schemas/slides.schema.json" | absolute_url }}: JSON Schema for slide records
+- {{ "/schemas/topics.schema.json" | absolute_url }}: JSON Schema for topic records
+
 Event export notes:
 - `id` is the stable unique event record key.
 - `slides` values join to `slides.json` `id`.
@@ -25,10 +29,13 @@ Event export notes:
 - `date_text` is generated display text.
 - `display_date` is a backward-compatible alias for `date_text`.
 - `sequence` preserves same-day ordering and is null for single-record dates.
+- `role_label` is generated visitor-facing text for `role`.
+- `has_videos` is generated from `videos`.
 
 Slide export notes:
 - `id` is the stable unique slide key.
 - `related_events` values join to `talks.json` `id`.
+- `latest_presented`, `latest_event`, and `video_event_count` are generated from `related_events`.
 
 Important indexes:
 - {{ "/events/" | absolute_url }}

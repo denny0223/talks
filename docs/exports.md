@@ -2,6 +2,8 @@
 
 This site exposes collection data for search engines, crawlers, and LLM/RAG tools. Source records live in `_events/`, `_slides/`, and `_topics/`; exported files are generated views.
 
+Public JSON Schemas are available at `/schemas/talks.schema.json`, `/schemas/slides.schema.json`, and `/schemas/topics.schema.json`.
+
 ## Event Records
 
 `/talks.json` exports public activity records.
@@ -11,6 +13,7 @@ This site exposes collection data for search engines, crawlers, and LLM/RAG tool
 - `title`: event record title; not unique.
 - `event`: activity, course, conference, or organization name; not unique.
 - `event_url`: external activity or organizer page, not a venue.
+- `role_label`: generated visitor-facing label for `role`.
 - `date`: canonical start date in `YYYY-MM-DD`.
 - `end_date`: canonical end date for continuous multi-day events, otherwise `null`.
 - `date_text`: generated visitor-facing date text.
@@ -19,6 +22,7 @@ This site exposes collection data for search engines, crawlers, and LLM/RAG tool
 - `topics`: topic IDs that join to `/topics.json` `id`.
 - `slides`: slide IDs that join to `/slides.json` `id`.
 - `videos` and `links`: labeled external resources.
+- `has_videos`: generated boolean derived from `videos`.
 
 Records are sorted by descending `date`; records on the same date are sorted by ascending `sequence`.
 
@@ -31,6 +35,9 @@ Records are sorted by descending `date`; records on the same date are sorted by 
 - `external_url`: original slide sharing URL.
 - `topics`: topic IDs that join to `/topics.json` `id`.
 - `related_events`: event IDs that join to `/talks.json` `id`.
+- `latest_presented`: generated latest related event date, otherwise `null`.
+- `latest_event`: generated latest related event ID, otherwise `null`.
+- `video_event_count`: generated count of related events with videos.
 
 The original slide URL remains the sharing target. The local `/slides/{id}/` page exists so crawlers can index context, topics, and related events.
 

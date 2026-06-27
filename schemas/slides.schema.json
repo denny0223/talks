@@ -1,0 +1,30 @@
+---
+layout: null
+permalink: /schemas/slides.schema.json
+---
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "{{ '/schemas/slides.schema.json' | absolute_url }}",
+  "title": "Denny Huang Slide Records",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "title", "external_url", "summary", "topics", "language", "first_presented", "latest_presented", "latest_event", "video_event_count", "aliases", "related_events", "url"],
+    "properties": {
+      "id": { "type": "string" },
+      "title": { "type": "string" },
+      "external_url": { "type": "string", "format": "uri" },
+      "summary": { "type": "string" },
+      "topics": { "type": "array", "items": { "type": "string" } },
+      "language": { "type": "string", "enum": ["zh-TW", "en"] },
+      "first_presented": { "type": "string", "format": "date" },
+      "latest_presented": { "type": ["string", "null"], "format": "date" },
+      "latest_event": { "type": ["string", "null"] },
+      "video_event_count": { "type": "integer", "minimum": 0 },
+      "aliases": { "type": "array", "items": { "type": "string" } },
+      "related_events": { "type": "array", "items": { "type": "string" } },
+      "url": { "type": "string", "format": "uri" }
+    },
+    "additionalProperties": false
+  }
+}

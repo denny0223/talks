@@ -1,0 +1,50 @@
+---
+layout: null
+permalink: /schemas/talks.schema.json
+---
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "{{ '/schemas/talks.schema.json' | absolute_url }}",
+  "title": "Denny Huang Talk Records",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "title", "date", "end_date", "date_text", "display_date", "sequence", "event", "event_url", "role", "role_label", "language", "summary", "topics", "slides", "has_videos", "videos", "links", "url"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-.+" },
+      "title": { "type": "string" },
+      "date": { "type": "string", "format": "date" },
+      "end_date": { "type": ["string", "null"], "format": "date" },
+      "date_text": { "type": "string" },
+      "display_date": { "type": "string", "deprecated": true },
+      "sequence": { "type": ["integer", "null"], "minimum": 1 },
+      "event": { "type": "string" },
+      "event_url": { "type": "string" },
+      "role": { "type": "string", "enum": ["speaker", "panelist", "judge", "host", "interviewee"] },
+      "role_label": { "type": "string" },
+      "language": { "type": "string", "enum": ["zh-TW", "en"] },
+      "summary": { "type": "string" },
+      "topics": { "type": "array", "items": { "type": "string" } },
+      "slides": { "type": "array", "items": { "type": "string" } },
+      "has_videos": { "type": "boolean" },
+      "videos": { "$ref": "#/$defs/linkList" },
+      "links": { "$ref": "#/$defs/linkList" },
+      "url": { "type": "string", "format": "uri" }
+    },
+    "additionalProperties": false
+  },
+  "$defs": {
+    "linkList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "url"],
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% assign sitemap_pages = site.pages | where_exp: "page", "page.sitemap != false" | sort: "url" %}
+{% for page in sitemap_pages %}
+{% unless page.url == "/sitemap.xml" %}
+  <url>
+    <loc>{{ page.url | absolute_url | xml_escape }}</loc>
+  </url>
+{% endunless %}
+{% endfor %}
+{% assign event_pages = site.events | sort: "date" %}
+{% for event in event_pages %}
+  <url>
+    <loc>{{ event.url | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ event.date | date_to_xmlschema }}</lastmod>
+  </url>
+{% endfor %}
+{% assign slide_pages = site.slides | sort: "slug" %}
+{% for slide in slide_pages %}
+  <url>
+    <loc>{{ slide.url | absolute_url | xml_escape }}</loc>
+  </url>
+{% endfor %}
+{% assign topic_pages = site.topics | sort: "slug" %}
+{% for topic in topic_pages %}
+  <url>
+    <loc>{{ topic.url | absolute_url | xml_escape }}</loc>
+  </url>
+{% endfor %}
+</urlset>

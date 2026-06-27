@@ -6,4 +6,12 @@ sitemap: false
 User-agent: *
 Allow: /
 
+LLMs: {{ "/llms.txt" | absolute_url }}
+Data: {{ "/talks.json" | absolute_url }}
+Data: {{ "/slides.json" | absolute_url }}
+Data: {{ "/topics.json" | absolute_url }}
+Schema: {{ "/schemas/talks.schema.json" | absolute_url }}
+Schema: {{ "/schemas/slides.schema.json" | absolute_url }}
+Schema: {{ "/schemas/topics.schema.json" | absolute_url }}
+
 Sitemap: {{ "/sitemap.xml" | absolute_url }}

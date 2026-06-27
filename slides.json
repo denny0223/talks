@@ -1,7 +1,6 @@
 ---
 layout: null
 permalink: /slides.json
-sitemap: false
 ---
 [
 {% assign slides = site.slides | sort: "title" %}
