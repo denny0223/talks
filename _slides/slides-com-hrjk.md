@@ -1,12 +1,13 @@
 ---
-title: "HrJ"
+title: "社群經營論壇：從校園到社會"
 external_url: "https://slides.com/hrjk"
-summary: "社群經營論壇—社群是什麼？從校園到社會 with HrJ & 聽風 相關投影片。"
+summary: "與 HrJ、聽風共同進行的社群經營論壇素材，從校園社群經驗延伸到更廣義的技術社群與公共參與。"
 topics: 
   - "community"
 language: "zh-TW"
 first_presented: 2017-08-06
-aliases: []
+aliases:
+  - "HrJ"
 ---
 
-社群經營論壇—社群是什麼？從校園到社會 with HrJ & 聽風 相關投影片。
+與 HrJ、聽風共同進行的社群經營論壇素材，從校園社群經驗延伸到更廣義的技術社群與公共參與。

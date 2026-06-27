@@ -1,12 +1,13 @@
 ---
-title: "Stay Hungry, Stay Foolish."
+title: "駭客精神與資訊學習態度"
 external_url: "https://denny.one/INFAS2018/"
-summary: "Stay Hungry, Stay Foolish. 相關投影片。"
+summary: "面向中學生資訊社群的 keynote 素材，從學校教育、FLOSS 與駭客精神談自主學習和技術社群參與。"
 topics: 
   - "education"
 language: "en"
 first_presented: 2018-06-10
-aliases: []
+aliases:
+  - "Stay Hungry, Stay Foolish."
 ---
 
-Stay Hungry, Stay Foolish. 相關投影片。
+面向中學生資訊社群的 keynote 素材，從學校教育、FLOSS 與駭客精神談自主學習和技術社群參與。
