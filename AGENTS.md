@@ -6,6 +6,12 @@ This repository builds <https://denny.one/talks>, a Jekyll/GitHub Pages site for
 
 The site is data-driven. Treat collection files as the source of truth and generated indexes as views over that data.
 
+## Architecture Decision Boundary
+
+Jekyll/GitHub Pages is intentionally kept as the stable production renderer. The long-term architecture priority is the collection data contract, validation, stable public URLs, and low-cost maintenance, not adopting a newer renderer.
+
+Do not propose or perform a renderer migration unless the revisit triggers in `docs/adr/0001-keep-jekyll-as-stable-renderer.md` clearly apply. Keep routine maintenance focused on source records, generated views, validation, and small reviewable diffs.
+
 ## Source Of Truth
 
 - `_events/`: one public activity record per file.
