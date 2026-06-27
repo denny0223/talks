@@ -49,7 +49,7 @@ function parseFrontMatter(source) {
     if (list && key) {
       if (!Array.isArray(data[key])) data[key] = [];
       const raw = list[1];
-      if (raw.includes(": ")) {
+      if (!raw.startsWith('"') && raw.includes(": ")) {
         const [firstKey, ...rest] = raw.split(": ");
         const item = { [firstKey]: JSON.parse(rest.join(": ")) };
         data[key].push(item);
@@ -87,6 +87,10 @@ function validUrl(url) {
 
 function validDate(value) {
   return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value);
+}
+
+function hasGenericSlideDescription(value) {
+  return /相關投影片|投影片，涵蓋|最早使用於/.test(value || "");
 }
 
 const events = readCollection(collections.events);
@@ -182,6 +186,12 @@ for (const slide of slides) {
     if (!slide.data[field] || (Array.isArray(slide.data[field]) && slide.data[field].length === 0)) {
       fail(`_slides/${slide.file}: missing ${field}`);
     }
+  }
+  if (hasGenericSlideDescription(slide.data.summary)) {
+    fail(`_slides/${slide.file}: summary must describe the deck's reader value, not say it is a related slide or repeat metadata`);
+  }
+  if (hasGenericSlideDescription(slide.body)) {
+    fail(`_slides/${slide.file}: body must not use generic related-slide wording`);
   }
   if (!validUrl(slide.data.external_url)) fail(`_slides/${slide.file}: invalid external_url`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(slide.data.first_presented)) fail(`_slides/${slide.file}: invalid first_presented; must use YYYY-MM-DD`);

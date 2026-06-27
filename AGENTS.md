@@ -115,6 +115,8 @@ This local environment may not have Ruby or Bundler installed. If the build cann
 - Use Traditional Chinese for Taiwanese learner/public-facing summaries unless the original talk title or event name is English.
 - Preserve literal product, event, and UI names as written.
 - Keep original slide URLs as the official sharing targets; `/slides/{slug}/` pages provide searchable context and links back to the original slides.
+- Slide titles should describe the deck-level subject, not blindly reuse one event title when the same deck supports multiple talks.
+- Slide summaries should tell readers why the deck is useful and what context it serves. Do not use generic phrases such as "相關投影片", or summaries mechanically generated from topics/date metadata.
 - Keep homepage featured slides manually curated via `featured`, `featured_order`, and `featured_label`; do not replace this with date-based automation.
 - Prefer meaningful `summary` text over generic labels such as "簡報連結" or "投影片連結".
 - When correcting obvious typos or URL normalization in data, keep the change small and mention it in the commit or final summary.
