@@ -16,8 +16,7 @@ Public JSON Schemas are available at `/schemas/talks.schema.json`, `/schemas/sli
 - `role_label`: generated visitor-facing label for `role`.
 - `date`: canonical start date in `YYYY-MM-DD`.
 - `end_date`: canonical end date for continuous multi-day events, otherwise `null`.
-- `date_text`: generated visitor-facing date text.
-- `display_date`: compatibility alias for `date_text`; new consumers should use `date_text`.
+- `date_text`: visitor-facing text generated from `date` and `end_date`; consumers should use the canonical fields for date logic.
 - `sequence`: same-day display order, otherwise `null`.
 - `topics`: topic IDs that join to `/topics.json` `id`.
 - `slides`: slide IDs that join to `/slides.json` `id`.

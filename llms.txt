@@ -26,8 +26,7 @@ Event export notes:
 - `slides` values join to `slides.json` `id`.
 - `topics` values join to `topics.json` `id`.
 - `date` and `end_date` are canonical date fields.
-- `date_text` is generated display text.
-- `display_date` is a backward-compatible alias for `date_text`.
+- `date_text` is generated from `date` and `end_date` for display; use the canonical fields for date logic.
 - `sequence` preserves same-day ordering and is null for single-record dates.
 - `role_label` is generated visitor-facing text for `role`.
 - `has_videos` is generated from `videos`.

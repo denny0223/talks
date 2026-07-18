@@ -27,6 +27,7 @@ Event date maintenance should stay script-driven:
 - Use `date` for normal records.
 - Add `--end-date YYYY-MM-DD` only for a continuous multi-day event.
 - Let `scripts/new-event` handle same-day display order.
+- Do not add `display_date` or `date_label`; generated views derive display text from `date` and `end_date`.
 
 Example multi-day record:
 

@@ -124,7 +124,7 @@ for (const event of events) {
       fail(`_events/${event.file}: missing ${field}`);
     }
   }
-  if ("display_date" in event.data) fail(`_events/${event.file}: display_date is generated from date and end_date`);
+  if ("display_date" in event.data) fail(`_events/${event.file}: display_date is not supported; encode the date range with date and end_date`);
   if ("date_label" in event.data) fail(`_events/${event.file}: date_label is not supported; encode the date range with date and end_date`);
   if (!validDate(event.data.date)) fail(`_events/${event.file}: invalid date; must use YYYY-MM-DD`);
   if (!validRoles.has(event.data.role)) fail(`_events/${event.file}: invalid role ${event.data.role}`);

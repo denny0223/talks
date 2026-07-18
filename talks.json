@@ -18,7 +18,6 @@ permalink: /talks.json
     "date": {{ event.date | date: "%Y-%m-%d" | jsonify }},
     "end_date": {{ event.end_date | date: "%Y-%m-%d" | jsonify }},
     "date_text": {{ event_date_text | strip | jsonify }},
-    "display_date": {{ event_date_text | strip | jsonify }},
     "sequence": {{ event.sequence | default: nil | jsonify }},
     "event": {{ event.event | jsonify }},
     "event_url": {{ event.event_url | jsonify }},

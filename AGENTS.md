@@ -97,8 +97,7 @@ Machine-readable exports use generated date fields:
 - `talks.json` `id` is the stable unique event record key and must be derived from the `_events` filename.
 - `slides.json` `related_events` values must join to `talks.json` `id`.
 - `topics.json` `id` values must join from event and slide `topics`.
-- `date_text` is the generated display date.
-- `display_date` is kept only as a backward-compatible alias for `date_text`.
+- `date_text` is generated from `date` and `end_date` for display.
 - Source records must not define `display_date` or `date_label`.
 
 If Ruby/Bundler is available, also run:

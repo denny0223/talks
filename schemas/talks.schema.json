@@ -9,14 +9,13 @@ permalink: /schemas/talks.schema.json
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["id", "title", "date", "end_date", "date_text", "display_date", "sequence", "event", "event_url", "role", "role_label", "language", "summary", "topics", "slides", "has_videos", "videos", "links", "url"],
+    "required": ["id", "title", "date", "end_date", "date_text", "sequence", "event", "event_url", "role", "role_label", "language", "summary", "topics", "slides", "has_videos", "videos", "links", "url"],
     "properties": {
       "id": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-.+" },
       "title": { "type": "string" },
       "date": { "type": "string", "format": "date" },
       "end_date": { "type": ["string", "null"], "format": "date" },
       "date_text": { "type": "string" },
-      "display_date": { "type": "string", "deprecated": true },
       "sequence": { "type": ["integer", "null"], "minimum": 1 },
       "event": { "type": "string" },
       "event_url": { "type": "string" },
