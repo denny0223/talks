@@ -76,12 +76,6 @@ featured_label: "Git slide"
 
 Only mark a slide as featured when the user explicitly wants it in that priority list. Sort order is controlled by `featured_order`; use gaps of 10. `featured_label` controls homepage link text and should match the existing visitor-facing wording.
 
-## Migration Script Boundary
-
-`scripts/migrate-readme.js` exists to reproduce the initial migration from the old README list. Do not run it for routine updates: it deletes and regenerates `_events/`, `_slides/`, and `_topics/`.
-
-Only use it intentionally when redoing the full migration from an old README snapshot, and review the generated diff carefully afterward.
-
 ## Validation
 
 Run this after changing collection data or templates:
