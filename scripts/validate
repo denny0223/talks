@@ -99,7 +99,7 @@ const topics = readCollection(collections.topics);
 const slideIds = new Set(slides.map((slide) => slide.slug));
 const topicIds = new Set(topics.map((topic) => topic.slug));
 const slideUrls = new Map(slides.map((slide) => [slide.slug, slide.data.external_url]));
-const validRoles = new Set(["speaker", "panelist", "judge", "host", "interviewee"]);
+const validRoles = new Set(["speaker", "panelist", "judge", "awardee", "host", "interviewee"]);
 const validLanguages = new Set(["zh-TW", "en"]);
 
 for (const [name, records] of Object.entries({ events, slides, topics })) {

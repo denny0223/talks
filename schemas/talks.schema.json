@@ -19,7 +19,7 @@ permalink: /schemas/talks.schema.json
       "sequence": { "type": ["integer", "null"], "minimum": 1 },
       "event": { "type": "string" },
       "event_url": { "type": "string" },
-      "role": { "type": "string", "enum": ["speaker", "panelist", "judge", "host", "interviewee"] },
+      "role": { "type": "string", "enum": ["speaker", "panelist", "judge", "awardee", "host", "interviewee"] },
       "role_label": { "type": "string" },
       "language": { "type": "string", "enum": ["zh-TW", "en"] },
       "summary": { "type": "string" },
