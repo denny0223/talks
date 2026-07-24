@@ -127,6 +127,7 @@ for (const event of events) {
   if ("display_date" in event.data) fail(`_events/${event.file}: display_date is not supported; encode the date range with date and end_date`);
   if ("date_label" in event.data) fail(`_events/${event.file}: date_label is not supported; encode the date range with date and end_date`);
   if (!validDate(event.data.date)) fail(`_events/${event.file}: invalid date; must use YYYY-MM-DD`);
+  else if (!event.file.startsWith(`${event.data.date}-`)) fail(`_events/${event.file}: filename must start with date ${event.data.date}`);
   if (!validRoles.has(event.data.role)) fail(`_events/${event.file}: invalid role ${event.data.role}`);
   if (!validLanguages.has(event.data.language)) fail(`_events/${event.file}: invalid language ${event.data.language}`);
   if (event.data.end_date) {
