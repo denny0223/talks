@@ -47,7 +47,7 @@ For a normal new talk or activity, use the maintenance script:
   --topics topic-a,topic-b
 ```
 
-Then complete the generated record's `summary`, `role`, `language`, resource fields, and body using the [record writing conventions](README.md#record-writing). Check the default `speaker` role and `zh-TW` language against the actual activity.
+Then complete the generated record's `summary`, `role`, `language`, resource fields, and body using the [record writing conventions](README.md#record-writing). The script creates activity and slide links, defaults to `speaker` and `zh-TW`, and leaves summaries and other resources for editorial review.
 
 Event dates are normalized:
 
@@ -125,3 +125,5 @@ Keep commits small and reviewable:
 - Script or validation changes: separate when practical.
 
 Before committing, run `./scripts/validate` and check `git status --short`.
+
+When changing `scripts/new-event`, run `node --test scripts/new-event.test.cjs` to check link labels, optional resources, multiple decks, and same-day ordering.

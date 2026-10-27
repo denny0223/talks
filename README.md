@@ -18,7 +18,7 @@ scripts/new-event \
   --topics cloud-ai,education
 ```
 
-Then complete the generated record using the [record writing conventions](#record-writing), including a useful summary and any video or supporting links. Check the default `speaker` role and `zh-TW` language against the actual activity.
+The script generates the activity link and `簡報連結` links from the referenced slide records. Then complete the generated record using the [record writing conventions](#record-writing), including a useful summary and any video or supporting links. Check the default `speaker` role and `zh-TW` language against the actual activity.
 
 If the record uses an existing slide, only the event file is needed.
 
@@ -138,6 +138,8 @@ scripts/validate
 ```
 
 The validator checks required fields, normalized date fields, same-day ordering, unique slugs, slide references, topic references, and URL shape.
+
+After changing the record creation script, also run `node --test scripts/new-event.test.cjs`.
 
 If Ruby and Bundler are available, also run:
 

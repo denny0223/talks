@@ -169,12 +169,21 @@ if (sequence && sameDateEvents.some((event) => event.data.sequence === sequence)
   process.exit(1);
 }
 const slideDir = path.join(root, "_slides");
+const slideLinks = [];
 for (const slide of slides) {
-  if (!fs.existsSync(path.join(slideDir, `${slide}.md`))) {
+  const slidePath = path.join(slideDir, `${slide}.md`);
+  if (!fs.existsSync(slidePath)) {
     console.error(`Unknown slide '${slide}'. Create _slides/${slide}.md first or use an existing slide id.`);
     process.exit(1);
   }
+  const slideData = parseFrontMatter(fs.readFileSync(slidePath, "utf8"));
+  const label = slides.length > 1 ? `${slideData.title} ` : "";
+  slideLinks.push(`${label}[簡報連結](${slideData.external_url})`);
 }
+
+const event = args.get("event");
+const eventLink = event && args.get("event-url") ? `[${event}](${args.get("event-url")})` : event;
+const description = [eventLink, args.get("title")].filter(Boolean).join(" : ");
 
 const body = `---
 title: ${yamlString(args.get("title"))}
@@ -190,7 +199,7 @@ videos: []
 links: []
 ---
 
-${args.get("event")} : ${args.get("title")}
+${[description, ...slideLinks].join(" ")}
 `;
 
 fs.writeFileSync(filePath, body);
