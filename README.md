@@ -18,7 +18,7 @@ scripts/new-event \
   --topics cloud-ai,education
 ```
 
-Then edit the generated `_events/YYYY-MM-DD-title.md` file and fill in `summary`, `videos`, and `links` if needed.
+Then complete the generated record using the [record writing conventions](#record-writing), including a useful summary and any video or supporting links. Check the default `speaker` role and `zh-TW` language against the actual activity.
 
 If the record uses an existing slide, only the event file is needed.
 
@@ -39,6 +39,43 @@ scripts/new-event \
   --event "Example Event" \
   --topics education
 ```
+
+## Record Writing
+
+Use these conventions for new records and requested corrections. Older records contain historical formats; do not normalize unrelated records as part of routine maintenance.
+
+Preserve the original activity and talk names. Set `role` to the actual participation (`speaker`, `panelist`, `judge`, `awardee`, `host`, or `interviewee`) and `language` to the language used, `zh-TW` or `en`. Panels, hosting, judging, awards, and interviews can describe the activity and role directly; they do not need an invented talk title or slide link. When there is no separate event name, omit the event prefix and its separator.
+
+Write a concise `summary` about the subject, audience, and value of the activity or deck. Omit incidental lab brands and simulated company names unless they are needed to understand the subject. Resource labels such as `簡報連結` belong on links, not in place of a useful summary.
+
+Front matter supplies record details and machine-readable exports. The homepage and event index display the Markdown body directly. Keep primary resources in both places with matching URLs and labels; supplementary resources may remain in `links` for the detail page. Avoid repeating an event URL as a separate resource when the activity name already links to it.
+
+| Resource or situation | Fields and body convention |
+| --- | --- |
+| Activity page | Prefer the official event, session, or organizer announcement for `event_url`, and link the corresponding activity name. Do not substitute a slide URL. If there is no suitable public page, leave `event_url` empty and use plain text. |
+| Official session page | A talk title may link to its official agenda/session page. Otherwise keep the title as plain text; do not use it as the slide or video link label. Put a separate session URL in `links` when it differs from `event_url`. |
+| Slides | Reference slide IDs in `slides`, and append `[簡報連結](original-slide-url)` using each slide's `external_url`. With multiple decks, add a short topic or session label before each link so readers can distinguish them. |
+| Video | Use `videos` and a label describing the resource, such as `課程錄影`, `議程錄影`, `活動錄影`, `發言片段`, or `完整 Podcast @YouTube`. Preserve useful timestamps for excerpts. |
+| Audio or interview article | Use `links` with an accurate label such as `訪談錄音` or `專訪文章`; reserve `videos` for video resources because it drives the site's Video badge and `has_videos` export. |
+| Supporting resources | Use `links` with purpose-specific labels such as `官方 Codelab`, `對話與工具紀錄`, `互動儀表板`, or `議程共筆`. Link directly to the useful artifact; a transcript that already links to its repository does not need an additional repository link unless the code itself is the intended resource. |
+| Secondary sources | Identify the publisher and source type, such as `媒體報導` or `轉載公告`. Keep them only when they add useful context; do not present a repost as the official activity page. |
+| Missing resources | Use empty `slides`, `videos`, or `links` arrays and omit the corresponding body links. A record without slides remains valid; do not invent placeholders. |
+
+For a talk with slides and a supporting artifact:
+
+```markdown
+[活動名稱](https://example.com/event) : 講題 [簡報連結](https://example.com/slides) [對話與工具紀錄](https://example.com/transcript)
+```
+
+For a talk with an official session page and a recording:
+
+```markdown
+[活動名稱](https://example.com/event) : [講題](https://example.com/session) [議程錄影](https://example.com/video)
+```
+
+When correcting or removing a resource, update both its front matter entry and any body links. After building, check the affected homepage/event-index rows, detail pages, and exports for the intended labels and destinations. `scripts/validate` checks URL shape, not reachability or editorial consistency.
+
+Before writing, identify the intended reader, a comparable record, any relevant exception, and the pages or exports that will change. Review the result against those criteria: can a visitor understand the subject without knowing the lab, identify the speaker's role, and reach the useful resources directly? When a correction exposes a mistaken assumption, recheck the other affected fields and outputs before considering the record complete.
 
 ## Add a New Slide
 

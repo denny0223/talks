@@ -47,7 +47,7 @@ For a normal new talk or activity, use the maintenance script:
   --topics topic-a,topic-b
 ```
 
-Then edit the generated `_events/YYYY-MM-DD-title.md` file and fill in a useful `summary`, plus `videos` and `links` when available.
+Then complete the generated record's `summary`, `role`, `language`, resource fields, and body using the [record writing conventions](README.md#record-writing). Check the default `speaker` role and `zh-TW` language against the actual activity.
 
 Event dates are normalized:
 
@@ -85,6 +85,8 @@ Run this after changing collection data or templates:
 ```
 
 The validator checks required fields, normalized date fields, same-day ordering, duplicate slugs, slide references, topic references, and URL shape.
+
+After building, inspect the affected homepage/event-index rows, record pages, and exports. Validation does not check resource relevance, URL reachability, or whether body links and front matter agree; verify those when adding or correcting records.
 
 Machine-readable exports use generated date fields:
 
