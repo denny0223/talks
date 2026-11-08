@@ -11,8 +11,8 @@ Public JSON Schemas are available at `/schemas/talks.schema.json`, `/schemas/sli
 - `id`: stable unique event record key derived from the `_events` filename without `.md`.
 - `url`: canonical public event page.
 - `title`: event record title; not unique.
-- `event`: activity, course, conference, or organization name; not unique.
-- `event_url`: external activity or organizer page, not a venue.
+- `event`: activity, program, or related organization name preserved from the source as context; not unique. Displayed as `Event / Organization`, without asserting an organization's role as organizer.
+- `event_url`: external activity or organization reference page, not a venue or a guaranteed identity URL for this record. It is not automatically emitted as `sameAs` in event structured data.
 - `role_label`: generated visitor-facing label for `role`.
 - `date`: canonical start date in `YYYY-MM-DD`.
 - `end_date`: canonical end date for continuous multi-day events, otherwise `null`.

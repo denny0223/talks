@@ -44,7 +44,9 @@ scripts/new-event \
 
 Use these conventions for new records and requested corrections. Older records contain historical formats; do not normalize unrelated records as part of routine maintenance.
 
-Preserve the original activity and talk names. Set `role` to the actual participation (`speaker`, `panelist`, `judge`, `awardee`, `host`, or `interviewee`) and `language` to the language used, `zh-TW` or `en`. Panels, hosting, judging, awards, and interviews can describe the activity and role directly; they do not need an invented talk title or slide link. When there is no separate event name, omit the event prefix and its separator.
+Preserve the original activity and talk names. Set `role` to the actual participation (`speaker`, `panelist`, `judge`, `awardee`, `host`, or `interviewee`) and `language` to the language used, `zh-TW` or `en`. Panels, hosting, judging, awards, and interviews can describe the activity and role directly; they do not need an invented talk title or slide link.
+
+Use `event` to preserve the activity, program, or related organization name provided by the source as context for the record. It is displayed as `Event / Organization`; the name alone does not establish an organization's role as organizer. If no such name is available, leave `event` empty and omit the body prefix and its separator.
 
 Write a concise `summary` about the subject, audience, and value of the activity or deck. Omit incidental lab brands and simulated company names unless they are needed to understand the subject. Resource labels such as `簡報連結` belong on links, not in place of a useful summary.
 

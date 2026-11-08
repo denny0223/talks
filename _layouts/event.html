@@ -12,10 +12,10 @@ layout: default
     <dt>Role</dt>
     <dd>{% include role-label.html role=page.role %}</dd>
     {% if page.event and page.event != "" and page.event_url and page.event_url != "" %}
-      <dt>Event</dt>
+      <dt>Event / Organization</dt>
       <dd><a href="{{ page.event_url }}">{{ page.event }}</a></dd>
     {% elsif page.event and page.event != "" %}
-      <dt>Event</dt>
+      <dt>Event / Organization</dt>
       <dd>{{ page.event }}</dd>
     {% endif %}
     {% if page.slides and page.slides.size > 0 %}

@@ -50,8 +50,7 @@
           "url": {{ link.url | jsonify }}
         }{% unless forloop.last %},{% endunless %}
       {% endfor %}
-    ]{% endif %}{% if page.event_url and page.event_url != "" %},
-    "sameAs": {{ page.event_url | jsonify }}{% endif %}
+    ]{% endif %}
   }
   </script>
 {% elsif page.collection == "slides" %}

@@ -61,9 +61,9 @@ permalink: /llms-full.txt
 {% if event.end_date %}- End date: {{ event.end_date | date: "%Y-%m-%d" }}
 {% endif %}- Date text: {{ event_date_text | strip }}
 - Sequence: {{ event.sequence | default: "" }}
-- Event: {{ event.event }}
+- Event / Organization: {{ event.event }}
 - URL: {{ event.url | absolute_url }}
-- Event URL: {{ event.event_url }}
+- Event / Organization URL: {{ event.event_url }}
 - Role: {{ event.role }}
 {% capture role_label %}{% include role-label.html role=event.role %}{% endcapture %}
 - Role label: {{ role_label | strip }}
